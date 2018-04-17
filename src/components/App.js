@@ -6,7 +6,7 @@ import ProjectTiles from './ProjectTiles';
 class App extends Component {
   render () {
     return (
-      <div class='content-container'>
+      <div className='content-container'>
         <Landing />
         <ProjectTiles />
       </div>
