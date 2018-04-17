@@ -32,10 +32,12 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
+    "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.8.3",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.2"
   }
