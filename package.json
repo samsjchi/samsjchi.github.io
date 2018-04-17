@@ -1,5 +1,5 @@
 {
-  "name": "Sam Chi | Portfolio",
+  "name": "sam-chi-portfolio",
   "version": "5.1.0",
   "private": true,
   "description": "Sam Chi | Portfolio",
@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/samsjchi/samsjchi.github.io.git"
   },
+  "homepage": "https://github.com/samsjchi/samsjchi.github.io#readme",
   "author": "Sam Chi <samuel.sj.chi@gmail.com>",
   "license": "MIT",
   "dependencies": {
