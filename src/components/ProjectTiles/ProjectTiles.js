@@ -81,23 +81,27 @@ class ProjectTiles extends Component {
   render () {
     return (
       <div className='project-tiles__container'>
-        <ul className='project-tiles__column-a project-tiles__column'>
-          <WeWork />
-          <Netflix />
-          <Behanced />
-          <CNN />
-          <BoA />
-          <StanfordChildrensHealth />
-        </ul>
+        <h1 className='project-tiles__heading'>Work.</h1>
         
-        <ul className='project-tiles__column-b project-tiles__column'>
-          <VMware />
-          <PBS />
-          <Betterment />
-          <Volvo />
-          <HPE />
-          <MeterMate />
-        </ul>
+        <div className='project-tiles__columns'>
+          <ul className='project-tiles__column-a project-tiles__column'>
+            <WeWork />
+            <Netflix />
+            <Behanced />
+            <CNN />
+            <BoA />
+            <StanfordChildrensHealth />
+          </ul>
+          
+          <ul className='project-tiles__column-b project-tiles__column'>
+            <VMware />
+            <PBS />
+            <Betterment />
+            <Volvo />
+            <HPE />
+            <MeterMate />
+          </ul>
+        </div>
       </div>
     );
   }
