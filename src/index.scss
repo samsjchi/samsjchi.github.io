@@ -78,11 +78,42 @@ html, body {
 
 .intro {
 	font-size: 4.6rem;
-	line-height: 1.5em;
+	line-height: 1.35em;
 }
 
-.intro__line-2 {
-	margin-top: 50px;
+.intro h2 {
+	transform: translate3d(0, 20px, 0);
+	opacity: 0;
+	animation: fade-up-in 1.2s cubic-bezier(0, 0.13, 0, 1.02) 0.9s forwards;
+	will-change: transform, opacity;
+}
+
+.intro h2:nth-of-type(1) {
+	animation-delay: 1.8s;
+}
+
+.intro h2:nth-of-type(2) {
+	animation-delay: 1.9s;
+}
+
+.intro h2:nth-of-type(3) {
+	animation-delay: 2s;
+}
+
+.intro h2:nth-of-type(4) {
+	animation-delay: 2.1s;
+	margin-top: 60px;
+}
+
+@keyframes fade-up-in {
+	from {
+		transform: translate3d(0, 20px, 0);
+		opacity: 0;
+	}
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
 }
 
 // Project Tiles
@@ -133,10 +164,10 @@ html, body {
 
 @keyframes column-slide-down {
   from {
-    transform: translate3d(0,-750px,0);
+    transform: translate3d(0, -750px, 0);
   }
   to {
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -222,18 +253,18 @@ html, body {
 	max-width: 75%;
 	margin-top: 50px;
 	opacity: 0;
-	transform: translate3d(-5px,0,0);
+	transform: translate3d(-5px, 0, 0);
 	transition: opacity 0.3s ease-out, transform 0.7s ease-out;
 }
 
 @keyframes fade-in-right {
   from {
     opacity: 0;
-    transform: translate3d(-5px,0,0);
+    transform: translate3d(-5px, 0, 0);
   }
   to {
     opacity: 1;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -279,7 +310,7 @@ html, body {
 	
 	opacity: 0;
   transform: scale(1.1);
-  transition: all 0.8s cubic-bezier(.19,1,.22,1) 0.8s;
+  transition: all 0.8s cubic-bezier(.19, 1, .22, 1) 0.8s;
 
   &.b-loaded {
     opacity: 1;
