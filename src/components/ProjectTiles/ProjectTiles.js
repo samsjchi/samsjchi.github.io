@@ -84,14 +84,16 @@ class ProjectTiles extends Component {
         <h1 className='project-tiles__heading'>Work.</h1>
         
         <div className='project-tiles__columns'>
-          <ul className='project-tiles__column-a project-tiles__column'>
-            <WeWork />
-            <Netflix />
-            <Behanced />
-            <CNN />
-            <BoA />
-            <StanfordChildrensHealth />
-          </ul>
+          <div className='project-tiles__column-a-wrapper project-tiles__column'>
+            <ul className='project-tiles__column-a'>
+              <WeWork />
+              <Netflix />
+              <Behanced />
+              <CNN />
+              <BoA />
+              <StanfordChildrensHealth />
+            </ul>
+          </div>
           
           <ul className='project-tiles__column-b project-tiles__column'>
             <VMware />
