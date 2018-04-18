@@ -12,10 +12,9 @@ export default function WeWork () {
       </div>
       
       <div className='project-tiles__cta'>View Project →</div>
-      
-      <div className='project-tiles__gradient-overlay'></div>
-      
-      <div className='project-tiles__image' data-bg-start='#c0efff' data-bg-end='#ffd194'>
+
+      <div className='project-tiles__image' data-bg-start='#c0efff' data-bg-end='#ffdaa8'>
+        <div className='project-tiles__gradient-overlay'></div>
         <img 
           className='b-lazy' 
           src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='

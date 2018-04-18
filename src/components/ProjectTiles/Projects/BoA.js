@@ -14,6 +14,7 @@ export default function BoA () {
       <div className='project-tiles__cta'>View Project →</div>
       
       <div className='project-tiles__image' data-bg-start='#16A085' data-bg-end='#B5AC49'>
+        <div className='project-tiles__gradient-overlay'></div>
         <img 
           className='b-lazy' 
           src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='

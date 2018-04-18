@@ -28,9 +28,11 @@ class ProjectTiles extends Component {
     projectTiles.forEach((projectTile) => {
       let bgStart = projectTile.getAttribute('data-bg-start');
       let bgEnd = projectTile.getAttribute('data-bg-end');
+      let gradientOverlay = projectTile.children[0];
       
       if (bgStart.length && bgEnd.length) {
         projectTile.style.backgroundImage = 'linear-gradient(135deg, ' + bgStart + ' 0%, ' + bgEnd + ' 100%)';
+        gradientOverlay.style.backgroundImage = 'linear-gradient(135deg, ' + bgStart + ' 0%, ' + bgEnd + ' 100%)';
       }
     });
   }

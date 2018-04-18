@@ -13,7 +13,8 @@ export default function StanfordChildrensHealth () {
       
       <div className='project-tiles__cta'>View Project →</div>
       
-      <div className='project-tiles__image' data-bg-start='#2D2114' data-bg-end='#c19b72'>
+      <div className='project-tiles__image' data-bg-start='#2D2114' data-bg-end='#42495B'>
+        <div className='project-tiles__gradient-overlay'></div>
         <img 
           className='b-lazy' 
           src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='

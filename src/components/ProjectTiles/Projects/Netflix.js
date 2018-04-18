@@ -13,7 +13,8 @@ export default function Netflix () {
       
       <div className='project-tiles__cta'>View Project →</div>
 
-      <div className='project-tiles__image' data-bg-start='#1A3342' data-bg-end='#030303'>
+      <div className='project-tiles__image' data-bg-start='#22485f' data-bg-end='#030303'>
+        <div className='project-tiles__gradient-overlay'></div>
         <img 
           className='b-lazy' 
           src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
