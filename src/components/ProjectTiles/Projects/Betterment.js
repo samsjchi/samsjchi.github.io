@@ -7,7 +7,9 @@ export default function Betterment () {
     <li id='betterment' className='project-tiles__tile'>
       <div className='project-tiles__tile-content'>
         <span className='project-tiles__client'>Betterment x The Atlantic</span>
-        <h2 className='project-tiles__title'>Investing: Was It Designed to Mystify Everyday Americans?</h2>
+        <h2 className='project-tiles__title'>
+          <a href='https://www.theatlantic.com/sponsored/betterment-2017/investing-was-it-designed-to-mystify-everyday-americans/1386/' target='_blank'>Investing: Was It Designed to Mystify Everyday Americans?</a>
+        </h2>
         <p className='project-tiles__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       

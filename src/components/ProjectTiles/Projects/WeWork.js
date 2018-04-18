@@ -7,7 +7,9 @@ export default function WeWork () {
     <li id='wework' className='project-tiles__tile'>
       <div className='project-tiles__tile-content'>
         <span className='project-tiles__client'>WeWork x The Atlantic</span>
-        <h2 className='project-tiles__title'>How Can Cities Succeed in the 21st Century?</h2>
+        <h2 className='project-tiles__title'>
+          <a href='https://www.theatlantic.com/sponsored/wework-2018/focus-on-community/1832/?preview=qAW5VhqO465CaJuLNAbkTMahzps' target='_blank'>How Can Cities Succeed in the 21st Century?</a>
+        </h2>
         <p className='project-tiles__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       

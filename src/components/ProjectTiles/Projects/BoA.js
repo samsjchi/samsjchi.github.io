@@ -7,7 +7,9 @@ export default function BoA () {
     <li id='boa' className='project-tiles__tile'>
       <div className='project-tiles__tile-content'>
         <span className='project-tiles__client'>Bank of America x The Atlantic</span>
-        <h2 className='project-tiles__title'>Beyond the Bottom Line</h2>
+        <h2 className='project-tiles__title'>
+          <a href='https://www.theatlantic.com/sponsored/bank-of-america-2017-nt/beyond-the-bottom-line/1368/' target='_blank'>Beyond the Bottom Line</a>
+        </h2>
         <p className='project-tiles__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       

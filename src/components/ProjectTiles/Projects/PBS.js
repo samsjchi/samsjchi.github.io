@@ -7,7 +7,9 @@ export default function PBS () {
     <li id='pbs' className='project-tiles__tile'>
       <div className='project-tiles__tile-content'>
         <span className='project-tiles__client'>PBS x The Atlantic</span>
-        <h2 className='project-tiles__title'>To Pledge Allegiance</h2>
+        <h2 className='project-tiles__title'>
+          <a href='https://www.theatlantic.com/sponsored/PBS-2017/to-pledge-allegiance/1443/' target='_blank'>To Pledge Allegiance</a>
+        </h2>
         <p className='project-tiles__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       

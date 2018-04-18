@@ -19,10 +19,36 @@ import MeterMate from './Projects/MeterMate';
 class ProjectTiles extends Component {
   constructor (props) {
     super(props);
+    
+    this.state = {
+      isScrolling: false,
+      scrollPosition: null
+    }
+    
+    this.handleScroll = this.handleScroll.bind(this);
   }
   
   componentDidMount () {
+    window.addEventListener('scroll', this.handleScroll); // Bind scroll event listener
+    window.onbeforeunload = () => { window.scrollTo(0, 0); } // Scroll to top on page refresh
+    
+    // Store initial scroll position
+    this.setState(() => ({ scrollPosition: document.documentElement.scrollTop }));
+    
+    // Set interval to throttle scrolling
+    let interval = setInterval(() => {
+      if (this.state.isScrolling) {
+        this.setState(() => ({ isScrolling: false }))
+      }
+    }, 1000);
+    
+    // Store interval to clear it in componentWillUnmount
+    this.setState(() => ({ interval }));
+    
+    // Initialize Blazy.js for lazy loading
     const blazy = new Blazy();
+    
+    // Set project tile gradients
     const projectTiles = document.querySelectorAll('.project-tiles__image');
 
     projectTiles.forEach((projectTile) => {
@@ -37,26 +63,47 @@ class ProjectTiles extends Component {
     });
   }
   
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.handleScroll);
+    clearInterval(this.state.interval);
+  }
+  
+  handleScroll () {
+    this.setState(() => ({ isScrolling: true }));
+    
+    let currentScrollPosition = document.documentElement.scrollTop;
+    let scrollDepth = Math.round((currentScrollPosition - this.state.scrollPosition) / 12);
+
+    let columnA = document.querySelector('.project-tiles__column-a');
+    columnA.style.transform = 'translate3d(0px, ' + scrollDepth + 'px, 0px)';
+  }
+  
   render () {
     return (
       <div className='project-tiles__container'>
-        <ul className='project-tiles__column-a project-tiles__column'>
-          <WeWork />
-          <Netflix />
-          <Behanced />
-          <CNN />
-          <BoA />
-          <StanfordChildrensHealth />
-        </ul>
+        <h1 className='project-tiles__heading'>Work.</h1>
         
-        <ul className='project-tiles__column-b project-tiles__column'>
-          <VMware />
-          <PBS />
-          <Betterment />
-          <Volvo />
-          <HPE />
-          <MeterMate />
-        </ul>
+        <div className='project-tiles__columns'>
+          <div className='project-tiles__column-a-wrapper project-tiles__column'>
+            <ul className='project-tiles__column-a'>
+              <WeWork />
+              <Netflix />
+              <Behanced />
+              <CNN />
+              <BoA />
+              <StanfordChildrensHealth />
+            </ul>
+          </div>
+          
+          <ul className='project-tiles__column-b project-tiles__column'>
+            <VMware />
+            <PBS />
+            <Betterment />
+            <Volvo />
+            <HPE />
+            <MeterMate />
+          </ul>
+        </div>
       </div>
     );
   }

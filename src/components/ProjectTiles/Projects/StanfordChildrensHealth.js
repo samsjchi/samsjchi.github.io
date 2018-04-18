@@ -7,7 +7,9 @@ export default function StanfordChildrensHealth () {
     <li id='stanford' className='project-tiles__tile'>
       <div className='project-tiles__tile-content'>
         <span className='project-tiles__client'>Stanford Children's Health x The Atlantic</span>
-        <h2 className='project-tiles__title'>Building with Care</h2>
+        <h2 className='project-tiles__title'>
+          <a href='https://www.theatlantic.com/sponsored/lucile-packard-childrens-health-stanford-2017/building-with-care/1694/' target='_blank'>Building with Care</a>
+        </h2>
         <p className='project-tiles__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       
