@@ -97,6 +97,13 @@ html, body {
 	flex-direction: column;
 	flex-basis: 50%;
 	max-width: 50%;
+	perspective: 5000px;
+	-webkit-perspective: 5000px;
+}
+
+.project-tiles__column-a {
+	padding-bottom: 10%;
+	transition: transform 1.5s ease-out;
 }
 
 .project-tiles__tile {
@@ -105,6 +112,11 @@ html, body {
 	padding-bottom: 72%;
 	overflow: hidden;
 	cursor: pointer;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	will-change: transform;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 	
 	&:hover .project-tiles__description {
 		opacity: 1;
@@ -128,7 +140,7 @@ html, body {
 	opacity: 0;
 	
 	animation: fade-in 0.5s ease-in forwards;
-	animation-delay: 1s;
+	animation-delay: 1.3s;
 }
 
 @keyframes fade-in {
