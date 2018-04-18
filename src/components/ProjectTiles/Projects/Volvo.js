@@ -7,7 +7,9 @@ export default function Volvo () {
     <li id='volvo' className='project-tiles__tile'>
       <div className='project-tiles__tile-content'>
         <span className='project-tiles__client'>Volvo x The Atlantic</span>
-        <h2 className='project-tiles__title'>Designing for the Future</h2>
+        <h2 className='project-tiles__title'>
+          <a href='https://www.theatlantic.com/sponsored/volvo-2018/designing-for-the-future/1757/' target='_blank'>Designing for the Future</a>
+        </h2>
         <p className='project-tiles__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       

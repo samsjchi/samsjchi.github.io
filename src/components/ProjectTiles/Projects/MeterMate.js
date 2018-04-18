@@ -7,7 +7,9 @@ export default function MeterMate () {
     <li id='metermate' className='project-tiles__tile'>
       <div className='project-tiles__tile-content'>
         <span className='project-tiles__client'>Team Project @ Hack Reactor</span>
-        <h2 className='project-tiles__title'>MeterMate</h2>
+        <h2 className='project-tiles__title'>
+          <a href='http://metermate.herokuapp.com/' target='_blank'>MeterMate</a>
+        </h2>
         <p className='project-tiles__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       

@@ -7,7 +7,9 @@ export default function VMware () {
     <li id='vmware' className='project-tiles__tile'>
       <div className='project-tiles__tile-content'>
         <span className='project-tiles__client'>VMware x The Atlantic</span>
-        <h2 className='project-tiles__title'>The Possibility Report</h2>
+        <h2 className='project-tiles__title'>
+          <a href='https://www.theatlantic.com/sponsored/vmware-2017/the-possibility-report/1401/' target='_blank'>The Possibility Report</a>
+        </h2>
         <p className='project-tiles__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       
