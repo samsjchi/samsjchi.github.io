@@ -47,20 +47,60 @@ table {
 	border-spacing: 0;
 }
 
+// Fonts
+@font-face {
+  font-family: 'Canela';
+  font-weight: 400;
+  src: url('../assets/fonts/Canela-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Canela';
+  font-weight: 600;
+  src: url('../assets/fonts/Canela-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Canela';
+  font-weight: 700;
+  src: url('../assets/fonts/Canela-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk';
+  font-weight: 400;
+  src: url('../assets/fonts/NeueHaasGroteskRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk';
+  font-weight: 600;
+  src: url('../assets/fonts/NeueHaasGroteskMedium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk';
+  font-weight: 700;
+  src: url('../assets/fonts/NeueHaasGroteskBold.ttf') format('truetype');
+}
+
 // Global
 html, body {
+	font-size: 62.5%;
+	border: 10px solid #eee;
+	background: #eee;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-	font-size: 62.5%;
-	border: 10px solid #eee;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .content-container {
-	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+	font-family: 'Neue Haas Grotesk',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
 	color: #2f2f2f;
+	background: #fff;
 	margin-right: auto;
 	margin-left: auto;
 	padding-right: 10%;
@@ -78,13 +118,15 @@ html, body {
 }
 
 .intro {
+	font-family: 'Canela',Georgia,Times New Roman,"serif";
+	font-weight: 400;
 	font-size: 4.2rem;
-	line-height: 1.35em;
+	line-height: 6.4rem;
 }
 
 .intro a {
 	color: #ff110b;
-	font-weight: bold;
+  font-weight: 700;
 	text-decoration: none;
 	position: relative;
 	display: inline-block;
@@ -95,10 +137,10 @@ html, body {
 	
 	&::before {
     position: absolute;
-		top: -3px;
+		top: -7px;
     left: -1px;
     z-index: -1;
-    width: 100%;
+    width: 101%;
     height: 115%;
     content: '';
 		background: #ff110b;
@@ -177,7 +219,7 @@ html, body {
 	position: relative;
 	display: inline-block;
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4) 40%, rgba(255, 255, 255, 0) 20%);
-	background-position: 3% 96%;
+	background-position: 3% 85%;
 	background-size: 5px 2px;
 	background-repeat: repeat-x;
 	transition: all 0.3s ease;
@@ -231,6 +273,7 @@ html, body {
 .project-tiles__heading {
 	position: relative;
 	top: 80px;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
 	font-size: 180px;
 	font-weight: bold;
 }
@@ -331,14 +374,16 @@ html, body {
 .project-tiles__client {
 	display: block;
 	font-size: 1.6rem;
-	line-height: 1.6rem;
-	margin-bottom: 15px;
+  line-height: 1.6rem;
+  margin-bottom: 15px;
+  letter-spacing: 0.05rem;
 }
 
 .project-tiles__title {
+	font-family: 'Canela';
+  font-weight: 600;
 	font-size: 3.4rem;
-	font-weight: bold;
-  line-height: 3.4rem;
+  line-height: 4.6rem;
 	max-width: 85%;
 	
 	a {
@@ -359,8 +404,9 @@ html, body {
 }
 
 .project-tiles__description {
-	font-size: 2.4rem;
-	line-height: 2.8rem;
+	font-size: 2rem;
+	line-height: 2.6rem;
+	letter-spacing: 0.05rem;
 	max-width: 75%;
 	margin-top: 50px;
 	opacity: 0;
@@ -382,6 +428,8 @@ html, body {
 .project-tiles__cta {
 	color: #fff;
 	font-size: 1.6rem;
+	line-height: 1.6rem;
+	letter-spacing: 0.05rem;
 	position: absolute;
   bottom: 40px;
   left: 40px;

@@ -10,7 +10,7 @@ export default function WeWork () {
         <h2 className='project-tiles__title'>
           <a href='https://www.theatlantic.com/sponsored/wework-2018/focus-on-community/1832/?preview=qAW5VhqO465CaJuLNAbkTMahzps' target='_blank'>How Can Cities Succeed in the 21st Century?</a>
         </h2>
-        <p className='project-tiles__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p className='project-tiles__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
       </div>
       
       <div className='project-tiles__cta'>View Project →</div>

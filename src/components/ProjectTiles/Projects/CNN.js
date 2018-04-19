@@ -10,7 +10,7 @@ export default function CNN () {
         <h2 className='project-tiles__title'>
           <a href='https://www.theatlantic.com/sponsored/cnn-2018/so-you-think-you-know-the-kennedys/1808/' target='_blank'>So You Think You Know the Kennedys?</a>
         </h2>
-        <p className='project-tiles__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p className='project-tiles__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
       </div>
       
       <div className='project-tiles__cta'>View Project →</div>
