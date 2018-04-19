@@ -9,8 +9,11 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.scss$/,
+      { 
+        test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ 
+      },
+      { 
+        test: /\.scss$/,
         use: [{
           loader: 'style-loader'
         }, {
@@ -19,7 +22,14 @@ module.exports = {
           loader: 'sass-loader'
         }]
       },
-      { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'url-loader?limit=25000' },
+      { 
+        test: /\.(jpe?g|png|gif|svg)$/i, 
+        use: 'url-loader?limit=25000'
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: 'file-loader'
+      },
     ],
   },
 

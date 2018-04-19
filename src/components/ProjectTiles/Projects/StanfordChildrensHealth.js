@@ -15,7 +15,7 @@ export default function StanfordChildrensHealth () {
       
       <div className='project-tiles__cta'>View Project →</div>
       
-      <div className='project-tiles__image' data-bg-start='#2D2114' data-bg-end='#42495B'>
+      <div className='project-tiles__image' data-bg-start='#42495B' data-bg-end='#2D2114'>
         <div className='project-tiles__gradient-overlay'></div>
         <img 
           className='b-lazy' 

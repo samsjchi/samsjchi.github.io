@@ -88,7 +88,7 @@ class ProjectTiles extends Component {
             <ul className='project-tiles__column-a'>
               <WeWork />
               <Netflix />
-              <Behanced />
+              <PBS />
               <CNN />
               <BoA />
               <StanfordChildrensHealth />
@@ -97,7 +97,7 @@ class ProjectTiles extends Component {
           
           <ul className='project-tiles__column-b project-tiles__column'>
             <VMware />
-            <PBS />
+            <Behanced />
             <Betterment />
             <Volvo />
             <HPE />
