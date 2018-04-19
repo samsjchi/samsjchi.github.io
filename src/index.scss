@@ -173,6 +173,60 @@ html, body {
 	}
 }
 
+.tooltip {
+	position: relative;
+	display: inline-block;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4) 40%, rgba(255, 255, 255, 0) 20%);
+	background-position: 3% 96%;
+	background-size: 5px 2px;
+	background-repeat: repeat-x;
+	transition: all 0.3s ease;
+	margin: 0 8px;
+}
+
+.tooltip:hover {
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 40%, rgba(255, 255, 255, 0) 20%);
+	
+	.tooltip__message {
+	    opacity: 1;
+	    margin-bottom: 5px;
+	    visibility: visible;
+	}
+}
+
+.tooltip__message {
+	position: absolute;
+  left: 30px;
+  bottom: 92%;
+  height: 41px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 14px;
+  line-height: 3em;
+	white-space: nowrap;
+  border-radius: 7px;
+  padding: 0px 15px;
+	transform-origin: center center;
+	transform: translateX(-50%);
+  transition: all 0.2s ease-in-out;
+	opacity: 0;
+  visibility: hidden;
+	
+	&::before {
+	  content: '';
+	  display: block;
+	  width: 0;
+	  height: 0;
+	  border-left: 5px solid transparent;
+	  border-right: 5px solid transparent;
+	  border-top: 5px solid rgba(0, 0, 0, 0.8);
+	  position: absolute;
+	  top: 100%;
+	  left: 50%;
+	  margin-left: -3px;
+	}
+}
+
 // Project Tiles
 .project-tiles__heading {
 	position: relative;
