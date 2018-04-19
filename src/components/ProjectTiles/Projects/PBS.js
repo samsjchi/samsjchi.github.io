@@ -15,7 +15,7 @@ export default function PBS () {
       
       <div className='project-tiles__cta'>View Project →</div>
       
-      <div className='project-tiles__image' data-bg-start='#eeeeee' data-bg-end='#efe75a'>
+      <div className='project-tiles__image' data-bg-start='#f7f07b' data-bg-end='#adccce'>
         <div className='project-tiles__gradient-overlay'></div>
         <img 
           className='b-lazy' 

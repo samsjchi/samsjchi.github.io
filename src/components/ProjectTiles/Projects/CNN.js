@@ -15,7 +15,7 @@ export default function CNN () {
       
       <div className='project-tiles__cta'>View Project →</div>
       
-      <div className='project-tiles__image' data-bg-start='#DF4C31' data-bg-end='#000000'>
+      <div className='project-tiles__image' data-bg-start='#000000' data-bg-end='#6b0404'>
         <div className='project-tiles__gradient-overlay'></div>
         <img 
           className='b-lazy' 

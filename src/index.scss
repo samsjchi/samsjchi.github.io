@@ -450,13 +450,32 @@ html, body {
 }
 
 #wework.project-tiles__tile {
+	border-top-left-radius: 15px;
+	
 	.project-tiles__tile-content,
 	.project-tiles__cta {
 		color: #2f2f2f;
 	}
 }
 
+#vmware.project-tiles__tile {
+	border-top-right-radius: 15px;
+}
+
+#stanford.project-tiles__tile {
+	border-bottom-left-radius: 15px;
+}
+
+#metermate.project-tiles__tile {
+	border-bottom-right-radius: 15px;
+}
+
 #boa.project-tiles__tile {
+	.project-tiles__tile-content,
+	.project-tiles__cta {
+		color: #2f2f2f;
+	}
+	
 	.project-tiles__image > .b-lazy {
 		transform: scale(0.5) translate(34%, -21%);
 	}
