@@ -13,7 +13,7 @@ export default function Footer () {
       <div className='footer__social-buttons'>
         <ul className='footer__social-buttons-list'>
           <li>
-            <a href='https://github.com/samsjchi'>
+            <a href='https://github.com/samsjchi' target='_blank'>
               <svg x="0px" y="0px" viewBox="0 0 41 41">
                 <title>GitHub</title>
                 <circle class="ring" fill="none" stroke-miterlimit="10" cx="20.5" cy="20.5" r="20"></circle>
@@ -22,7 +22,7 @@ export default function Footer () {
             </a>
           </li>
           <li>
-            <a href='https://www.linkedin.com/in/samsjchi/'>
+            <a href='https://www.linkedin.com/in/samsjchi/' target='_blank'>
               <svg x="0px" y="0px" viewBox="0 0 41 41">
                 <title>LinkedIn</title>
                 <circle class="ring" fill="none" stroke-miterlimit="10" cx="20.5" cy="20.5" r="20"></circle>
@@ -36,7 +36,7 @@ export default function Footer () {
             </a>
           </li>
           <li>
-            <a href='https://www.facebook.com/samsjchi'>
+            <a href='https://www.facebook.com/samsjchi' target='_blank'>
               <svg x="0px" y="0px" viewBox="0 0 41 41">
                 <title>Facebook</title>
                 <circle class="ring" fill="none" stroke-miterlimit="10" cx="20.5" cy="20.5" r="20"></circle>
@@ -45,7 +45,7 @@ export default function Footer () {
             </a>
           </li>
           <li>
-            <a href='https://www.instagram.com/samsjchi/'>
+            <a href='https://www.instagram.com/samsjchi/' target='_blank'>
               <svg x="0px" y="0px" viewBox="0 0 41 41">
                 <title>Instagram</title>
                 <circle class="ring" fill="none" stroke-miterlimit="10" cx="20.5" cy="20.5" r="20"></circle>
