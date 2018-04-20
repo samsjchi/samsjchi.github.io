@@ -87,7 +87,6 @@ table {
 // Global
 html, body {
 	font-size: 62.5%;
-	border: 10px solid #eee;
 	background: #eee;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -97,15 +96,22 @@ html, body {
 	-webkit-tap-highlight-color: transparent;
 }
 
+.app {
+	border: 20px solid #eee;
+}
+
 .content-container {
 	font-family: 'Neue Haas Grotesk',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
 	color: #2f2f2f;
 	background: #fff;
 	margin-right: auto;
 	margin-left: auto;
+	margin-bottom: 270px;
 	padding-right: 10%;
 	padding-left: 10%;
 	padding-bottom: 10%;
+	position: relative;
+  z-index: 1;
 }
 
 // Landing
@@ -122,6 +128,7 @@ html, body {
 	font-weight: 400;
 	font-size: 4.2rem;
 	line-height: 6.4rem;
+	position: relative;
 }
 
 .intro a {
@@ -243,7 +250,7 @@ html, body {
   height: 41px;
   background: rgba(0, 0, 0, 0.8);
   color: white;
-	font-family: 'Neue Haas Grotesk',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+	font-family: 'Neue Haas Grotesk';
   font-size: 1.4rem;
   line-height: 4rem;
   letter-spacing: 0.05rem;
@@ -557,4 +564,17 @@ html, body {
 	justify-content: center;
 	align-items: center;
 	display: none;
+}
+
+.footer {
+  position: fixed;
+	bottom: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+	height: 130px;
+  background: black;
+  color: white;
+  padding: 70px 0;
+  text-align: center;
+  z-index: 0;
 }
