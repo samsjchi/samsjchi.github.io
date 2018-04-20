@@ -42,12 +42,20 @@ class Landing extends Component {
           </h2>
           <h2>
             Currently at <a className='rethink' href="https://advertising.theatlantic.com/rethink/" target="_blank">Atlantic Re:think</a> 
-            <img 
-              className='video-icon' 
-              src={videoIcon}
-              onMouseOver={() => this.handleMouseOver()}
-            />,
-            the award-winning content
+            <div 
+              className='video-icon'
+              onMouseOver={() => this.handleMouseOver()}>
+              <svg x="0px" y="0px" viewBox="0 0 27 24">
+                <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none">
+                  <g fill="#2f2f2f">
+                    <path d="M18,15.8461538 L18,11 L0,11 L0,24 L18,24 L18,19.8461538 L27,24 L27,11 L18,15.8461538 Z"></path>
+                    <circle r="5.5" cy="5.5" cx="12.5"></circle>
+                    <circle r="3.5" cy="7.5" cx="3.5"></circle>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            , the award-winning content
           </h2>
           <h2>
             studio and in-house creative marketing team at <a className='atlantic' href='https://www.theatlantic.com/' target='_blank'>The Atlantic</a>.
