@@ -23,12 +23,26 @@ module.exports = {
         }]
       },
       { 
-        test: /\.(jpe?g|png|gif|svg)$/i, 
+        test: /\.(jpe?g|png|gif)$/i, 
         use: 'url-loader?limit=25000'
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: 'file-loader'
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              jsx: true
+            }
+          }
+        ]
       },
     ],
   },

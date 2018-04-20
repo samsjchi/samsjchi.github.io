@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import anime from 'animejs';
 import videoIcon from '../../assets/img/video-icon.png';
 
 class Landing extends Component {
