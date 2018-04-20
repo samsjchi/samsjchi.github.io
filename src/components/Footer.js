@@ -1,5 +1,12 @@
 import React from 'react';
 
+// Logos
+import ReactLogo from '../../assets/img/react-logo.svg'
+import BabelLogo from '../../assets/img/babel-logo.svg'
+import WebpackLogo from '../../assets/img/webpack-logo.svg'
+import SassLogo from '../../assets/img/sass-logo.svg'
+import GitHubLogo from '../../assets/img/github-logo.svg'
+
 export default function Footer () {
   return (
     <footer className='footer'>
@@ -23,27 +30,27 @@ export default function Footer () {
         <ul className='footer__web-tech-list'>
           <li>
             <a href='https://reactjs.org/' target='_blank'>
-              React Logo
+              <ReactLogo width={65} />
             </a>
           </li>
           <li>
             <a href='https://babeljs.io/' target='_blank'>
-              Babel Logo
+              <BabelLogo width={80} />
             </a>
           </li>
           <li>
             <a href='https://webpack.js.org/' target='_blank'>
-              Webpack Logo
+              <WebpackLogo width={45} />
             </a>
           </li>
           <li>
             <a href='https://sass-lang.com/' target='_blank'>
-              Sass Logo
+              <SassLogo width={40} />
             </a>
           </li>
           <li>
             <a href='https://pages.github.com/' target='_blank'>
-              GitHub Pages Logo
+              <GitHubLogo width={45} />
             </a>
           </li>
         </ul>
