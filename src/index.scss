@@ -126,9 +126,14 @@ html, body {
 .intro {
 	font-family: 'Canela',Georgia,Times New Roman,"serif";
 	font-weight: 400;
-	font-size: 4.1rem;
+	font-size: 4rem;
 	line-height: 6.4rem;
+	letter-spacing: 0.03rem;
 	position: relative;
+	
+	.name {
+		font-weight: 700;
+	}
 }
 
 .intro a {
@@ -276,6 +281,11 @@ html, body {
 	  left: 50%;
 	  margin-left: -3px;
 	}
+}
+
+.ampersand {
+	width: 35px;
+	margin: 0 5px;
 }
 
 // Project Tiles

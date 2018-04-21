@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import videoIcon from '../../assets/img/video-icon.png';
+import ampersand from '../../assets/img/ampersand.png';
 
 class Landing extends Component {
   constructor (props) {
@@ -78,12 +79,12 @@ class Landing extends Component {
       <div className='landing'>
         <div className='intro'>
           <h2>
-            I'm Sam 
+            <span className='name'>I'm Sam</span>
             <div className='tooltip'>
               <span className='tooltip__message'>
                 Pronounced “kai,” like the Greek letter
               </span>
-              Chi
+              <span className='name'>Chi</span>
             </div>
             – a front end engineer based in New York City.
           </h2>
@@ -93,7 +94,7 @@ class Landing extends Component {
               className='video-icon'
               onMouseOver={() => this.handleMouseOver()}>
               <svg x='0px' y='0px' viewBox='0 0 27 24'>
-                <g fill-rule='evenodd' fill='none' stroke-width='1' stroke='none'>
+                <g fillRule='evenodd' fill='none' strokeWidth='1' stroke='none'>
                   <g fill='#2f2f2f'>
                     <path d='M18,15.8461538 L18,11 L0,11 L0,24 L18,24 L18,19.8461538 L27,24 L27,11 L18,15.8461538 Z'></path>
                     <circle r='5.5' cy='5.5' cx='12.5'></circle>
@@ -123,7 +124,7 @@ class Landing extends Component {
             </iframe>
           </div>
           
-          <h2>I design & build... <span className='typewriter'>dynamic web applications.</span></h2>
+          <h2>I design <img className='ampersand' src={ampersand} /> build... &nbsp;<span className='typewriter'>dynamic web applications.</span></h2>
         </div>
       </div>
     );
