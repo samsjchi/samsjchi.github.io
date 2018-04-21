@@ -9,7 +9,7 @@ class Landing extends Component {
     
     this.state = {
       showVideo: false
-    }
+    };
   }
   
   componentDidMount () {

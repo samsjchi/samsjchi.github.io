@@ -196,7 +196,7 @@ html, body {
 .intro h2 {
 	transform: translate3d(0, 20px, 0);
 	opacity: 0;
-	animation: fade-up-in 1.2s cubic-bezier(0, 0.13, 0, 1.02) 0.9s forwards;
+	animation: fade-up-in--intro 1.2s cubic-bezier(0, 0.13, 0, 1.02) 0.9s forwards;
 	will-change: transform, opacity;
 }
 
@@ -217,7 +217,7 @@ html, body {
 	margin-top: 60px;
 }
 
-@keyframes fade-up-in {
+@keyframes fade-up-in--intro {
 	from {
 		transform: translate3d(0, 20px, 0);
 		opacity: 0;
@@ -232,7 +232,7 @@ html, body {
 	position: relative;
 	display: inline-block;
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4) 40%, rgba(255, 255, 255, 0) 20%);
-	background-position: 3% 85%;
+	background-position: 8% 80%;
 	background-size: 5px 2px;
 	background-repeat: repeat-x;
 	transition: all 0.3s ease;
@@ -345,6 +345,105 @@ html, body {
 				transform-origin: 13px 13px;
 			}
 		}
+	}
+}
+
+// Side Nav Left
+.side-nav-left {
+	position: fixed;
+	top: 0;
+	left: 20px;
+	width: 9%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	.social-buttons {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		height: 200px;
+		
+		&.active {
+			li {
+				animation: fade-up-in--social 0.3s cubic-bezier(0, 0.13, 0, 1.02) 0.3s forwards;
+			}
+		}
+		
+		li {
+			transform: translate3d(0, 10px, 0);
+			opacity: 0;
+			will-change: transform;
+			will-change: opacity;
+
+			&:nth-of-type(1) {
+				animation-delay: 0s;
+			}
+			
+			&:nth-of-type(2) {
+				animation-delay: 0.1s;
+			}
+
+			&:nth-of-type(3) {
+				animation-delay: 0.2s;
+			}
+
+			&:nth-of-type(4) {
+				animation-delay: 0.3s;
+			}
+		}
+		
+		li a {
+			transition: color 0.15s;
+			
+			&:hover .ring {
+				stroke: #1a1a1a;
+			}
+			
+			&:hover .mark {
+				fill: #1a1a1a;
+			}
+		}
+		
+		li a svg {
+			display: block;
+			width: 4rem;
+			height: 4rem;
+			
+			.ring {
+				fill: transparent;
+				stroke: #ddd;
+				transition: stroke 0.125s ease-in-out;
+			}
+			
+			.mark {
+				fill: #5e5e5e;
+				transition: fill 0.125s ease-in-out;
+			}
+			
+			.github-mark {
+				transform: scale(0.16);
+				transform-origin: 13px 13px;
+			}
+			
+			.linkedin-mark {
+				transform: scale(0.036);
+				transform-origin: 13px 13px;
+			}
+		}
+	}
+}
+
+@keyframes fade-up-in--social {
+	from {
+		transform: translate3d(0, -10px, 0);
+		opacity: 0;
+	}
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
 	}
 }
 
