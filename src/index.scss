@@ -130,6 +130,7 @@ html, body {
 	line-height: 6.4rem;
 	letter-spacing: 0.03rem;
 	position: relative;
+	min-width: 100%;
 	
 	.name {
 		font-weight: 700;
@@ -286,6 +287,65 @@ html, body {
 .ampersand {
 	width: 35px;
 	margin: 0 5px;
+}
+
+// Side Nav Left
+.side-nav-left {
+	position: fixed;
+	top: 0;
+	left: 20px;
+	width: 9%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	.social-buttons {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		height: 200px;
+		
+		li a {
+			transition: color 0.15s;
+			
+			&:hover .ring {
+				stroke: #1a1a1a;
+			}
+			
+			&:hover .mark {
+				fill: #1a1a1a;
+			}
+		}
+		
+		li a svg {
+			display: block;
+			width: 4rem;
+			height: 4rem;
+			
+			.ring {
+				fill: transparent;
+				stroke: #ddd;
+				transition: stroke 0.125s ease-in-out;
+			}
+			
+			.mark {
+				fill: #5e5e5e;
+				transition: fill 0.125s ease-in-out;
+			}
+			
+			.github-mark {
+				transform: scale(0.16);
+				transform-origin: 13px 13px;
+			}
+			
+			.linkedin-mark {
+				transform: scale(0.036);
+				transform-origin: 13px 13px;
+			}
+		}
+	}
 }
 
 // Project Tiles
@@ -588,7 +648,6 @@ html, body {
 	z-index: 5;
 	width: 100%;
 	height: 100%;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	display: none;
@@ -644,7 +703,7 @@ html, body {
 			
 			.mark {
 				fill: #b3b3b3;
-				transition: stroke 0.125s ease-in-out;
+				transition: fill 0.125s ease-in-out;
 			}
 			
 			.github-mark {

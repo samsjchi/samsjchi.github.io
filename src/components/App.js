@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import SideNavLeft from './SideNavLeft';
 import Landing from './Landing';
 import ProjectTiles from './ProjectTiles/ProjectTiles';
 import Footer from './Footer';
@@ -9,6 +10,7 @@ class App extends Component {
     return (
       <div className='app'>
         <div className='content-container'>
+          <SideNavLeft />
           <Landing />
           <ProjectTiles />
         </div>
