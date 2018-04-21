@@ -5,8 +5,27 @@ class SideNavLeft extends Component {
     super(props);
     
     this.state = {
-      showSideNav: false
+      showSideNav: false,
+      lastScrollPosition: 0
     };
+    
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+  
+  componentDidMount () {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+  
+  handleScroll () {
+    let newScrollPosition = window.scrollY;
+
+    if (newScrollPosition < this.state.lastScrollPosition) {
+      document.querySelector('.side-nav-left .social-buttons').classList.add('active');
+    } else {
+      document.querySelector('.side-nav-left .social-buttons').classList.remove('active');
+    }
+    
+    this.setState(() => ({ lastScrollPosition: newScrollPosition }));
   }
   
   handleMouseOver () {
