@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import SideNavLeft from './SideNavLeft/SideNavLeft';
-import Landing from './Landing/Landing';
-import ProjectTiles from './ProjectTiles/ProjectTiles';
-import Footer from './Footer/Footer';
+import SideNavLeft from '../SideNavLeft/SideNavLeft';
+import Landing from '../Landing/Landing';
+import ProjectTiles from '../ProjectTiles/ProjectTiles';
+import Footer from '../Footer/Footer';
 
 class App extends Component {
   render () {

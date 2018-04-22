@@ -5,38 +5,8 @@
 @import 'variables';
 
 // Components
+@import '../../src/components/App/App';
 @import '../../src/components/SideNavLeft/SideNavLeft';
 @import '../../src/components/Landing/Landing';
 @import '../../src/components/ProjectTiles/ProjectTiles';
 @import '../../src/components/Footer/Footer';
-
-// Global
-html, body {
-	font-size: 62.5%;
-	background: $app-border--color;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-	-webkit-tap-highlight-color: transparent;
-}
-
-.app {
-	font-family: 'Neue Haas Grotesk',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
-	border: 20px solid $app-border--color;
-}
-
-.content-container {
-	color: $dark-gray;
-	background: $white;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 350px;
-	padding-right: 10%;
-	padding-left: 10%;
-	padding-bottom: 12%;
-	position: relative;
-	box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.25);
-  z-index: $z-content-container;
-}
