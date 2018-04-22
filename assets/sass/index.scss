@@ -1,11 +1,12 @@
 // Base
 @import 'reset';
+@import 'colors';
 @import 'typography';
 
 // Global
 html, body {
 	font-size: 62.5%;
-	background: #eee;
+	background: $app-border--color;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	-webkit-text-size-adjust: 100%;
@@ -16,12 +17,12 @@ html, body {
 
 .app {
 	font-family: 'Neue Haas Grotesk',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
-	border: 20px solid #eee;
+	border: 20px solid $app-border--color;
 }
 
 .content-container {
-	color: #2f2f2f;
-	background: #fff;
+	color: $dark-gray;
+	background: $white;
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 350px;
@@ -56,7 +57,6 @@ html, body {
 }
 
 .intro a {
-	color: #ff110b;
   font-weight: 700;
 	text-decoration: none;
 	position: relative;
@@ -74,7 +74,6 @@ html, body {
     width: 101%;
     height: 115%;
     content: '';
-		background: #ff110b;
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
     -o-transition: transform 0.3s;
@@ -97,17 +96,25 @@ html, body {
   	    transform: scaleY(0.618) translateX(0);
   }
 	
+	&.rethink {
+		color: $rethink-red;
+	}
+	
+	&.rethink::before {
+		background: $rethink-red;
+	}
+	
 	&.atlantic {
-		color: #ab987a;
+		color: $atlantic-gold;
 	}
 	
 	&.atlantic::before {
-		background: #ab987a;
+		background: $atlantic-gold;
 	}
 	
 	&:hover,
 	&:focus {
-		color: #fff;
+		color: $white;
 	}
 }
 
@@ -173,7 +180,7 @@ html, body {
   bottom: 92%;
   height: 41px;
   background: rgba(0, 0, 0, 0.8);
-  color: white;
+  color: $white;
 	font-family: 'Neue Haas Grotesk';
   font-size: 1.4rem;
   line-height: 4rem;
@@ -258,11 +265,11 @@ html, body {
 			transition: color 0.15s;
 			
 			&:hover .ring {
-				stroke: #1a1a1a;
+				stroke: $charcoal;
 			}
 			
-			&:hover .mark {
-				fill: #1a1a1a;
+			&:hover .icon {
+				fill: $charcoal;
 			}
 		}
 		
@@ -277,17 +284,17 @@ html, body {
 				transition: stroke 0.125s ease-in-out;
 			}
 			
-			.mark {
+			.icon {
 				fill: #5e5e5e;
 				transition: fill 0.125s ease-in-out;
 			}
 			
-			.github-mark {
+			.github-icon {
 				transform: scale(0.16);
 				transform-origin: 13px 13px;
 			}
 			
-			.linkedin-mark {
+			.linkedin-icon {
 				transform: scale(0.036);
 				transform-origin: 13px 13px;
 			}
@@ -385,7 +392,7 @@ html, body {
 }
 
 .project-tiles__tile-content {
-	color: #fff;
+	color: $white;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -463,7 +470,7 @@ html, body {
 }
 
 .project-tiles__cta {
-	color: #fff;
+	color: $white;
 	font-size: 1.6rem;
 	line-height: 1.6rem;
 	letter-spacing: 0.05rem;
@@ -517,14 +524,14 @@ html, body {
 #behanced.project-tiles__tile {
 	.project-tiles__tile-content,
 	.project-tiles__cta {
-		color: #2f2f2f;
+		color: $project-tiles--color;
 	}
 }
 
 #pbs.project-tiles__tile {
 	.project-tiles__tile-content,
 	.project-tiles__cta {
-		color: #2f2f2f;
+		color: $project-tiles--color;
 	}
 }
 
@@ -539,7 +546,7 @@ html, body {
 	
 	.project-tiles__tile-content,
 	.project-tiles__cta {
-		color: #2f2f2f;
+		color: $project-tiles--color;
 	}
 }
 
@@ -558,7 +565,7 @@ html, body {
 #boa.project-tiles__tile {
 	.project-tiles__tile-content,
 	.project-tiles__cta {
-		color: #2f2f2f;
+		color: $project-tiles--color;
 	}
 	
 	.project-tiles__image > .b-lazy {
@@ -569,7 +576,7 @@ html, body {
 #metermate.project-tiles__tile {
 	.project-tiles__tile-content,
 	.project-tiles__cta {
-		color: #2f2f2f;
+		color: $project-tiles--color;
 	}
 }
 
@@ -589,13 +596,13 @@ html, body {
 
 @keyframes float {
 	0% {
-		transform: translatey(0px);
+		transform: translateY(0px);
 	}
 	50% {
-		transform: translatey(-7px);
+		transform: translateY(-7px);
 	}
 	100% {
-		transform: translatey(0px);
+		transform: translateY(0px);
 	}
 }
 
@@ -620,8 +627,8 @@ html, body {
   left: 20px;
   width: calc(100% - 40px);
 	height: 250px;
-  background: #1a1a1a;
-  color: #f7f7f7;
+  background: $footer--background;
+  color: $footer--color;
   padding: 50px 0;
   text-align: center;
   z-index: 0;
@@ -644,8 +651,8 @@ html, body {
 				stroke: #5e5e5e;
 			}
 			
-			&:hover .mark {
-				fill: #fff;
+			&:hover .icon {
+				fill: $white;
 			}
 		}
 		
@@ -659,17 +666,17 @@ html, body {
 				transition: stroke 0.125s ease-in-out;
 			}
 			
-			.mark {
+			.icon {
 				fill: #b3b3b3;
 				transition: fill 0.125s ease-in-out;
 			}
 			
-			.github-mark {
+			.github-icon {
 				transform: scale(0.16);
 				transform-origin: 13px 13px;
 			}
 			
-			.linkedin-mark {
+			.linkedin-icon {
 				transform: scale(0.036);
 				transform-origin: 13px 13px;
 			}
@@ -697,7 +704,7 @@ html, body {
 
 		.octocat,
 		.dots {
-			fill: #f7f7f7;
+			fill: $footer--color;
 		}
 	}
 }
