@@ -1,11 +1,11 @@
 import React from 'react';
 
 // Logos
-import ReactLogo from '../../assets/img/react-logo.svg'
-import BabelLogo from '../../assets/img/babel-logo.svg'
-import WebpackLogo from '../../assets/img/webpack-logo.svg'
-import SassLogo from '../../assets/img/sass-logo.svg'
-import GitHubLogo from '../../assets/img/github-logo.svg'
+import ReactLogo from '../../../assets/img/react-logo.svg'
+import BabelLogo from '../../../assets/img/babel-logo.svg'
+import WebpackLogo from '../../../assets/img/webpack-logo.svg'
+import SassLogo from '../../../assets/img/sass-logo.svg'
+import GitHubLogo from '../../../assets/img/github-logo.svg'
 
 export default function Footer () {
   return (

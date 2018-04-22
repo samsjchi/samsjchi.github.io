@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import SideNavLeft from './SideNavLeft';
 import Landing from './Landing';
 import ProjectTiles from './ProjectTiles/ProjectTiles';
-import Footer from './Footer';
+import Footer from './Footer/Footer';
 
 class App extends Component {
   render () {
