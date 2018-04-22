@@ -2,6 +2,7 @@
 @import 'reset';
 @import 'colors';
 @import 'typography';
+@import 'variables';
 
 // Global
 html, body {
@@ -31,7 +32,7 @@ html, body {
 	padding-bottom: 12%;
 	position: relative;
 	box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.25);
-  z-index: 1;
+  z-index: $z-content-container;
 }
 
 // Landing
@@ -70,7 +71,7 @@ html, body {
     position: absolute;
 		top: -7px;
     left: -1px;
-    z-index: -1;
+    z-index: $z-intro-link;
     width: 101%;
     height: 115%;
     content: '';
@@ -399,7 +400,7 @@ html, body {
 	bottom: 0;
 	left: 0;
 	padding: 40px;
-	z-index: 3;
+	z-index: $z-project-tiles-content;
 	opacity: 0;
 	
 	animation: fade-in 0.5s ease-in forwards;
@@ -443,7 +444,7 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 3;
+    z-index: $z-project-tiles-title;
 	}
 }
 
@@ -477,7 +478,7 @@ html, body {
 	position: absolute;
   bottom: 40px;
   left: 40px;
-	z-index: 3;
+	z-index: $z-project-tiles-cta;
 	opacity: 0;
 	
 	animation: fade-in 0.5s ease-in forwards;
@@ -488,7 +489,7 @@ html, body {
 	position: absolute;
 	width: 100%;
   height: 100%;
-	z-index: 2;
+	z-index: $z-project-tiles-image;
 }
 
 .project-tiles__gradient-overlay {
@@ -497,7 +498,7 @@ html, body {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 1;
+	z-index: $z-project-tiles-gradient;
 	opacity: 0;
 	transition: opacity 0.3s ease-in-out;
 }
@@ -607,15 +608,15 @@ html, body {
 }
 
 .rethink-video {
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 5;
 	width: 100%;
 	height: 100%;
 	justify-content: center;
 	align-items: center;
-	display: none;
+	z-index: $z-rethink-video;
 }
 
 // Footer
@@ -631,7 +632,7 @@ html, body {
   color: $footer--color;
   padding: 50px 0;
   text-align: center;
-  z-index: 0;
+  z-index: $z-footer;
 }
 
 .footer__social-buttons {
