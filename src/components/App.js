@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import SideNavLeft from './SideNavLeft/SideNavLeft';
-import Landing from './Landing';
+import Landing from './Landing/Landing';
 import ProjectTiles from './ProjectTiles/ProjectTiles';
 import Footer from './Footer/Footer';
 
