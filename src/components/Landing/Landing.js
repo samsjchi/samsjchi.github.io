@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import videoIcon from '../../assets/img/video-icon.png';
-import ampersand from '../../assets/img/ampersand.png';
+import videoIcon from '../../../assets/img/video-icon.png';
+import ampersand from '../../../assets/img/ampersand.png';
 
 class Landing extends Component {
   constructor (props) {
