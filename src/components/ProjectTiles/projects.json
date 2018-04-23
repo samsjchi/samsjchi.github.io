@@ -1,0 +1,64 @@
+{
+  "columnA": [
+    {
+      "id": "wework",
+      "client": "WeWork x The Atlantic",
+      "title": "How Can Cities Succeed in the 21st Century?",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "url": "https://www.theatlantic.com/sponsored/wework-2018/focus-on-community/1832/?preview=qAW5VhqO465CaJuLNAbkTMahzps",
+      "bgStart": "#c0efff",
+      "bgEnd": "#ffdaa8",
+      "imgSrc": "../../../assets/img/wework-cities.png"
+    },
+    {
+      "id": "netflix",
+      "client": "Netflix x The Atlantic",
+      "title": "Fauda",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "url": "about:blank",
+      "bgStart": "#22485f",
+      "bgEnd": "#030303",
+      "imgSrc": "../../../assets/img/netflix-fauda.jpg"
+    },
+    {
+      "id": "pbs",
+      "client": "To Pledge Allegiance",
+      "title": "PBS x The Atlantic",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "url": "https://www.theatlantic.com/sponsored/PBS-2017/to-pledge-allegiance/1443/",
+      "bgStart": "#f7f07b",
+      "bgEnd": "#adccce",
+      "imgSrc": "../../../assets/img/pbs-to-pledge-allegiance.jpg"
+    },
+    {
+      "id": "cnn",
+      "client": "CNN x The Atlantic",
+      "title": "So You Think You Know the Kennedys?",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "url": "https://www.theatlantic.com/sponsored/cnn-2018/so-you-think-you-know-the-kennedys/1808/",
+      "bgStart": "#000",
+      "bgEnd": "#6b0404",
+      "imgSrc": "../../../assets/img/cnn-kennedys.jpg"
+    },
+    {
+      "id": "boa",
+      "client": "Bank of America x The Atlantic",
+      "title": "Beyond the Bottom Line",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "url": "https://www.theatlantic.com/sponsored/bank-of-america-2017-nt/beyond-the-bottom-line/1368/",
+      "bgStart": "#eee",
+      "bgEnd": "#d6fbac",
+      "imgSrc": "../../../assets/img/boa-beyond-bottom-line.gif"
+    },
+    {
+      "id": "stanford",
+      "client": "Stanford Children's Health x The Atlantic",
+      "title": "Building with Care",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "url": "https://www.theatlantic.com/sponsored/lucile-packard-childrens-health-stanford-2017/building-with-care/1694/",
+      "bgStart": "#42495B",
+      "bgEnd": "#2D2114",
+      "imgSrc": "../../../assets/img/stanford-childrens-health.jpg"
+    }
+  ]
+}
