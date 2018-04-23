@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function ProjectTilesItem ({ project }) {
   return (
@@ -27,4 +28,8 @@ export default function ProjectTilesItem ({ project }) {
       </div>
     </li>
   );
+}
+
+ProjectTilesItem.propTypes = {
+  project: PropTypes.object.isRequired
 }
