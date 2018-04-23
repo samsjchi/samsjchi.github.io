@@ -1,20 +1,8 @@
 import React, { Component } from 'react';
 
+import ProjectTilesItem from './ProjectTilesItem';
+import projects from './projects.json';
 import Blazy from 'blazy';
-
-// Project Tiles
-import WeWork from './Projects/WeWork';
-import Netflix from './Projects/Netflix';
-import Behanced from './Projects/Behanced';
-import CNN from './Projects/CNN';
-import BoA from './Projects/BoA';
-import StanfordChildrensHealth from './Projects/StanfordChildrensHealth';
-import VMware from './Projects/VMware';
-import PBS from './Projects/PBS';
-import Betterment from './Projects/Betterment';
-import Volvo from './Projects/Volvo';
-import HPE from './Projects/HPE';
-import MeterMate from './Projects/MeterMate';
 
 class ProjectTiles extends Component {
   constructor (props) {
@@ -87,22 +75,30 @@ class ProjectTiles extends Component {
         <div className='project-tiles__columns'>
           <div className='project-tiles__column-a-wrapper project-tiles__column'>
             <ul className='project-tiles__column-a'>
-              <WeWork />
-              <Netflix />
-              <PBS />
-              <CNN />
-              <BoA />
-              <StanfordChildrensHealth />
+              {
+                projects.columnA.map((project) => {
+                  return (
+                    <ProjectTilesItem
+                      key={project.id}
+                      project={project}
+                    />
+                  );
+                })
+              }
             </ul>
           </div>
           
           <ul className='project-tiles__column-b project-tiles__column'>
-            <VMware />
-            <Behanced />
-            <Betterment />
-            <Volvo />
-            <HPE />
-            <MeterMate />
+            {
+              projects.columnB.map((project) => {
+                return (
+                  <ProjectTilesItem
+                    key={project.id}
+                    project={project}
+                  />
+                );
+              })
+            }
           </ul>
         </div>
       </div>
