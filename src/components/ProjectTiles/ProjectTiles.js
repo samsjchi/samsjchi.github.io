@@ -4,14 +4,6 @@ import ProjectTilesItem from './ProjectTilesItem';
 import projects from './projects.json';
 import Blazy from 'blazy';
 
-// Project Tiles
-import VMware from './Projects/VMware';
-import Behanced from './Projects/Behanced';
-import Betterment from './Projects/Betterment';
-import Volvo from './Projects/Volvo';
-import HPE from './Projects/HPE';
-import MeterMate from './Projects/MeterMate';
-
 class ProjectTiles extends Component {
   constructor (props) {
     super(props);
@@ -97,12 +89,16 @@ class ProjectTiles extends Component {
           </div>
           
           <ul className='project-tiles__column-b project-tiles__column'>
-            <VMware />
-            <Behanced />
-            <Betterment />
-            <Volvo />
-            <HPE />
-            <MeterMate />
+            {
+              projects.columnB.map((project) => {
+                return (
+                  <ProjectTilesItem
+                    key={project.id}
+                    project={project}
+                  />
+                );
+              })
+            }
           </ul>
         </div>
       </div>

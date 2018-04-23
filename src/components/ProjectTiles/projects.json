@@ -60,5 +60,68 @@
       "bgEnd": "#2D2114",
       "imgSrc": "../../../assets/img/stanford-childrens-health.jpg"
     }
+  ],
+  
+  "columnB": [
+    {
+      "id": "vmware",
+      "client": "VMware x The Atlantic",
+      "title": "The Possibility Report",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "url": "https://www.theatlantic.com/sponsored/vmware-2017/the-possibility-report/1401/",
+      "bgStart": "#061454",
+      "bgEnd": "#fc4a1a",
+      "imgSrc": "../../../assets/img/vmware-possibility-report.jpg"
+    },
+    {
+      "id": "behanced",
+      "client": "Personal Project",
+      "title": "Behanced",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "url": "about:blank",
+      "bgStart": "#dedede",
+      "bgEnd": "#fff",
+      "imgSrc": "../../../assets/img/behanced.png"
+    },
+    {
+      "id": "betterment",
+      "client": "Investing: Was It Designed to Mystify Everyday Americans?",
+      "title": "Betterment x The Atlantic",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "url": "https://www.theatlantic.com/sponsored/betterment-2017/investing-was-it-designed-to-mystify-everyday-americans/1386/",
+      "bgStart": "#1FA2FF",
+      "bgEnd": "#A6FFCB",
+      "imgSrc": "../../../assets/img/betterment-investing.gif"
+    },
+    {
+      "id": "volvo",
+      "client": "Volvo x The Atlantic",
+      "title": "Designing for the Future",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "url": "https://www.theatlantic.com/sponsored/volvo-2018/designing-for-the-future/1757/",
+      "bgStart": "#FF512F",
+      "bgEnd": "#fffb85",
+      "imgSrc": "../../../assets/img/volvo-future.png"
+    },
+    {
+      "id": "hpe",
+      "client": "Hewlett Packard Enterprise x The Atlantic",
+      "title": "Eighteen Zeros",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "url": "https://www.theatlantic.com/sponsored/hpe-2017/eighteen-zeros/1545/",
+      "bgStart": "#0B0E1D",
+      "bgEnd": "#0c7d63",
+      "imgSrc": "../../../assets/img/hpe-eighteen-zeros.jpg"
+    },
+    {
+      "id": "metermate",
+      "client": "Team Project @ Hack Reactor",
+      "title": "MeterMate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "url": "http://metermate.herokuapp.com/",
+      "bgStart": "#dedede",
+      "bgEnd": "#fff",
+      "imgSrc": "../../../assets/img/metermate.jpg"
+    }
   ]
 }
