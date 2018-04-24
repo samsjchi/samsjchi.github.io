@@ -22,8 +22,8 @@
     },
     {
       "id": "pbs",
-      "client": "To Pledge Allegiance",
-      "title": "PBS x The Atlantic",
+      "client": "PBS x The Atlantic",
+      "title": "To Pledge Allegiance",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "url": "https://www.theatlantic.com/sponsored/PBS-2017/to-pledge-allegiance/1443/",
       "bgStart": "#f7f07b",
@@ -85,8 +85,8 @@
     },
     {
       "id": "betterment",
-      "client": "Investing: Was It Designed to Mystify Everyday Americans?",
-      "title": "Betterment x The Atlantic",
+      "client": "Betterment x The Atlantic",
+      "title": "Investing: Was It Designed to Mystify Everyday Americans?",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
       "url": "https://www.theatlantic.com/sponsored/betterment-2017/investing-was-it-designed-to-mystify-everyday-americans/1386/",
       "bgStart": "#1FA2FF",
