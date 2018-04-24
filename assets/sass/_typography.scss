@@ -1,6 +1,12 @@
 // Canela
 @font-face {
   font-family: 'Canela';
+  font-weight: 300;
+  src: url('../fonts/Canela-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Canela';
   font-weight: 400;
   src: url('../fonts/Canela-Regular.otf') format('opentype');
 }
