@@ -24,7 +24,7 @@ class ProjectTiles extends Component {
     window.addEventListener('scroll', this.handleScroll);
 
     // Scroll to top on page refresh
-    window.onbeforeunload = () => { window.scrollTo(0, 0); }
+    window.onbeforeunload = () => { window.scrollTo(0, 0); };
 
     // Store initial scroll position
     this.setState(() => ({ scrollPosition: document.documentElement.scrollTop }));
@@ -32,7 +32,7 @@ class ProjectTiles extends Component {
     // Set interval to throttle scrolling
     const interval = setInterval(() => {
       if (this.state.isScrolling) {
-        this.setState(() => ({ isScrolling: false }))
+        this.setState(() => ({ isScrolling: false }));
       }
     }, 1000);
 
