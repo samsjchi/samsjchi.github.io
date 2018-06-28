@@ -8,21 +8,21 @@
 .intro {
 	font-family: 'Canela',Georgia,Times New Roman,"serif";
 	font-weight: 300;
-	font-size: 4.2rem;
-	line-height: 6.4rem;
+	font-size: 3vw;
+	line-height: 4vw;
 	position: relative;
 	min-width: 100%;
-	
+
 	.name {
 		font-weight: 700;
 	}
-  
+
   h2 {
   	transform: translate3d(0, 20px, 0);
   	opacity: 0;
   	animation: fade-up-in--intro 1.2s cubic-bezier(0, 0.13, 0, 1.02) 0.9s forwards;
   	will-change: transform, opacity;
-    
+
     &:nth-of-type(1) {
     	animation-delay: 1.8s;
     }
@@ -62,7 +62,7 @@
 	vertical-align: bottom;
 	white-space: nowrap;
 	overflow: hidden;
-	
+
 	&::before {
     position: absolute;
 		top: -7px;
@@ -79,36 +79,36 @@
     -webkit-transform: scaleY(0.618) translateX(-100%);
     -ms-transform: scaleY(0.618) translateX(-100%);
     transform: scaleY(0.618) translateX(-100%);
-		
+
 		pointer-events: none;
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 		-webkit-font-smoothing: antialiased;
 	}
-	
+
 	&:hover::before,
   &:focus::before {
   	-webkit-transform: scaleY(0.618) translateX(0);
   	-ms-transform: scaleY(0.618) translateX(0);
   	    transform: scaleY(0.618) translateX(0);
   }
-	
+
 	&.rethink {
 		color: $rethink-red;
 	}
-	
+
 	&.rethink::before {
 		background: $rethink-red;
 	}
-	
+
 	&.atlantic {
 		color: $atlantic-gold;
 	}
-	
+
 	&.atlantic::before {
 		background: $atlantic-gold;
 	}
-	
+
 	&:hover,
 	&:focus {
 		color: $white;
@@ -124,10 +124,10 @@
 	background-repeat: repeat-x;
 	transition: all 0.3s ease;
 	margin: 0 8px;
-  
+
   &:hover {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 40%, rgba(255, 255, 255, 0) 20%);
-    
+
     .tooltip__message {
   	    opacity: 1;
   	    margin-bottom: 5px;
@@ -155,7 +155,7 @@
   transition: all 0.2s ease-in-out;
 	opacity: 0;
   visibility: hidden;
-	
+
 	&::before {
 	  content: '';
 	  display: block;
@@ -178,7 +178,7 @@
 	width: 25px;
 	height: 25px;
 	margin: 0 5px 0 10px;
-	
+
 	svg {
 		transform: translateY(0px);
 		animation: float 2s ease-in-out infinite;
