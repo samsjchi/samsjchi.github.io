@@ -27,7 +27,7 @@ class Landing extends Component {
       // Check if text isn't finished yet
       if (i < (text.length)) {
         // Add next character
-        document.querySelector('span.typewriter').innerHTML = text.substring(0, i + 1) + '<span className="single-letter" aria-hidden="true"></span>';
+        document.querySelector('span.typewriter').innerHTML = `${text.substring(0, i + 1)}<span className="single-letter" aria-hidden="true"></span>`;
 
         // Wait 50ms, then move on to next character
         setTimeout(() => { typeWriter(text, i + 1, callbackFn); }, 50);
@@ -76,7 +76,7 @@ class Landing extends Component {
       <div className="landing">
         <div className="intro">
           <h2>
-            <span className="name">I'm Sam</span>
+            <span className="name">I&apos;m Sam</span>
             <div className="tooltip">
               <span className="tooltip__message">
                 Pronounced “kai,” like the Greek letter
@@ -86,16 +86,17 @@ class Landing extends Component {
             – a front end engineer based in New York City.
           </h2>
           <h2>
-            Currently at <a className="rethink" href="https://advertising.theatlantic.com/rethink/" target="_blank">Atlantic Re:think</a>
+            Currently at <a className="rethink" href="https://advertising.theatlantic.com/rethink/" target="_blank" rel="noopener noreferrer">Atlantic Re:think</a>
             <div
               className="video-icon"
-              onMouseOver={() => this.handleMouseOver()}>
+              onMouseOver={() => this.handleMouseOver()}
+            >
               <svg x="0px" y="0px" viewBox="0 0 27 24">
                 <g fillRule="evenodd" fill="none" strokeWidth="1" stroke="none">
                   <g fill="#2f2f2f">
-                    <path d="M18,15.8461538 L18,11 L0,11 L0,24 L18,24 L18,19.8461538 L27,24 L27,11 L18,15.8461538 Z"></path>
-                    <circle r="5.5" cy="5.5" cx="12.5"></circle>
-                    <circle r="3.5" cy="7.5" cx="3.5"></circle>
+                    <path d="M18,15.8461538 L18,11 L0,11 L0,24 L18,24 L18,19.8461538 L27,24 L27,11 L18,15.8461538 Z" />
+                    <circle r="5.5" cy="5.5" cx="12.5" />
+                    <circle r="3.5" cy="7.5" cx="3.5" />
                   </g>
                 </g>
               </svg>
@@ -122,7 +123,7 @@ class Landing extends Component {
             />
           </div>
 
-          <h2>I design <img alt="" className="ampersand" src={ampersand} /> build... &nbsp;<span className="typewriter">dynamic web applications.</span></h2>
+          <h2>I design <img className="ampersand" src={ampersand} alt="" /> build... &nbsp;<span className="typewriter">dynamic web applications.</span></h2>
         </div>
       </div>
     );
