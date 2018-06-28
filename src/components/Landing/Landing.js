@@ -113,8 +113,8 @@ class Landing extends Component {
             <iframe
               id="vimeoIframe"
               src="https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0"
-              width="640"
-              height="345"
+              width="960"
+              height="518"
               frameBorder="0"
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
