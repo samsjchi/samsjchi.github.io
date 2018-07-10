@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import ProjectTiles from '../ProjectTiles/ProjectTiles';
 import ampersand from '../../../assets/img/ampersand.png';
 
 class Landing extends Component {
@@ -25,13 +26,19 @@ class Landing extends Component {
     // Type one character in the typewriter
     function typeWriter(text, i, callbackFn) {
       // Check if text isn't finished yet
-      if (i < (text.length)) {
+      if (i < text.length) {
         // Add next character
-        document.querySelector('span.typewriter').innerHTML = `${text.substring(0, i + 1)}<span className="single-letter" aria-hidden="true"></span>`;
+        document.querySelector('span.typewriter').innerHTML = `${text.substring(
+          0,
+          i + 1,
+        )}<span className="single-letter" aria-hidden="true"></span>`;
 
         // Wait 50ms, then move on to next character
-        setTimeout(() => { typeWriter(text, i + 1, callbackFn); }, 50);
-      } else if (typeof callbackFn === 'function') { // If text has finished, invoke callback function
+        setTimeout(() => {
+          typeWriter(text, i + 1, callbackFn);
+        }, 50);
+      } else if (typeof callbackFn === 'function') {
+        // If text has finished, invoke callback function
         // Invoke callback after 2500ms
         setTimeout(callbackFn, 2500);
       }
@@ -41,7 +48,9 @@ class Landing extends Component {
     function startTextAnimation(i) {
       // If at the end of typeWriterList, start over
       if (typeof typeWriterList[i] === 'undefined') {
-        setTimeout(() => { startTextAnimation(0); }, 7000);
+        setTimeout(() => {
+          startTextAnimation(0);
+        }, 7000);
       }
       // If text exists, start typewriter animation
       if (i < typeWriterList[i].length) {
@@ -61,7 +70,12 @@ class Landing extends Component {
     document.querySelector('.rethink-video').style.display = 'flex';
 
     if (document.querySelector('#vimeoIframe').getAttribute('src') === 'about:blank') {
-      document.querySelector('#vimeoIframe').setAttribute('src', 'https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0');
+      document
+        .querySelector('#vimeoIframe')
+        .setAttribute(
+          'src',
+          'https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0',
+        );
     }
   }
 
@@ -73,58 +87,74 @@ class Landing extends Component {
 
   render() {
     return (
-      <div className="landing">
-        <div className="intro">
-          <h2>
-            <span className="name">I&apos;m Sam</span>
-            <div className="tooltip">
-              <span className="tooltip__message">
-                Pronounced “kai,” like the Greek letter
-              </span>
-              <span className="name">Chi</span>
-            </div>
-            – a front end engineer based in New York City.
-          </h2>
-          <h2>
-            Currently at <a className="rethink" href="https://advertising.theatlantic.com/rethink/" target="_blank" rel="noopener noreferrer">Atlantic Re:think</a>
-            <div
-              className="video-icon"
-              onMouseOver={() => this.handleMouseOver()}
-            >
-              <svg x="0px" y="0px" viewBox="0 0 27 24">
-                <g fillRule="evenodd" fill="none" strokeWidth="1" stroke="none">
-                  <g fill="#2f2f2f">
-                    <path d="M18,15.8461538 L18,11 L0,11 L0,24 L18,24 L18,19.8461538 L27,24 L27,11 L18,15.8461538 Z" />
-                    <circle r="5.5" cy="5.5" cx="12.5" />
-                    <circle r="3.5" cy="7.5" cx="3.5" />
+      <div className="content-container">
+        <div className="landing">
+          <div className="intro">
+            <h2>
+              <span className="name">I&apos;m Sam</span>
+              <div className="tooltip">
+                <span className="tooltip__message">Pronounced “kai,” like the Greek letter</span>
+                <span className="name">Chi</span>
+              </div>
+              – a front end engineer based in New York City.
+            </h2>
+            <h2>
+              Currently at{' '}
+              <a
+                className="rethink"
+                href="https://advertising.theatlantic.com/rethink/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Atlantic Re:think
+              </a>
+              <div className="video-icon" onMouseOver={() => this.handleMouseOver()}>
+                <svg x="0px" y="0px" viewBox="0 0 27 24">
+                  <g fillRule="evenodd" fill="none" strokeWidth="1" stroke="none">
+                    <g fill="#2f2f2f">
+                      <path d="M18,15.8461538 L18,11 L0,11 L0,24 L18,24 L18,19.8461538 L27,24 L27,11 L18,15.8461538 Z" />
+                      <circle r="5.5" cy="5.5" cx="12.5" />
+                      <circle r="3.5" cy="7.5" cx="3.5" />
+                    </g>
                   </g>
-                </g>
-              </svg>
+                </svg>
+              </div>
+              , the award-winning content
+            </h2>
+            <h2>
+              studio and in-house creative marketing team at{' '}
+              <a
+                className="atlantic"
+                href="https://www.theatlantic.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                The Atlantic
+              </a>.
+            </h2>
+
+            <div className="rethink-video" onMouseOut={() => this.handleMouseOut()}>
+              <iframe
+                id="vimeoIframe"
+                src="https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0"
+                width="960"
+                height="518"
+                frameBorder="0"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                allowFullScreen="true"
+              />
             </div>
-            , the award-winning content
-          </h2>
-          <h2>
-            studio and in-house creative marketing team at <a className="atlantic" href="https://www.theatlantic.com/" target="_blank" rel="noopener noreferrer">The Atlantic</a>.
-          </h2>
 
-          <div
-            className="rethink-video"
-            onMouseOut={() => this.handleMouseOut()}
-          >
-            <iframe
-              id="vimeoIframe"
-              src="https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0"
-              width="960"
-              height="518"
-              frameBorder="0"
-              webkitallowfullscreen="true"
-              mozallowfullscreen="true"
-              allowFullScreen="true"
-            />
+            <h2>
+              I design <img className="ampersand" src={ampersand} alt="" /> build... &nbsp;<span className="typewriter">
+                dynamic web applications.
+              </span>
+            </h2>
           </div>
-
-          <h2>I design <img className="ampersand" src={ampersand} alt="" /> build... &nbsp;<span className="typewriter">dynamic web applications.</span></h2>
         </div>
+
+        <ProjectTiles />
       </div>
     );
   }
