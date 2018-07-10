@@ -30,7 +30,7 @@
   height: auto;
   padding-bottom: 10%;
   transition: transform 1.5s ease-out;
-  transform: translate3d(0, -27.5%, 0);
+  transform: translate3d(0, -23%, 0);
   animation: column-slide-down cubic-bezier(0.485, 0.135, 0.15, 0.86) 2s forwards;
   animation-delay: 1s;
 }
@@ -41,14 +41,14 @@
 }
 
 .project-tiles__column-b {
-  transform: translate3d(0, -27.5%, 0);
+  transform: translate3d(0, -23%, 0);
   animation: column-slide-down cubic-bezier(0.485, 0.135, 0.15, 0.86) 2s forwards;
   animation-delay: 1.1s;
 }
 
 @keyframes column-slide-down {
   from {
-    transform: translate3d(0, -27.5%, 0);
+    transform: translate3d(0, -23%, 0);
   }
   to {
     transform: translate3d(0, 0, 0);
