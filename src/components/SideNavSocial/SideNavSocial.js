@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class SideNavLeft extends Component {
+class SideNavSocial extends Component {
   constructor(props) {
     super(props);
 
@@ -20,9 +20,9 @@ class SideNavLeft extends Component {
     const newScrollPosition = window.scrollY;
 
     if (newScrollPosition < this.state.lastScrollPosition) {
-      document.querySelector('.side-nav-left .social-buttons').classList.add('active');
+      document.querySelector('.side-nav-social .social-buttons').classList.add('active');
     } else {
-      document.querySelector('.side-nav-left .social-buttons').classList.remove('active');
+      document.querySelector('.side-nav-social .social-buttons').classList.remove('active');
     }
 
     this.setState(() => ({ lastScrollPosition: newScrollPosition }));
@@ -30,18 +30,18 @@ class SideNavLeft extends Component {
 
   handleMouseOver() {
     this.setState(() => ({ showSideNav: true }));
-    document.querySelector('.side-nav-left .social-buttons').classList.add('active');
+    document.querySelector('.side-nav-social .social-buttons').classList.add('active');
   }
 
   handleMouseOut() {
     this.setState(() => ({ showSideNav: false }));
-    document.querySelector('.side-nav-left .social-buttons').classList.remove('active');
+    document.querySelector('.side-nav-social .social-buttons').classList.remove('active');
   }
 
   render() {
     return (
       <aside
-        className="side-nav-left"
+        className="side-nav-social"
         onMouseOver={() => this.handleMouseOver()}
         onMouseOut={() => this.handleMouseOut()}
       >
@@ -134,4 +134,4 @@ class SideNavLeft extends Component {
   }
 }
 
-export default SideNavLeft;
+export default SideNavSocial;
