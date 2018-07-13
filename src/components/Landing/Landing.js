@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import ProjectTiles from '../ProjectTiles/ProjectTiles';
-import ampersand from '../../../assets/img/ampersand.png';
+import NycLogo from '../../../assets/img/nyc-logo.svg';
+import Ampersand from '../../../assets/img/ampersand.png';
 
 class Landing extends Component {
   constructor(props) {
@@ -14,13 +15,12 @@ class Landing extends Component {
 
   componentDidMount() {
     const typeWriterList = [
-      ' dynamic single-page web applications.',
       ' clean and intuitive user interfaces.',
-      ' responsive, cross-browser compatible websites.',
+      ' modern single-page web applications.',
       ' interactive data-driven content.',
-      ' useful and delightful web experiences.',
-      ' with the end user in mind.',
-      ' then experiment, iterate, learn, and repeat.',
+      ' dynamic and responsive web experiences.',
+      ' always with the end user in mind.',
+      ' experiment, iterate, learn, and repeat.',
     ];
 
     // Type one character in the typewriter
@@ -96,10 +96,14 @@ class Landing extends Component {
                 <span className="tooltip__message">Pronounced “kai,” like the Greek letter</span>
                 <span className="name">Chi</span>
               </div>
-              – a front end engineer based in New York City.
+              – a front end engineer based in{' '}
+              <span className="nyc">
+                New York City
+                <NycLogo className="nyc-logo" width={200} height={200} />
+              </span>.
             </h2>
             <h2>
-              Currently at{' '}
+              Currently at &nbsp;
               <a
                 className="rethink"
                 href="https://advertising.theatlantic.com/rethink/"
@@ -147,7 +151,7 @@ class Landing extends Component {
             </div>
 
             <h2>
-              I design <img className="ampersand" src={ampersand} alt="" /> build... &nbsp;<span className="typewriter">
+              I design <img className="ampersand" src={Ampersand} alt="" /> build... &nbsp;<span className="typewriter">
                 dynamic web applications.
               </span>
             </h2>

@@ -1,43 +1,75 @@
-// Canela
+// GT Pressura
 @font-face {
-  font-family: 'Canela';
-  font-weight: 300;
-  src: url('../fonts/Canela-Light.otf') format('opentype');
+  font-family: 'GTPressura-Light';
+  src: url('../fonts/GTPressura-Light.eot');
+  src: url('../fonts/GTPressura-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GTPressura-Light.woff') format('woff'),
+    url('../fonts/GTPressura-Light.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Canela';
-  font-weight: 400;
-  src: url('../fonts/Canela-Regular.otf') format('opentype');
+  font-family: 'GTPressura-Regular';
+  src: url('../fonts/GTPressura-Regular.eot');
+  src: url('../fonts/GTPressura-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GTPressura-Regular.woff') format('woff'),
+    url('../fonts/GTPressura-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Canela';
-  font-weight: 600;
-  src: url('../fonts/Canela-Medium.otf') format('opentype');
+  font-family: 'GTPressuraMono-Light';
+  src: url('../fonts/GTPressuraMono-Light.eot');
+  src: url('../fonts/GTPressuraMono-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GTPressuraMono-Light.woff') format('woff'),
+    url('../fonts/GTPressuraMono-Light.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Canela';
-  font-weight: 700;
-  src: url('../fonts/Canela-Bold.otf') format('opentype');
+  font-family: 'GTPressuraMono-Regular';
+  src: url('../fonts/GTPressuraMono-Regular.eot');
+  src: url('../fonts/GTPressuraMono-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GTPressuraMono-Regular.woff') format('woff'),
+    url('../fonts/GTPressuraMono-Regular.ttf') format('truetype');
 }
 
-// Neue Haas Grotesk
+// Maison Neue
 @font-face {
-  font-family: 'Neue Haas Grotesk';
-  font-weight: 400;
-  src: url('../fonts/NeueHaasGroteskRegular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Neue Haas Grotesk';
-  font-weight: 600;
-  src: url('../fonts/NeueHaasGroteskMedium.ttf') format('truetype');
+  font-family: 'MaisonNeue-Light';
+  src: url('../fonts/MaisonNeue-Light.woff2') format('woff2'),
+    url('../fonts/MaisonNeue-Light.woff') format('woff'),
+    url('../fonts/MaisonNeue-Light.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Neue Haas Grotesk';
-  font-weight: 700;
-  src: url('../fonts/NeueHaasGroteskBold.ttf') format('truetype');
+  font-family: 'MaisonNeue-Book';
+  src: url('../fonts/MaisonNeue-Book.woff2') format('woff2'),
+    url('../fonts/MaisonNeue-Book.woff') format('woff'),
+    url('../fonts/MaisonNeue-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MaisonNeue-Medium';
+  src: url('../fonts/MaisonNeue-Medium.woff2') format('woff2'),
+    url('../fonts/MaisonNeue-Medium.woff') format('woff'),
+    url('../fonts/MaisonNeue-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MaisonNeue-Demi';
+  src: url('../fonts/MaisonNeue-Demi.woff2') format('woff2'),
+    url('../fonts/MaisonNeue-Demi.woff') format('woff'),
+    url('../fonts/MaisonNeue-Demi.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MaisonNeue-Bold';
+  src: url('../fonts/MaisonNeue-Bold.woff2') format('woff2'),
+    url('../fonts/MaisonNeue-Bold.woff') format('woff'),
+    url('../fonts/MaisonNeue-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MaisonNeue-Mono';
+  src: url('../fonts/MaisonNeue-Mono.woff2') format('woff2'),
+    url('../fonts/MaisonNeue-Mono.woff') format('woff'),
+    url('../fonts/MaisonNeue-Mono.ttf') format('truetype');
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Nav from '../Nav/Nav';
-import SideNavLeft from '../SideNavLeft/SideNavLeft';
+import SideNavSocial from '../SideNavSocial/SideNavSocial';
 import Landing from '../Landing/Landing';
 import Footer from '../Footer/Footer';
 
@@ -36,7 +36,6 @@ export default function App() {
       <Nav />
 
       <div className="main-content">
-        <SideNavLeft />
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route path="/about" component={About} />
@@ -44,6 +43,7 @@ export default function App() {
           <Route path="/contact" component={Contact} />
           <Route component={PageNotFound} />
         </Switch>
+        <SideNavSocial />
       </div>
 
       <Footer />

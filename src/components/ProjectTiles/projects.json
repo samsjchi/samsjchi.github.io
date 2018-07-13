@@ -4,8 +4,10 @@
       "id": "wework",
       "client": "WeWork x The Atlantic",
       "title": "How Can Cities Succeed in the 21st Century?",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      "url": "https://www.theatlantic.com/sponsored/wework-2018/focus-on-community/1832/?preview=qAW5VhqO465CaJuLNAbkTMahzps",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim veniam, quis nostrud.",
+      "url":
+        "https://www.theatlantic.com/sponsored/wework-2018/focus-on-community/1832/?preview=qAW5VhqO465CaJuLNAbkTMahzps",
       "bgStart": "#c0efff",
       "bgEnd": "#ffdaa8",
       "imgSrc": "../../../assets/img/wework-cities.png"
@@ -14,7 +16,8 @@
       "id": "netflix",
       "client": "Netflix x The Atlantic",
       "title": "Fauda",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
       "url": "about:blank",
       "bgStart": "#22485f",
       "bgEnd": "#030303",
@@ -24,7 +27,8 @@
       "id": "pbs",
       "client": "PBS x The Atlantic",
       "title": "To Pledge Allegiance",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
       "url": "https://www.theatlantic.com/sponsored/PBS-2017/to-pledge-allegiance/1443/",
       "bgStart": "#f7f07b",
       "bgEnd": "#adccce",
@@ -34,8 +38,10 @@
       "id": "cnn",
       "client": "CNN x The Atlantic",
       "title": "So You Think You Know the Kennedys?",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      "url": "https://www.theatlantic.com/sponsored/cnn-2018/so-you-think-you-know-the-kennedys/1808/",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim veniam, quis nostrud.",
+      "url":
+        "https://www.theatlantic.com/sponsored/cnn-2018/so-you-think-you-know-the-kennedys/1808/",
       "bgStart": "#000",
       "bgEnd": "#6b0404",
       "imgSrc": "../../../assets/img/cnn-kennedys.jpg"
@@ -44,8 +50,10 @@
       "id": "boa",
       "client": "Bank of America x The Atlantic",
       "title": "Beyond the Bottom Line",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "url": "https://www.theatlantic.com/sponsored/bank-of-america-2017-nt/beyond-the-bottom-line/1368/",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+      "url":
+        "https://www.theatlantic.com/sponsored/bank-of-america-2017-nt/beyond-the-bottom-line/1368/",
       "bgStart": "#eee",
       "bgEnd": "#d6fbac",
       "imgSrc": "../../../assets/img/boa-beyond-bottom-line.gif"
@@ -54,20 +62,23 @@
       "id": "stanford",
       "client": "Stanford Children's Health x The Atlantic",
       "title": "Building with Care",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "url": "https://www.theatlantic.com/sponsored/lucile-packard-childrens-health-stanford-2017/building-with-care/1694/",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+      "url":
+        "https://www.theatlantic.com/sponsored/lucile-packard-childrens-health-stanford-2017/building-with-care/1694/",
       "bgStart": "#42495B",
       "bgEnd": "#2D2114",
       "imgSrc": "../../../assets/img/stanford-childrens-health.jpg"
     }
   ],
-  
+
   "columnB": [
     {
       "id": "vmware",
       "client": "VMware x The Atlantic",
       "title": "The Possibility Report",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
       "url": "https://www.theatlantic.com/sponsored/vmware-2017/the-possibility-report/1401/",
       "bgStart": "#061454",
       "bgEnd": "#fc4a1a",
@@ -77,7 +88,8 @@
       "id": "behanced",
       "client": "Personal Project",
       "title": "Behanced",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
       "url": "about:blank",
       "bgStart": "#dedede",
       "bgEnd": "#fff",
@@ -87,8 +99,10 @@
       "id": "betterment",
       "client": "Betterment x The Atlantic",
       "title": "Investing: Was It Designed to Mystify Everyday Americans?",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-      "url": "https://www.theatlantic.com/sponsored/betterment-2017/investing-was-it-designed-to-mystify-everyday-americans/1386/",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim veniam, quis nostrud.",
+      "url":
+        "https://www.theatlantic.com/sponsored/betterment-2017/investing-was-it-designed-to-mystify-everyday-americans/1386/",
       "bgStart": "#1FA2FF",
       "bgEnd": "#A6FFCB",
       "imgSrc": "../../../assets/img/betterment-investing.gif"
@@ -97,7 +111,8 @@
       "id": "volvo",
       "client": "Volvo x The Atlantic",
       "title": "Designing for the Future",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
       "url": "https://www.theatlantic.com/sponsored/volvo-2018/designing-for-the-future/1757/",
       "bgStart": "#FF512F",
       "bgEnd": "#fffb85",
@@ -107,7 +122,8 @@
       "id": "hpe",
       "client": "Hewlett Packard Enterprise x The Atlantic",
       "title": "Eighteen Zeros",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
       "url": "https://www.theatlantic.com/sponsored/hpe-2017/eighteen-zeros/1545/",
       "bgStart": "#0B0E1D",
       "bgEnd": "#0c7d63",
@@ -117,7 +133,8 @@
       "id": "metermate",
       "client": "Team Project @ Hack Reactor",
       "title": "MeterMate",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
       "url": "http://metermate.herokuapp.com/",
       "bgStart": "#dedede",
       "bgEnd": "#fff",

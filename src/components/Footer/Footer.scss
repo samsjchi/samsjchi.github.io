@@ -4,8 +4,8 @@
   height: 250px;
   width: 100%;
   max-width: $max-width;
+  font-family: 'GTPressuraMono-Light';
   font-size: 1.2rem;
-  letter-spacing: 0.05rem;
   background: $footer--background;
   color: $footer--color;
   margin: 0 auto;
@@ -29,7 +29,7 @@
     transition: color 0.15s;
 
     &:hover .ring {
-      stroke: #5e5e5e;
+      stroke: $white;
     }
 
     &:hover .icon {
@@ -43,7 +43,7 @@
     height: 4rem;
 
     .ring {
-      stroke: #2b2b2b;
+      stroke: #5e5e5e;
       transition: stroke 0.125s ease-in-out;
     }
 
