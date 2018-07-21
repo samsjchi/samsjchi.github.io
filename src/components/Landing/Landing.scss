@@ -145,6 +145,20 @@
     z-index: $z-rethink-video;
   }
 
+  &__video-wrapper {
+    position: relative;
+  }
+
+  &__video-close-btn {
+    position: absolute;
+    top: 3px;
+    right: -35px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &__ampersand {
     width: 25px;
   }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import ProjectTiles from '../ProjectTiles/ProjectTiles';
 import NycLogo from '../../../assets/img/nyc-logo.svg';
+import CloseBtn from '../../../assets/img/close-btn.svg';
 import Ampersand from '../../../assets/img/ampersand.png';
 
 class Landing extends Component {
@@ -11,9 +12,13 @@ class Landing extends Component {
     this.state = {
       showVideo: false,
     };
+
+    this.closeVideo = this.closeVideo.bind(this);
   }
 
   componentDidMount() {
+    document.addEventListener('keydown', this.escFunction, false);
+
     const typeWriterList = [
       ' clean and intuitive user interfaces.',
       ' modern single-page web applications.',
@@ -65,6 +70,10 @@ class Landing extends Component {
     startTextAnimation(0);
   }
 
+  componentWillUnmount() {
+    // document.removeEventListener('keydown', this.escFunction, false);
+  }
+
   handleMouseOver() {
     this.setState(() => ({ showVideo: true }));
     document.querySelector('.intro__rethink-video').style.display = 'flex';
@@ -74,12 +83,12 @@ class Landing extends Component {
         .querySelector('#vimeoIframe')
         .setAttribute(
           'src',
-          'https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0',
+          'https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0?autoplay=1',
         );
     }
   }
 
-  handleMouseOut() {
+  closeVideo() {
     this.setState(() => ({ showVideo: false }));
     document.querySelector('.intro__rethink-video').style.display = 'none';
     document.querySelector('#vimeoIframe').setAttribute('src', 'about:blank');
@@ -139,17 +148,25 @@ class Landing extends Component {
               </a>.
             </h2>
 
-            <div className="intro__rethink-video" onMouseOut={() => this.handleMouseOut()}>
-              <iframe
-                id="vimeoIframe"
-                src="https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0"
-                width="960"
-                height="518"
-                frameBorder="0"
-                webkitallowfullscreen="true"
-                mozallowfullscreen="true"
-                allowFullScreen="true"
-              />
+            <div className="intro__rethink-video">
+              <div className="intro__video-wrapper">
+                <iframe
+                  id="vimeoIframe"
+                  src="https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0?autoplay=1"
+                  width="960"
+                  height="518"
+                  frameBorder="0"
+                  webkitallowfullscreen="true"
+                  mozallowfullscreen="true"
+                  allowFullScreen="true"
+                />
+                <CloseBtn
+                  onClick={() => this.closeVideo()}
+                  className="intro__video-close-btn"
+                  width={25}
+                  height={25}
+                />
+              </div>
             </div>
 
             <h2 className="intro__tagline">
