@@ -19,7 +19,7 @@ class Landing extends Component {
       ' modern single-page web applications.',
       ' interactive data-driven content.',
       ' dynamic and responsive web experiences.',
-      ' always with the end user in mind.',
+      ' with the end user in mind.',
       ' experiment, iterate, learn, and repeat.',
     ];
 
@@ -90,20 +90,22 @@ class Landing extends Component {
       <div className="content-container">
         <div className="landing">
           <div className="intro">
-            <h2>
-              <span className="name">I&apos;m Sam</span>
-              <div className="tooltip">
-                <span className="tooltip__message">Pronounced “kai,” like the Greek letter</span>
-                <span className="name">Chi</span>
+            <h2 className="intro__tagline">
+              <span className="intro__name">I&apos;m Sam</span>
+              <div className="intro__tooltip">
+                <span className="intro__tooltip-message">
+                  Pronounced “kai,” like the Greek letter
+                </span>
+                <span className="intro__name">Chi</span>
               </div>
               – a front end engineer based in{' '}
-              <span className="nyc">
+              <span className="intro__nyc">
                 New York City
-                <NycLogo className="nyc-logo" width={200} height={200} />
+                <NycLogo className="intro__nyc-logo" width={200} height={200} />
               </span>.
             </h2>
-            <h2>
-              Currently at &nbsp;
+            <h2 className="intro__tagline">
+              Currently at&nbsp;
               <a
                 className="rethink"
                 href="https://advertising.theatlantic.com/rethink/"
@@ -112,7 +114,7 @@ class Landing extends Component {
               >
                 Atlantic Re:think
               </a>
-              <div className="video-icon" onMouseOver={() => this.handleMouseOver()}>
+              <div className="intro__video-icon" onMouseOver={() => this.handleMouseOver()}>
                 <svg x="0px" y="0px" viewBox="0 0 27 24">
                   <g fillRule="evenodd" fill="none" strokeWidth="1" stroke="none">
                     <g fill="#2f2f2f">
@@ -125,7 +127,7 @@ class Landing extends Component {
               </div>
               , the award-winning content
             </h2>
-            <h2>
+            <h2 className="intro__tagline">
               studio and in-house creative marketing team at{' '}
               <a
                 className="atlantic"
@@ -137,7 +139,7 @@ class Landing extends Component {
               </a>.
             </h2>
 
-            <div className="rethink-video" onMouseOut={() => this.handleMouseOut()}>
+            <div className="intro__rethink-video" onMouseOut={() => this.handleMouseOut()}>
               <iframe
                 id="vimeoIframe"
                 src="https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0"
@@ -150,10 +152,9 @@ class Landing extends Component {
               />
             </div>
 
-            <h2>
-              I design <img className="ampersand" src={Ampersand} alt="" /> build... &nbsp;<span className="typewriter">
-                dynamic web applications.
-              </span>
+            <h2 className="intro__tagline">
+              I design <img className="intro__ampersand" src={Ampersand} alt="" /> build...{' '}
+              <span className="typewriter">dynamic web applications.</span>
             </h2>
           </div>
         </div>

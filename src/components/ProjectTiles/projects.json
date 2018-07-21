@@ -17,7 +17,7 @@
       "client": "PBS x The Atlantic",
       "title": "To Pledge Allegiance",
       "description":
-        "An immersive web experience showcasing a selection of audio stories from citizens affected by The Vietnam War, in partnership with PBS and Ken Burns' critically acclaimed documentary film series. I built a custom audio player, a countdown timer component using JavaScript ES6, jQuery, HTML5, and Sass.",
+        "An immersive web experience showcasing a selection of audio stories from citizens affected by The Vietnam War, in partnership with PBS and Ken Burns' critically acclaimed documentary film series. I built a custom HTML5 audio player, responsive photo grid, and countdown timer component using JavaScript ES6, jQuery, HTML5, and Sass.",
       "url": "https://www.theatlantic.com/sponsored/PBS-2017/to-pledge-allegiance/1443/",
       "bgStart": "#e0d384",
       "bgEnd": "#948e7a",
