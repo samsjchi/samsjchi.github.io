@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import ProjectTiles from '../ProjectTiles/ProjectTiles';
 import NycLogo from '../../../assets/img/nyc-logo.svg';
 import CloseBtn from '../../../assets/img/close-btn.svg';
+import RethinkLogo from '../../../assets/img/rethink-poseidon.svg';
+import AtlanticLogo from '../../../assets/img/atlantic-a.svg';
 import Ampersand from '../../../assets/img/ampersand.png';
 
 class Landing extends Component {
@@ -70,10 +72,6 @@ class Landing extends Component {
     startTextAnimation(0);
   }
 
-  componentWillUnmount() {
-    // document.removeEventListener('keydown', this.escFunction, false);
-  }
-
   handleMouseOver() {
     this.setState(() => ({ showVideo: true }));
     document.querySelector('.intro__rethink-video').style.display = 'flex';
@@ -85,6 +83,30 @@ class Landing extends Component {
           'src',
           'https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0?autoplay=1',
         );
+    }
+  }
+
+  handleLinkMouseOver(e) {
+    if (e.target.className === 'rethink') {
+      document.querySelector('.intro__nyc-logo').style.opacity = '0';
+      document.querySelector('.intro__rethink-logo').style.opacity = '0.05';
+    }
+
+    if (e.target.className === 'atlantic') {
+      document.querySelector('.intro__nyc-logo').style.opacity = '0';
+      document.querySelector('.intro__atlantic-logo').style.opacity = '0.05';
+    }
+  }
+
+  handleLinkMouseOut(e) {
+    if (e.target.className === 'rethink') {
+      document.querySelector('.intro__rethink-logo').style.opacity = '0';
+      document.querySelector('.intro__nyc-logo').style.opacity = '0.05';
+    }
+
+    if (e.target.className === 'atlantic') {
+      document.querySelector('.intro__atlantic-logo').style.opacity = '0';
+      document.querySelector('.intro__nyc-logo').style.opacity = '0.05';
     }
   }
 
@@ -110,7 +132,7 @@ class Landing extends Component {
               – a front end engineer based in{' '}
               <span className="intro__nyc">
                 New York City
-                <NycLogo className="intro__nyc-logo" width={200} height={200} />
+                {/* <NycLogo className="intro__nyc-logo" width={200} height={200} /> */}
               </span>.
             </h2>
             <h2 className="intro__tagline">
@@ -120,6 +142,8 @@ class Landing extends Component {
                 href="https://advertising.theatlantic.com/rethink/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseOver={e => this.handleLinkMouseOver(e)}
+                onMouseOut={e => this.handleLinkMouseOut(e)}
               >
                 Atlantic Re:think
               </a>
@@ -143,10 +167,16 @@ class Landing extends Component {
                 href="https://www.theatlantic.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseOver={e => this.handleLinkMouseOver(e)}
+                onMouseOut={e => this.handleLinkMouseOut(e)}
               >
                 The Atlantic
               </a>.
             </h2>
+
+            <NycLogo className="intro__nyc-logo" height={550} width={550} />
+            <RethinkLogo className="intro__rethink-logo" height={550} />
+            <AtlanticLogo className="intro__atlantic-logo" height={550} />
 
             <div className="intro__rethink-video">
               <div className="intro__video-wrapper">

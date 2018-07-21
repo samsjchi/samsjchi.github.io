@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 80vh;
+  height: 75vh;
 }
 
 .intro {
@@ -161,6 +161,26 @@
 
   &__ampersand {
     width: 25px;
+  }
+
+  &__nyc-logo,
+  &__rethink-logo,
+  &__atlantic-logo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &__nyc-logo {
+    right: -40px;
+    opacity: 0.05;
+  }
+
+  &__rethink-logo {
+    right: -5px;
   }
 
   a {
