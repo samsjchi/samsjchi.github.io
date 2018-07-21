@@ -1,7 +1,6 @@
 .nav {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: flex-end;
   padding-top: 100px;
   padding-left: 10%;
   padding-right: 10%;
@@ -10,10 +9,11 @@
 }
 
 .nav ul li {
-  font-family: 'GTPressuraMono-Light';
-  font-size: 1.6rem;
+  font-family: 'MaisonNeue-Mono';
+  font-size: 1.4rem;
+  letter-spacing: -1px;
   display: inline;
-  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .nav ul li a {

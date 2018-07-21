@@ -7,11 +7,11 @@ export default function Nav() {
       <nav className="nav">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Work</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/photography">Photography</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/about">About</Link>
           </li>

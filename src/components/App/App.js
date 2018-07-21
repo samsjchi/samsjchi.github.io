@@ -36,6 +36,7 @@ export default function App() {
       <Nav />
 
       <div className="main-content">
+        <SideNavSocial />
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route path="/about" component={About} />
@@ -43,7 +44,6 @@ export default function App() {
           <Route path="/contact" component={Contact} />
           <Route component={PageNotFound} />
         </Switch>
-        <SideNavSocial />
       </div>
 
       <Footer />
