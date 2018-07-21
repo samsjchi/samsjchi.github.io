@@ -1,10 +1,13 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import ScrollToTop from 'react-scroll-up';
 
 import Nav from '../Nav/Nav';
 import SideNavSocial from '../SideNavSocial/SideNavSocial';
 import Landing from '../Landing/Landing';
 import Footer from '../Footer/Footer';
+
+import PointingUpEmoji from '../../../assets/img/pointing-up-emoji.png';
 
 const About = () => (
   <div className="temp-wrapper">
@@ -31,6 +34,12 @@ const PageNotFound = () => (
 );
 
 export default function App() {
+  const scrollToTopStyles = {
+    position: 'relative',
+    bottom: 0,
+    right: 0,
+  };
+
   return (
     <div className="app">
       <Nav />
@@ -44,6 +53,12 @@ export default function App() {
           <Route path="/contact" component={Contact} />
           <Route component={PageNotFound} />
         </Switch>
+      </div>
+
+      <div className="back-to-top-btn">
+        <ScrollToTop showUnder={1000} duration={500} style={scrollToTopStyles}>
+          <img src={PointingUpEmoji} alt="Back to Top" />
+        </ScrollToTop>
       </div>
 
       <Footer />
