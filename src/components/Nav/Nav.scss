@@ -1,26 +1,42 @@
 .nav {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 100px;
-  padding-left: 10%;
-  padding-right: 10%;
-  font-size: 16px;
   background: $white;
-}
+  position: relative;
+  padding-bottom: 25px;
 
-.nav ul li {
-  font-family: 'MaisonNeue-Mono';
-  font-size: 1.4rem;
-  letter-spacing: -1px;
-  display: inline;
-  margin-left: 40px;
-}
+  &__logo {
+    position: absolute;
+    left: calc(10% - 4px);
+    top: 88px;
 
-.nav ul li a {
-  color: $dark-gray;
-  text-decoration: none;
-}
+    img {
+      width: 50px;
+    }
+  }
 
-.nav ul li a:hover {
-  text-decoration: underline;
+  &__links {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 16px;
+    background: $white;
+  }
+
+  &__links ul li {
+    font-family: 'MaisonNeue-Mono';
+    font-size: 1.4rem;
+    letter-spacing: -1px;
+    display: inline;
+    margin-left: 40px;
+  }
+
+  &__links ul li a {
+    color: $dark-gray;
+    text-decoration: none;
+  }
+
+  &__links ul li a:hover {
+    text-decoration: underline;
+  }
 }

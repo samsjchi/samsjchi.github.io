@@ -45,7 +45,7 @@
   }
 
   &__name {
-    font-weight: 700;
+    font-weight: bold;
   }
 
   &__tooltip {
@@ -150,80 +150,34 @@
   }
 
   a {
-    font-weight: 700;
-    text-decoration: none;
-    position: relative;
     display: inline-block;
-    outline: none;
-    vertical-align: bottom;
-    white-space: nowrap;
-    overflow: hidden;
-
-    &::before {
-      position: absolute;
-      top: -5px;
-      left: -1px;
-      z-index: $z-intro-link;
-      width: 101%;
-      height: 125%;
-      content: '';
-      -webkit-transition: -webkit-transform 0.3s;
-      transition: -webkit-transform 0.3s;
-      -o-transition: transform 0.3s;
-      transition: transform 0.3s;
-      transition: transform 0.3s, -webkit-transform 0.3s;
-      -webkit-transform: scaleY(0.618) translateX(-100%);
-      -ms-transform: scaleY(0.618) translateX(-100%);
-      transform: scaleY(0.618) translateX(-100%);
-
-      pointer-events: none;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 0;
-      left: 0;
-      bottom: 3px;
-      border-bottom: 2px solid;
-    }
+    color: $dark-gray;
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &.rethink {
       color: $rethink-red;
+      -webkit-box-shadow: inset 0 -3px 0 $rethink-red;
+      box-shadow: inset 0 -3px 0 $rethink-red;
 
-      &::before {
-        background: $rethink-red;
-      }
-
-      &::after {
-        border-bottom-color: $rethink-red;
+      &:hover {
+        color: $white;
+        -webkit-box-shadow: inset 0 -40px 0 $rethink-red;
+        box-shadow: inset 0 -40px 0 $rethink-red;
       }
     }
 
     &.atlantic {
       color: $atlantic-gold;
+      -webkit-box-shadow: inset 0 -3px 0 $atlantic-gold;
+      box-shadow: inset 0 -3px 0 $atlantic-gold;
 
-      &::before {
-        background: $atlantic-gold;
-      }
-
-      &::after {
-        border-bottom-color: $atlantic-gold;
-      }
-    }
-
-    &:hover,
-    &:focus {
-      color: $white;
-
-      &::before {
-        -webkit-transform: scaleY(0.618) translateX(0);
-        -ms-transform: scaleY(0.618) translateX(0);
-        transform: scaleY(0.618) translateX(0);
+      &:hover {
+        color: $white;
+        -webkit-box-shadow: inset 0 -40px 0 $atlantic-gold;
+        box-shadow: inset 0 -40px 0 $atlantic-gold;
       }
     }
   }

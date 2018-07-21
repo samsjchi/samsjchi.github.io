@@ -67,7 +67,7 @@ class Landing extends Component {
 
   handleMouseOver() {
     this.setState(() => ({ showVideo: true }));
-    document.querySelector('.rethink-video').style.display = 'flex';
+    document.querySelector('.intro__rethink-video').style.display = 'flex';
 
     if (document.querySelector('#vimeoIframe').getAttribute('src') === 'about:blank') {
       document
@@ -81,7 +81,7 @@ class Landing extends Component {
 
   handleMouseOut() {
     this.setState(() => ({ showVideo: false }));
-    document.querySelector('.rethink-video').style.display = 'none';
+    document.querySelector('.intro__rethink-video').style.display = 'none';
     document.querySelector('#vimeoIframe').setAttribute('src', 'about:blank');
   }
 

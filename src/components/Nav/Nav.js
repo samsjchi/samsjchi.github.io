@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Logo from '../../../assets/img/sc-logo.jpg';
+
 export default function Nav() {
   return (
-    <div className="nav-wrapper">
-      <nav className="nav">
+    <div className="nav">
+      <div className="nav__logo">
+        <img src={Logo} alt="" />
+      </div>
+      <nav className="nav__links">
         <ul>
           <li>
             <Link to="/">Work</Link>
