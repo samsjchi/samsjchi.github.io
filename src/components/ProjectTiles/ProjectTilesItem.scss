@@ -65,10 +65,10 @@
 
 .project-tiles__title {
   font-family: 'MaisonNeue-Demi';
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: 2.6rem;
+  line-height: 3.6rem;
   letter-spacing: -1px;
-  max-width: 85%;
+  max-width: 75%;
 
   a {
     color: inherit;
@@ -89,9 +89,9 @@
 
 .project-tiles__description {
   font-family: 'MaisonNeue-Book';
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 2.4rem;
-  max-width: 75%;
+  max-width: 85%;
   margin-top: 50px;
   opacity: 0;
   transform: translate3d(-5px, 0, 0);
@@ -112,6 +112,11 @@
 
   animation: fade-in 0.5s ease-in forwards;
   animation-delay: 2s;
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
 }
 
 .project-tiles__image {
@@ -132,36 +137,40 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-#behanced.project-tiles__tile {
+// Column A
+#netflix.project-tiles__tile {
+  border-top-left-radius: 15px;
+
   .project-tiles__tile-content,
-  .project-tiles__cta {
+  .project-tiles__cta a {
+    color: $project-tiles--color;
+  }
+}
+
+#wework.project-tiles__tile {
+  .project-tiles__tile-content,
+  .project-tiles__cta a {
     color: $project-tiles--color;
   }
 }
 
 #pbs.project-tiles__tile {
   .project-tiles__tile-content,
-  .project-tiles__cta {
+  .project-tiles__cta a {
     color: $project-tiles--color;
   }
 }
 
-#metermate.project-tiles__tile {
+#behanced.project-tiles__tile {
   .project-tiles__tile-content,
-  .project-tiles__cta {
+  .project-tiles__cta a {
     color: $project-tiles--color;
-  }
-}
-
-#betterment.project-tiles__tile {
-  .project-tiles__title {
-    max-width: 100%;
   }
 }
 
 #boa.project-tiles__tile {
   .project-tiles__tile-content,
-  .project-tiles__cta {
+  .project-tiles__cta a {
     color: $project-tiles--color;
   }
 
@@ -170,27 +179,31 @@
   }
 }
 
-#wework.project-tiles__tile {
-  border-top-left-radius: 15px;
-
-  .project-tiles__tile-content,
-  .project-tiles__cta {
-    color: $project-tiles--color;
-  }
-}
-
-#vmware.project-tiles__tile {
-  border-top-right-radius: 15px;
-}
-
 #stanford.project-tiles__tile {
   border-bottom-left-radius: 15px;
 }
 
-#metermate.project-tiles__tile {
-  border-bottom-right-radius: 15px;
+// Column B
+#vmware.project-tiles__tile {
+  border-top-right-radius: 15px;
 }
 
+#betterment.project-tiles__tile {
+  .project-tiles__title {
+    max-width: 100%;
+  }
+}
+
+#metermate.project-tiles__tile {
+  border-bottom-right-radius: 15px;
+
+  .project-tiles__tile-content,
+  .project-tiles__cta a {
+    color: $project-tiles--color;
+  }
+}
+
+// bLazy.js
 .b-lazy {
   position: absolute;
   top: 0;

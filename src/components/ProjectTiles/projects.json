@@ -1,38 +1,38 @@
 {
   "columnA": [
     {
-      "id": "wework",
-      "client": "WeWork x The Atlantic",
-      "title": "How Can Cities Succeed in the 21st Century?",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim veniam, quis nostrud.",
-      "url":
-        "https://www.theatlantic.com/sponsored/wework-2018/focus-on-community/1832/?preview=qAW5VhqO465CaJuLNAbkTMahzps",
-      "bgStart": "#c0efff",
-      "bgEnd": "#ffdaa8",
-      "imgSrc": "../../../assets/img/wework-cities.png"
-    },
-    {
       "id": "netflix",
       "client": "Netflix x The Atlantic",
       "title": "Fauda",
       "description":
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-      "url": "about:blank",
-      "bgStart": "#22485f",
-      "bgEnd": "#030303",
+        "A historical journey through the Israeli-Palestinian conflict, in collaboration with Netflix and their Israeli political thriller TV series, Fauda. In this React web application, I used inline SVGs and the Scrollama.js library to build an interactive map component and a performant scrollytelling experience.",
+      "url": "https://www.theatlantic.com/sponsored/netflix-fauda-2018/a-land-divided/1853/",
+      "bgStart": "#fbfbfd",
+      "bgEnd": "#614126",
       "imgSrc": "../../../assets/img/netflix-fauda.jpg"
     },
+
     {
       "id": "pbs",
       "client": "PBS x The Atlantic",
       "title": "To Pledge Allegiance",
       "description":
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "An immersive web experience showcasing a selection of audio stories from citizens affected by The Vietnam War, in partnership with PBS and Ken Burns' critically acclaimed documentary film series. I built a custom audio player, a countdown timer component using JavaScript ES6, jQuery, HTML5, and Sass.",
       "url": "https://www.theatlantic.com/sponsored/PBS-2017/to-pledge-allegiance/1443/",
-      "bgStart": "#f7f07b",
-      "bgEnd": "#adccce",
+      "bgStart": "#e0d384",
+      "bgEnd": "#948e7a",
       "imgSrc": "../../../assets/img/pbs-to-pledge-allegiance.jpg"
+    },
+    {
+      "id": "hpe",
+      "client": "Hewlett Packard Enterprise x The Atlantic",
+      "title": "Eighteen Zeros",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+      "url": "https://www.theatlantic.com/sponsored/hpe-2017/eighteen-zeros/1545/",
+      "bgStart": "#0B0E1D",
+      "bgEnd": "#0c7d63",
+      "imgSrc": "../../../assets/img/hpe-eighteen-zeros.jpg"
     },
     {
       "id": "cnn",
@@ -78,19 +78,41 @@
       "client": "VMware x The Atlantic",
       "title": "The Possibility Report",
       "description":
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "An expansive multimedia hub of articles, infographics, and videos exploring how new technologies will reframe our understanding of the world. Built semantic, modular, and reusable components using JavaScript ES6, jQuery, and HTML/CSS using the BEM methodology.",
       "url": "https://www.theatlantic.com/sponsored/vmware-2017/the-possibility-report/1401/",
       "bgStart": "#061454",
       "bgEnd": "#fc4a1a",
       "imgSrc": "../../../assets/img/vmware-possibility-report.jpg"
     },
     {
+      "id": "wework",
+      "client": "WeWork x The Atlantic",
+      "title": "How Can Cities Succeed in the 21st Century?",
+      "description":
+        "How WeWork is revolutionizing the future of work and impacting cultural change in the workplace and in cities. I built two interactives–a data visualization and infographic–using JavaScript ES6, inline SVGs, and Slick.js.",
+      "url": "https://www.theatlantic.com/sponsored/wework-2018/focus-on-community/1832/",
+      "bgStart": "#c0efff",
+      "bgEnd": "#fae1dc",
+      "imgSrc": "../../../assets/img/wework-cities.png"
+    },
+    {
+      "id": "volvo",
+      "client": "Volvo x The Atlantic",
+      "title": "Designing for the Future",
+      "description":
+        "An interactive custom content piece exploring Volvo's human-centric design philosophy, presented by the all-new XC60, the “model taking the brand into the future.”",
+      "url": "https://www.theatlantic.com/sponsored/volvo-2018/designing-for-the-future/1757/",
+      "bgStart": "#FE0004",
+      "bgEnd": "#fff",
+      "imgSrc": "../../../assets/img/volvo-future.png"
+    },
+    {
       "id": "behanced",
       "client": "Personal Project",
       "title": "Behanced",
       "description":
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-      "url": "about:blank",
+        "A re-designed Behance clone built with React, axios, and the Adobe Behance API.",
+      "url": "https://github.com/samsjchi/behanced",
       "bgStart": "#dedede",
       "bgEnd": "#fff",
       "imgSrc": "../../../assets/img/behanced.png"
@@ -106,28 +128,6 @@
       "bgStart": "#1FA2FF",
       "bgEnd": "#A6FFCB",
       "imgSrc": "../../../assets/img/betterment-investing.gif"
-    },
-    {
-      "id": "volvo",
-      "client": "Volvo x The Atlantic",
-      "title": "Designing for the Future",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-      "url": "https://www.theatlantic.com/sponsored/volvo-2018/designing-for-the-future/1757/",
-      "bgStart": "#FF512F",
-      "bgEnd": "#fffb85",
-      "imgSrc": "../../../assets/img/volvo-future.png"
-    },
-    {
-      "id": "hpe",
-      "client": "Hewlett Packard Enterprise x The Atlantic",
-      "title": "Eighteen Zeros",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-      "url": "https://www.theatlantic.com/sponsored/hpe-2017/eighteen-zeros/1545/",
-      "bgStart": "#0B0E1D",
-      "bgEnd": "#0c7d63",
-      "imgSrc": "../../../assets/img/hpe-eighteen-zeros.jpg"
     },
     {
       "id": "metermate",
