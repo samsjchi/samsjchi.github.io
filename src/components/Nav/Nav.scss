@@ -23,19 +23,44 @@
   }
 
   &__links ul li {
-    font-family: 'MaisonNeue-Mono';
-    font-size: 1.4rem;
-    letter-spacing: -1px;
+    font-family: 'MaisonNeue-Book';
+    font-size: 1.6rem;
     display: inline;
     margin-left: 40px;
   }
 
   &__links ul li a {
+    position: relative;
     color: $dark-gray;
     text-decoration: none;
-  }
 
-  &__links ul li a:hover {
-    text-decoration: underline;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -3px;
+      left: 0;
+      background-color: #000;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.2s ease-in-out 0s;
+      transition: all 0.2s ease-in-out 0s;
+    }
+
+    &:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+
+    &.active {
+      &:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
   }
 }

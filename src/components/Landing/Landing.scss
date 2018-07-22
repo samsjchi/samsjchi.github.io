@@ -167,7 +167,6 @@
   &__rethink-logo,
   &__atlantic-logo {
     position: fixed;
-    right: 0;
     bottom: 0;
     opacity: 0;
     z-index: -1;
@@ -177,10 +176,26 @@
   &__nyc-logo {
     right: -40px;
     opacity: 0.05;
+
+    @media screen and (min-width: 1441px) {
+      right: calc(3% - 40px);
+    }
   }
 
   &__rethink-logo {
     right: -5px;
+
+    @media screen and (min-width: 1441px) {
+      right: 3%;
+    }
+  }
+
+  &__atlantic-logo {
+    right: 0;
+
+    @media screen and (min-width: 1441px) {
+      right: 3%;
+    }
   }
 
   a {
