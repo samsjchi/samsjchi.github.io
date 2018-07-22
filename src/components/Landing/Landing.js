@@ -13,14 +13,18 @@ class Landing extends Component {
 
     this.state = {
       showVideo: false,
+      showNycLogo: true,
     };
 
-    this.closeVideo = this.closeVideo.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount() {
-    document.addEventListener('keydown', this.escFunction, false);
+    window.addEventListener('scroll', this.handleScroll);
 
+    /**
+     * Typewriter animation
+     */
     const typeWriterList = [
       ' clean and intuitive user interfaces.',
       ' modern single-page web applications.',
@@ -73,7 +77,27 @@ class Landing extends Component {
     startTextAnimation(0);
   }
 
-  handleMouseOver() {
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  /**
+   * Hide NYC logo when user reaches project tiles section
+   */
+  handleScroll() {
+    if (window.pageYOffset < 350) {
+      if (!this.state.showNycLogo) {
+        this.setState({ showNycLogo: true });
+      }
+    } else if (this.state.showNycLogo) {
+      this.setState({ showNycLogo: false });
+    }
+  }
+
+  /**
+   * Show Vimeo iframe when user hovers over video icon
+   */
+  openVideo() {
     this.setState(() => ({ showVideo: true }));
     document.querySelector('.intro__rethink-video').style.display = 'flex';
 
@@ -87,6 +111,18 @@ class Landing extends Component {
     }
   }
 
+  /**
+   * Close Vimeo iframe when user clicks on close button
+   */
+  closeVideo() {
+    this.setState(() => ({ showVideo: false }));
+    document.querySelector('.intro__rethink-video').style.display = 'none';
+    document.querySelector('#vimeoIframe').setAttribute('src', 'about:blank');
+  }
+
+  /**
+   * Show Re:think Poseidon/Atlantic "A" graphic on link mouse over
+   */
   handleLinkMouseOver(e) {
     if (e.target.className === 'rethink') {
       document.querySelector('.intro__nyc-logo').style.opacity = '0';
@@ -99,6 +135,9 @@ class Landing extends Component {
     }
   }
 
+  /**
+   * Hide Re:think Poseidon/Atlantic "A" graphic on link mouse out
+   */
   handleLinkMouseOut(e) {
     if (e.target.className === 'rethink') {
       document.querySelector('.intro__rethink-logo').style.opacity = '0';
@@ -109,12 +148,6 @@ class Landing extends Component {
       document.querySelector('.intro__atlantic-logo').style.opacity = '0';
       document.querySelector('.intro__nyc-logo').style.opacity = '0.05';
     }
-  }
-
-  closeVideo() {
-    this.setState(() => ({ showVideo: false }));
-    document.querySelector('.intro__rethink-video').style.display = 'none';
-    document.querySelector('#vimeoIframe').setAttribute('src', 'about:blank');
   }
 
   render() {
@@ -130,11 +163,7 @@ class Landing extends Component {
                 </span>
                 <span className="intro__name">Chi</span>
               </div>
-              – a front end engineer based in{' '}
-              <span className="intro__nyc">
-                New York City
-                {/* <NycLogo className="intro__nyc-logo" width={200} height={200} /> */}
-              </span>.
+              – a front end engineer based in <span className="intro__nyc">New York City</span>.
             </h2>
             <h2 className="intro__tagline">
               Currently at&nbsp;
@@ -148,7 +177,7 @@ class Landing extends Component {
               >
                 Atlantic Re:think
               </a>
-              <div className="intro__video-icon" onMouseOver={() => this.handleMouseOver()}>
+              <div className="intro__video-icon" onMouseOver={() => this.openVideo()}>
                 <svg x="0px" y="0px" viewBox="0 0 27 24">
                   <g fillRule="evenodd" fill="none" strokeWidth="1" stroke="none">
                     <g fill="#2f2f2f">
@@ -175,7 +204,12 @@ class Landing extends Component {
               </a>.
             </h2>
 
-            <NycLogo className="intro__nyc-logo" height={550} width={550} />
+            <NycLogo
+              className="intro__nyc-logo"
+              height={550}
+              width={550}
+              style={{ opacity: this.state.showNycLogo ? 0.05 : 0 }}
+            />
             <RethinkLogo className="intro__rethink-logo" height={550} />
             <AtlanticLogo className="intro__atlantic-logo" height={550} />
 

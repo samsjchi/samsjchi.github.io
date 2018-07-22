@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import Logo from '../../../assets/img/sc-logo.jpg';
 
@@ -7,7 +8,7 @@ class SideNavSocial extends Component {
     super(props);
 
     this.state = {
-      showSideNav: false,
+      show: false,
       lastScrollPosition: 0,
     };
 
@@ -18,25 +19,51 @@ class SideNavSocial extends Component {
     window.addEventListener('scroll', this.handleScroll);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
   handleScroll() {
+    /**
+     * Only show side nav when user is viewing project tiles section
+     */
+    if (window.pageYOffset > 750 && window.pageYOffset < 3000) {
+      if (!this.state.show) {
+        this.setState({ show: true });
+      }
+    } else if (this.state.show) {
+      this.setState({ show: false });
+    }
+
+    /**
+     * Show side nav on scroll up; hide on scroll down
+     */
     const newScrollPosition = window.scrollY;
 
     if (newScrollPosition < this.state.lastScrollPosition) {
+      document.querySelector('.side-nav-social__logo').style.opacity = '1';
       document.querySelector('.side-nav-social__buttons').classList.add('active');
     } else {
+      document.querySelector('.side-nav-social__logo').style.opacity = '0';
       document.querySelector('.side-nav-social__buttons').classList.remove('active');
     }
 
     this.setState(() => ({ lastScrollPosition: newScrollPosition }));
   }
 
+  /**
+   * Show side nav on mouse over
+   */
   handleMouseOver() {
-    this.setState(() => ({ showSideNav: true }));
+    document.querySelector('.side-nav-social__logo').style.opacity = '1';
     document.querySelector('.side-nav-social__buttons').classList.add('active');
   }
 
+  /**
+   * Hide side nav on mouse out
+   */
   handleMouseOut() {
-    this.setState(() => ({ showSideNav: false }));
+    document.querySelector('.side-nav-social__logo').style.opacity = '0';
     document.querySelector('.side-nav-social__buttons').classList.remove('active');
   }
 
@@ -44,11 +71,14 @@ class SideNavSocial extends Component {
     return (
       <aside
         className="side-nav-social"
+        style={{ opacity: this.state.show ? 1 : 0 }}
         onMouseOver={() => this.handleMouseOver()}
         onMouseOut={() => this.handleMouseOut()}
       >
         <div className="side-nav-social__logo">
-          <img src={Logo} alt="" />
+          <Link to="/">
+            <img src={Logo} alt="" />
+          </Link>
         </div>
 
         <ul className="side-nav-social__buttons">
