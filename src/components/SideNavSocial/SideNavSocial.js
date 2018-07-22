@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Logo from '../../../assets/img/sc-logo.jpg';
+
 class SideNavSocial extends Component {
   constructor(props) {
     super(props);
@@ -20,9 +22,9 @@ class SideNavSocial extends Component {
     const newScrollPosition = window.scrollY;
 
     if (newScrollPosition < this.state.lastScrollPosition) {
-      document.querySelector('.side-nav-social .social-buttons').classList.add('active');
+      document.querySelector('.side-nav-social__buttons').classList.add('active');
     } else {
-      document.querySelector('.side-nav-social .social-buttons').classList.remove('active');
+      document.querySelector('.side-nav-social__buttons').classList.remove('active');
     }
 
     this.setState(() => ({ lastScrollPosition: newScrollPosition }));
@@ -30,12 +32,12 @@ class SideNavSocial extends Component {
 
   handleMouseOver() {
     this.setState(() => ({ showSideNav: true }));
-    document.querySelector('.side-nav-social .social-buttons').classList.add('active');
+    document.querySelector('.side-nav-social__buttons').classList.add('active');
   }
 
   handleMouseOut() {
     this.setState(() => ({ showSideNav: false }));
-    document.querySelector('.side-nav-social .social-buttons').classList.remove('active');
+    document.querySelector('.side-nav-social__buttons').classList.remove('active');
   }
 
   render() {
@@ -45,7 +47,11 @@ class SideNavSocial extends Component {
         onMouseOver={() => this.handleMouseOver()}
         onMouseOut={() => this.handleMouseOut()}
       >
-        <ul className="social-buttons">
+        <div className="side-nav-social__logo">
+          <img src={Logo} alt="" />
+        </div>
+
+        <ul className="side-nav-social__buttons">
           <li>
             <a href="https://github.com/samsjchi" target="_blank" rel="noopener noreferrer">
               <svg x="0px" y="0px" viewBox="0 0 41 41">

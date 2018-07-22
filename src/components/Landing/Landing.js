@@ -24,9 +24,10 @@ class Landing extends Component {
     const typeWriterList = [
       ' clean and intuitive user interfaces.',
       ' modern single-page web applications.',
-      ' interactive data-driven content.',
-      ' dynamic and responsive web experiences.',
-      ' with the end user in mind.',
+      ' responsive, interactive data-driven content.',
+      ' dynamic and delightful web experiences.',
+      ' cross-browser/cross-platform compatible websites.',
+      ' with the end user always in mind.',
       ' experiment, iterate, learn, and repeat.',
     ];
 
