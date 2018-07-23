@@ -18,7 +18,7 @@ export default function Contact() {
           </a>
 
           <p className="contact__body">
-            Got an awesome idea? Interested in working together or collaborating on a project (web
+            Got a cool idea? Interested in working together or collaborating on a project (web
             development, design, photography, or otherwise)? Have a question about my work?
             Don&apos;t be shy and say hello! 🤙
           </p>

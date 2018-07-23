@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Logo from '../../../assets/img/sc-logo.jpg';
 
-class SideNavSocial extends Component {
+class SideSocial extends Component {
   constructor(props) {
     super(props);
 
@@ -170,4 +170,4 @@ class SideNavSocial extends Component {
   }
 }
 
-export default SideNavSocial;
+export default SideSocial;

@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import ScrollToTop from 'react-scroll-up';
 
 import Nav from '../Nav/Nav';
-import SideNavSocial from '../SideNavSocial/SideNavSocial';
+import SideSocial from '../SideSocial/SideSocial';
 import Landing from '../Landing/Landing';
 import Footer from '../Footer/Footer';
 import Contact from '../Contact/Contact';
@@ -40,7 +40,7 @@ export default function App() {
       <Nav />
 
       <div className="main-content">
-        <SideNavSocial />
+        <SideSocial />
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route path="/photography" component={Photography} />
