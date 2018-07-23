@@ -1,4 +1,4 @@
-.side-nav-social {
+.side-social {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -31,12 +31,12 @@
 
     &.active {
       li {
-        animation: fade-in-up 0.3s cubic-bezier(0, 0.13, 0, 1.02) 0.3s forwards;
+        animation: fade-in-down 0.3s cubic-bezier(0, 0.13, 0, 1.02) 0.3s forwards;
       }
     }
 
     li {
-      transform: translate3d(0, 10px, 0);
+      transform: translate3d(0, -10px, 0);
       opacity: 0;
       will-change: transform;
       will-change: opacity;
@@ -99,7 +99,7 @@
   }
 }
 
-@keyframes fade-in-up {
+@keyframes fade-in-down {
   from {
     transform: translate3d(0, -10px, 0);
     opacity: 0;

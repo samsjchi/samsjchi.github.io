@@ -4,6 +4,7 @@ import ScrollToTop from 'react-scroll-up';
 
 import Nav from '../Nav/Nav';
 import SideSocial from '../SideSocial/SideSocial';
+import SideNav from '../SideNav/SideNav';
 import Landing from '../Landing/Landing';
 import Footer from '../Footer/Footer';
 import Contact from '../Contact/Contact';
@@ -48,6 +49,7 @@ export default function App() {
           <Route path="/contact" component={Contact} />
           <Route component={PageNotFound} />
         </Switch>
+        <SideNav />
       </div>
 
       <div className="back-to-top-btn is-unselectable">

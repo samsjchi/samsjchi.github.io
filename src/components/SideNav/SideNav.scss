@@ -1,0 +1,77 @@
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+  .nav {
+    display: flex;
+    align-items: center;
+    transform: rotate(90deg);
+    padding-bottom: 0;
+    height: 50px;
+    top: 220px;
+
+    &__logo {
+      display: none;
+    }
+
+    &__links {
+      padding: 0;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      li {
+        margin-left: unset;
+        margin-right: 40px;
+        transform: translate3d(-20px, 0, 0);
+        opacity: 0;
+        will-change: transform;
+        will-change: opacity;
+      }
+    }
+
+    &.active {
+      li {
+        animation: fade-in-down 0.3s cubic-bezier(0, 0.13, 0, 1.02) 0.3s forwards;
+
+        &:nth-of-type(1) {
+          animation-delay: 0s;
+        }
+
+        &:nth-of-type(2) {
+          animation-delay: 0.1s;
+        }
+
+        &:nth-of-type(3) {
+          animation-delay: 0.2s;
+        }
+
+        &:nth-of-type(4) {
+          animation-delay: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    transform: translate3d(-20px, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

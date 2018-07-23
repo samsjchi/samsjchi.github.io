@@ -29,10 +29,10 @@ class SideSocial extends Component {
      */
     if (window.pageYOffset > 750 && window.pageYOffset < 3000) {
       if (!this.state.show) {
-        this.setState({ show: true });
+        this.setState(() => ({ show: true }));
       }
     } else if (this.state.show) {
-      this.setState({ show: false });
+      this.setState(() => ({ show: false }));
     }
 
     /**
@@ -41,11 +41,11 @@ class SideSocial extends Component {
     const newScrollPosition = window.scrollY;
 
     if (newScrollPosition < this.state.lastScrollPosition) {
-      document.querySelector('.side-nav-social__logo').style.opacity = '1';
-      document.querySelector('.side-nav-social__buttons').classList.add('active');
+      document.querySelector('.side-social__logo').style.opacity = '1';
+      document.querySelector('.side-social__buttons').classList.add('active');
     } else {
-      document.querySelector('.side-nav-social__logo').style.opacity = '0';
-      document.querySelector('.side-nav-social__buttons').classList.remove('active');
+      document.querySelector('.side-social__logo').style.opacity = '0';
+      document.querySelector('.side-social__buttons').classList.remove('active');
     }
 
     this.setState(() => ({ lastScrollPosition: newScrollPosition }));
@@ -55,33 +55,33 @@ class SideSocial extends Component {
    * Show side nav on mouse over
    */
   handleMouseOver() {
-    document.querySelector('.side-nav-social__logo').style.opacity = '1';
-    document.querySelector('.side-nav-social__buttons').classList.add('active');
+    document.querySelector('.side-social__logo').style.opacity = '1';
+    document.querySelector('.side-social__buttons').classList.add('active');
   }
 
   /**
    * Hide side nav on mouse out
    */
   handleMouseOut() {
-    document.querySelector('.side-nav-social__logo').style.opacity = '0';
-    document.querySelector('.side-nav-social__buttons').classList.remove('active');
+    document.querySelector('.side-social__logo').style.opacity = '0';
+    document.querySelector('.side-social__buttons').classList.remove('active');
   }
 
   render() {
     return (
       <aside
-        className="side-nav-social"
+        className="side-social"
         style={{ opacity: this.state.show ? 1 : 0 }}
         onMouseOver={() => this.handleMouseOver()}
         onMouseOut={() => this.handleMouseOut()}
       >
-        <div className="side-nav-social__logo is-unselectable">
+        <div className="side-social__logo is-unselectable">
           <Link to="/">
             <img src={Logo} alt="" />
           </Link>
         </div>
 
-        <ul className="side-nav-social__buttons">
+        <ul className="side-social__buttons">
           <li>
             <a href="https://github.com/samsjchi" target="_blank" rel="noopener noreferrer">
               <svg x="0px" y="0px" viewBox="0 0 41 41">
