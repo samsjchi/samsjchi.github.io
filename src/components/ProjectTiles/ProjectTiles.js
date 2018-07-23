@@ -24,7 +24,9 @@ class ProjectTiles extends Component {
     window.addEventListener('scroll', this.handleScroll);
 
     // Scroll to top on page refresh
-    window.onbeforeunload = () => { window.scrollTo(0, 0); };
+    window.onbeforeunload = () => {
+      window.scrollTo(0, 0);
+    };
 
     // Store initial scroll position
     this.setState(() => ({ scrollPosition: document.documentElement.scrollTop }));
@@ -63,7 +65,7 @@ class ProjectTiles extends Component {
     const currentScrollPosition = document.documentElement.scrollTop;
     const scrollDepth = Math.round((currentScrollPosition - this.state.scrollPosition) / 12);
 
-    const columnA = document.querySelector('.project-tiles__column-a');
+    const columnA = document.querySelector('.project-tiles__column-b');
     columnA.style.transform = `translate3d(0px, ${scrollDepth}px, 0px)`;
   }
 
@@ -73,29 +75,19 @@ class ProjectTiles extends Component {
         <h1 className="project-tiles__heading">Work.</h1>
 
         <div className="project-tiles__columns">
-          <div className="project-tiles__column-a-wrapper project-tiles__column">
-            <ul className="project-tiles__column-a">
-              {
-                projects.columnA.map(project => (
-                  <ProjectTilesItem
-                    key={project.id}
-                    project={project}
-                  />
-                ))
-              }
+          <ul className="project-tiles__column-a project-tiles__column">
+            {projects.columnA.map(project => (
+              <ProjectTilesItem key={project.id} project={project} />
+            ))}
+          </ul>
+
+          <div className="project-tiles__column-b-wrapper project-tiles__column">
+            <ul className="project-tiles__column-b">
+              {projects.columnB.map(project => (
+                <ProjectTilesItem key={project.id} project={project} />
+              ))}
             </ul>
           </div>
-
-          <ul className="project-tiles__column-b project-tiles__column">
-            {
-              projects.columnB.map(project => (
-                <ProjectTilesItem
-                  key={project.id}
-                  project={project}
-                />
-              ))
-            }
-          </ul>
         </div>
       </div>
     );

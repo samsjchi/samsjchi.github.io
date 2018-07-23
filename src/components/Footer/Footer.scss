@@ -4,8 +4,9 @@
   height: 250px;
   width: 100%;
   max-width: $max-width;
-  font-family: 'GTPressuraMono-Light';
+  font-family: 'MaisonNeue-Mono';
   font-size: 1.2rem;
+  letter-spacing: -1px;
   background: $footer--background;
   color: $footer--color;
   margin: 0 auto;
@@ -29,11 +30,11 @@
     transition: color 0.15s;
 
     &:hover .ring {
-      stroke: $white;
+      stroke: white;
     }
 
     &:hover .icon {
-      fill: $white;
+      fill: white;
     }
   }
 
@@ -79,10 +80,11 @@
     transition: transform 0.15s;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
   }
 
+  .github-logo,
   .octocat,
   .dots {
     fill: $footer--color;

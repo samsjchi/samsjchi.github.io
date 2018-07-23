@@ -1,28 +1,42 @@
-.side-nav-social {
+.side-social {
   position: fixed;
   top: 0;
-  right: 0;
   bottom: 0;
   width: 10%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 
-  .social-buttons {
+  &__logo {
+    position: relative;
+    top: 35px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+
+    img {
+      width: 40px;
+    }
+  }
+
+  &__buttons {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 200px;
+    position: relative;
+    bottom: 50px;
 
     &.active {
       li {
-        animation: fade-up-in--social 0.3s cubic-bezier(0, 0.13, 0, 1.02) 0.3s forwards;
+        animation: fade-in-down 0.3s cubic-bezier(0, 0.13, 0, 1.02) 0.3s forwards;
       }
     }
 
     li {
-      transform: translate3d(0, 10px, 0);
+      transform: translate3d(0, -10px, 0);
       opacity: 0;
       will-change: transform;
       will-change: opacity;
@@ -85,7 +99,7 @@
   }
 }
 
-@keyframes fade-up-in--social {
+@keyframes fade-in-down {
   from {
     transform: translate3d(0, -10px, 0);
     opacity: 0;

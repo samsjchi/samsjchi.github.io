@@ -1,26 +1,66 @@
 .nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-top: 100px;
-  padding-left: 10%;
-  padding-right: 10%;
-  font-size: 16px;
-  background: $white;
-}
+  background: white;
+  position: relative;
+  padding-bottom: 25px;
 
-.nav ul li {
-  font-family: 'GTPressuraMono-Light';
-  font-size: 1.6rem;
-  display: inline;
-  margin-right: 40px;
-}
+  &__logo {
+    position: absolute;
+    left: calc(10% - 4px);
+    top: 88px;
 
-.nav ul li a {
-  color: $dark-gray;
-  text-decoration: none;
-}
+    img {
+      width: 50px;
+    }
+  }
 
-.nav ul li a:hover {
-  text-decoration: underline;
+  &__links {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background: white;
+  }
+
+  &__links ul li {
+    font-family: 'MaisonNeue-Book';
+    font-size: 1.6rem;
+    display: inline;
+    margin-left: 40px;
+  }
+
+  &__links ul li a {
+    position: relative;
+    color: $dark-gray;
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -3px;
+      left: 0;
+      background-color: #000;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.2s ease-in-out 0s;
+      transition: all 0.2s ease-in-out 0s;
+    }
+
+    &:hover::before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+
+    &.active {
+      &::before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+  }
 }

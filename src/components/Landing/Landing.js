@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import ProjectTiles from '../ProjectTiles/ProjectTiles';
 import NycLogo from '../../../assets/img/nyc-logo.svg';
+import RethinkLogo from '../../../assets/img/rethink-poseidon.svg';
+import AtlanticLogo from '../../../assets/img/atlantic-a.svg';
 import Ampersand from '../../../assets/img/ampersand.png';
 
 class Landing extends Component {
@@ -9,17 +11,25 @@ class Landing extends Component {
     super(props);
 
     this.state = {
-      showVideo: false,
+      showNycLogo: true,
     };
+
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+
+    /**
+     * Typewriter animation
+     */
     const typeWriterList = [
       ' clean and intuitive user interfaces.',
       ' modern single-page web applications.',
-      ' interactive data-driven content.',
-      ' dynamic and responsive web experiences.',
-      ' always with the end user in mind.',
+      ' responsive, interactive data-driven content.',
+      ' dynamic and delightful web experiences.',
+      ' cross-browser/cross-platform compatible websites.',
+      ' with the end user always in mind.',
       ' experiment, iterate, learn, and repeat.',
     ];
 
@@ -65,24 +75,78 @@ class Landing extends Component {
     startTextAnimation(0);
   }
 
-  handleMouseOver() {
-    this.setState(() => ({ showVideo: true }));
-    document.querySelector('.rethink-video').style.display = 'flex';
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 
-    if (document.querySelector('#vimeoIframe').getAttribute('src') === 'about:blank') {
-      document
-        .querySelector('#vimeoIframe')
-        .setAttribute(
-          'src',
-          'https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0',
-        );
+  /**
+   * Hide NYC logo when user reaches project tiles section
+   */
+  handleScroll() {
+    if (window.pageYOffset < 350) {
+      if (!this.state.showNycLogo) {
+        this.setState(() => ({ showNycLogo: true }));
+      }
+    } else if (this.state.showNycLogo) {
+      this.setState(() => ({ showNycLogo: false }));
     }
   }
 
-  handleMouseOut() {
-    this.setState(() => ({ showVideo: false }));
-    document.querySelector('.rethink-video').style.display = 'none';
+  /**
+   * Show Vimeo iframe when user hovers over video icon
+   */
+  openVideo() {
+    const rethinkVideo = document.querySelector('.intro__rethink-video');
+    const vimeoIframe = document.querySelector('#vimeoIframe');
+
+    document.querySelector('body').style.overflow = 'hidden';
+    rethinkVideo.classList.remove('closed');
+
+    if (vimeoIframe.getAttribute('src') === 'about:blank') {
+      vimeoIframe.setAttribute(
+        'src',
+        'https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0?autoplay=1',
+      );
+    }
+  }
+
+  /**
+   * Close Vimeo iframe when user clicks on close button
+   */
+  closeVideo() {
+    document.querySelector('body').style.overflow = 'auto';
+    document.querySelector('.intro__rethink-video').classList.add('closed');
     document.querySelector('#vimeoIframe').setAttribute('src', 'about:blank');
+  }
+
+  /**
+   * Show Re:think Poseidon/Atlantic "A" graphic on link mouse over
+   */
+  handleLinkMouseOver(e) {
+    if (e.target.className === 'rethink') {
+      document.querySelector('.intro__nyc-logo').style.opacity = '0';
+      document.querySelector('.intro__rethink-logo').style.opacity = '0.05';
+    }
+
+    if (e.target.className === 'atlantic') {
+      document.querySelector('.intro__nyc-logo').style.opacity = '0';
+      document.querySelector('.intro__atlantic-logo').style.opacity = '0.05';
+    }
+  }
+
+  /**
+   * Hide Re:think Poseidon/Atlantic "A" graphic on link mouse out
+   */
+  handleLinkMouseOut(e) {
+    if (e.target.className === 'rethink') {
+      document.querySelector('.intro__rethink-logo').style.opacity = '0';
+      document.querySelector('.intro__nyc-logo').style.opacity = '0.05';
+    }
+
+    if (e.target.className === 'atlantic') {
+      document.querySelector('.intro__atlantic-logo').style.opacity = '0';
+      document.querySelector('.intro__nyc-logo').style.opacity = '0.05';
+    }
   }
 
   render() {
@@ -90,29 +154,29 @@ class Landing extends Component {
       <div className="content-container">
         <div className="landing">
           <div className="intro">
-            <h2>
-              <span className="name">I&apos;m Sam</span>
-              <div className="tooltip">
-                <span className="tooltip__message">Pronounced “kai,” like the Greek letter</span>
-                <span className="name">Chi</span>
+            <h2 className="intro__tagline">
+              <span className="intro__name">I&apos;m Sam</span>
+              <div className="intro__tooltip">
+                <span className="intro__tooltip-message">
+                  Pronounced “kai,” like the Greek letter
+                </span>
+                <span className="intro__name">Chi</span>
               </div>
-              – a front end engineer based in{' '}
-              <span className="nyc">
-                New York City
-                <NycLogo className="nyc-logo" width={200} height={200} />
-              </span>.
+              – a front end engineer based in <span className="intro__nyc">New York City</span>.
             </h2>
-            <h2>
-              Currently at &nbsp;
+            <h2 className="intro__tagline">
+              Currently at&nbsp;
               <a
                 className="rethink"
                 href="https://advertising.theatlantic.com/rethink/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseOver={e => this.handleLinkMouseOver(e)}
+                onMouseOut={e => this.handleLinkMouseOut(e)}
               >
                 Atlantic Re:think
               </a>
-              <div className="video-icon" onMouseOver={() => this.handleMouseOver()}>
+              <div className="intro__video-icon" onMouseOver={() => this.openVideo()}>
                 <svg x="0px" y="0px" viewBox="0 0 27 24">
                   <g fillRule="evenodd" fill="none" strokeWidth="1" stroke="none">
                     <g fill="#2f2f2f">
@@ -125,35 +189,48 @@ class Landing extends Component {
               </div>
               , the award-winning content
             </h2>
-            <h2>
+            <h2 className="intro__tagline">
               studio and in-house creative marketing team at{' '}
               <a
                 className="atlantic"
                 href="https://www.theatlantic.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseOver={e => this.handleLinkMouseOver(e)}
+                onMouseOut={e => this.handleLinkMouseOut(e)}
               >
                 The Atlantic
               </a>.
             </h2>
 
-            <div className="rethink-video" onMouseOut={() => this.handleMouseOut()}>
-              <iframe
-                id="vimeoIframe"
-                src="https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0"
-                width="960"
-                height="518"
-                frameBorder="0"
-                webkitallowfullscreen="true"
-                mozallowfullscreen="true"
-                allowFullScreen="true"
-              />
+            <NycLogo
+              className="intro__nyc-logo"
+              height={550}
+              width={550}
+              style={{ opacity: this.state.showNycLogo ? 0.05 : 0 }}
+            />
+            <RethinkLogo className="intro__rethink-logo" height={550} />
+            <AtlanticLogo className="intro__atlantic-logo" height={550} />
+
+            <div className="intro__rethink-video closed" onClick={() => this.closeVideo()}>
+              <div className="intro__video-wrapper">
+                <iframe
+                  id="vimeoIframe"
+                  src="https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0?autoplay=1"
+                  width="960"
+                  height="518"
+                  frameBorder="0"
+                  webkitallowfullscreen="true"
+                  mozallowfullscreen="true"
+                  allowFullScreen="true"
+                />
+                <button className="intro__video-close-btn" onClick={() => this.closeVideo()} />
+              </div>
             </div>
 
-            <h2>
-              I design <img className="ampersand" src={Ampersand} alt="" /> build... &nbsp;<span className="typewriter">
-                dynamic web applications.
-              </span>
+            <h2 className="intro__tagline">
+              I design <img className="intro__ampersand" src={Ampersand} alt="" /> build...{' '}
+              <span className="typewriter">dynamic web applications.</span>
             </h2>
           </div>
         </div>
