@@ -26,7 +26,6 @@
 
   &__box--left {
     position: relative;
-    font-family: 'MaisonNeue-Mono';
     width: 70%;
     color: white;
     padding: 60px;
@@ -36,6 +35,7 @@
   }
 
   &__email {
+    font-family: 'MaisonNeue-Mono';
     font-size: 4rem;
     color: white;
     text-decoration: none;
@@ -47,9 +47,9 @@
 
   &__body {
     position: relative;
-    font-size: 1.6rem;
+    font-family: 'MaisonNeue-Book';
+    font-size: 1.8rem;
     line-height: 3rem;
-    letter-spacing: -1px;
     margin-top: 75px;
     max-width: 70%;
 
