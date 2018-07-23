@@ -42,7 +42,7 @@
 
     &.active {
       li {
-        animation: fade-in-down 0.3s cubic-bezier(0, 0.13, 0, 1.02) 0.3s forwards;
+        animation: fade-in-down-nav 0.3s cubic-bezier(0, 0.13, 0, 1.02) 0.3s forwards;
 
         &:nth-of-type(1) {
           animation-delay: 0s;
@@ -64,7 +64,7 @@
   }
 }
 
-@keyframes fade-in-down {
+@keyframes fade-in-down-nav {
   from {
     transform: translate3d(-20px, 0, 0);
     opacity: 0;

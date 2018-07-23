@@ -13,11 +13,15 @@ export default function ProjectTilesItem({ project }) {
         </h2>
         <p className="project-tiles__description">{project.description}</p>
       </div>
-      <div className="project-tiles__cta">
-        <a href={project.url} target="_blank" rel="noopener noreferrer">
-          View Project →
-        </a>
-      </div>
+
+      <a
+        className="project-tiles__cta is-unselectable"
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Project →
+      </a>
 
       <div
         className="project-tiles__image is-unselectable"
