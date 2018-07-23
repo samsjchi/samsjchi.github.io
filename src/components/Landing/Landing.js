@@ -12,71 +12,22 @@ class Landing extends Component {
 
     this.state = {
       showNycLogo: true,
+      typeWriterTimeouts: [],
     };
 
     this.handleScroll = this.handleScroll.bind(this);
+    this.typeWriter = this.typeWriter.bind(this);
+    this.startTextAnimation = this.startTextAnimation.bind(this);
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-
-    /**
-     * Typewriter animation
-     */
-    const typeWriterList = [
-      ' clean and intuitive user interfaces.',
-      ' modern single-page web applications.',
-      ' responsive, interactive data-driven content.',
-      ' dynamic and delightful web experiences.',
-      ' cross-browser/cross-platform compatible websites.',
-      ' with the end user always in mind.',
-      ' experiment, iterate, learn, and repeat.',
-    ];
-
-    // Type one character in the typewriter
-    function typeWriter(text, i, callbackFn) {
-      // Check if text isn't finished yet
-      if (i < text.length) {
-        // Add next character
-        document.querySelector('span.typewriter').innerHTML = `${text.substring(
-          0,
-          i + 1,
-        )}<span className="single-letter" aria-hidden="true"></span>`;
-
-        // Wait 50ms, then move on to next character
-        setTimeout(() => {
-          typeWriter(text, i + 1, callbackFn);
-        }, 50);
-      } else if (typeof callbackFn === 'function') {
-        // If text has finished, invoke callback function
-        // Invoke callback after 2500ms
-        setTimeout(callbackFn, 2500);
-      }
-    }
-
-    // Start text animation for each word in the typeWriterList
-    function startTextAnimation(i) {
-      // If at the end of typeWriterList, start over
-      if (typeof typeWriterList[i] === 'undefined') {
-        setTimeout(() => {
-          startTextAnimation(0);
-        }, 7000);
-      }
-      // If text exists, start typewriter animation
-      if (i < typeWriterList[i].length) {
-        typeWriter(typeWriterList[i], 0, () => {
-          // After entire text has been animated, start next word
-          startTextAnimation(i + 1);
-        });
-      }
-    }
-
-    // Initiate text animation
-    startTextAnimation(0);
+    this.startTextAnimation(0); // Initiate typewriter animation
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
+    this.state.typeWriterTimeouts.forEach(timeout => clearTimeout(timeout)); // Clear all typewriter timeouts
   }
 
   /**
@@ -146,6 +97,69 @@ class Landing extends Component {
     if (e.target.className === 'atlantic') {
       document.querySelector('.intro__atlantic-logo').style.opacity = '0';
       document.querySelector('.intro__nyc-logo').style.opacity = '0.05';
+    }
+  }
+
+  /**
+   * Typewriter animation
+   */
+  typeWriter(text, i, callbackFn) {
+    // Check if text isn't finished yet
+    if (i < text.length) {
+      // Add next character
+      document.querySelector('span.typewriter').innerHTML = `${text.substring(
+        0,
+        i + 1,
+      )}<span className="single-letter" aria-hidden="true"></span>`;
+
+      // Wait 50ms, then move on to next character
+      const timeout1 = setTimeout(() => {
+        this.typeWriter(text, i + 1, callbackFn);
+      }, 50);
+
+      this.setState(prevState => ({
+        typeWriterTimeouts: [...prevState.typeWriterTimeouts, timeout1],
+      }));
+    } else if (typeof callbackFn === 'function') {
+      // If text has finished, invoke callback function
+      // Invoke callback after 2500ms
+      const timeout2 = setTimeout(callbackFn, 2500);
+      this.setState(prevState => ({
+        typeWriterTimeouts: [...prevState.typeWriterTimeouts, timeout2],
+      }));
+    }
+  }
+
+  /**
+   * Start text animation for each word in the typeWriterList
+   */
+  startTextAnimation(i) {
+    const typeWriterList = [
+      ' clean and intuitive user interfaces.',
+      ' modern single-page web applications.',
+      ' responsive, interactive data-driven content.',
+      ' dynamic and delightful web experiences.',
+      ' cross-browser/cross-platform compatible websites.',
+      ' with the end user always in mind.',
+      ' experiment, iterate, learn, and repeat.',
+    ];
+
+    // If at the end of typeWriterList, start over
+    if (typeof typeWriterList[i] === 'undefined') {
+      const timeout3 = setTimeout(() => {
+        this.startTextAnimation(0);
+      }, 7000);
+
+      this.setState(prevState => ({
+        typeWriterTimeouts: [...prevState.typeWriterTimeouts, timeout3],
+      }));
+    }
+    // If text exists, start typewriter animation
+    if (i < typeWriterList[i].length) {
+      this.typeWriter(typeWriterList[i], 0, () => {
+        // After entire text has been animated, start next word
+        this.startTextAnimation(i + 1);
+      });
     }
   }
 
