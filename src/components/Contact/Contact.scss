@@ -11,10 +11,17 @@
     line-height: 5.4rem;
     z-index: 1;
     color: black;
+    opacity: 0;
+    transform: translate3d(0, -27.5%, 0);
+    animation: heading-slide-down cubic-bezier(0.485, 0.135, 0.15, 0.86) 1.5s forwards;
+    animation-delay: 2s;
   }
 
   &__box {
     display: flex;
+    transform: translate3d(0, -27.5%, 0);
+    animation: contact-slide-down cubic-bezier(0.485, 0.135, 0.15, 0.86) 1s forwards;
+    animation-delay: 1s;
   }
 
   &__box--left {
@@ -89,5 +96,25 @@
         transform: scale(1.2);
       }
     }
+  }
+}
+
+@keyframes heading-slide-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -27.5%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes contact-slide-down {
+  from {
+    transform: translate3d(0, -27.5%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
