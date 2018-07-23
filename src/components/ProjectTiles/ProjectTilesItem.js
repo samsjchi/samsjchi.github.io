@@ -12,6 +12,9 @@ export default function ProjectTilesItem({ project }) {
           </a>
         </h2>
         <p className="project-tiles__description">{project.description}</p>
+        <p className="project-tiles__year-role">
+          <span>Year:</span> {project.year} | <span>Role:</span> {project.role}
+        </p>
       </div>
 
       <a

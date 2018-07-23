@@ -17,8 +17,12 @@
     }
 
     &:hover .project-tiles__description {
-      opacity: 1;
       animation: fade-in-right ease 0.3s forwards;
+    }
+
+    &:hover .project-tiles__year-role {
+      animation: fade-in-up ease 0.5s forwards;
+      animation-delay: 0.1s;
     }
 
     &:hover .project-tiles__gradient-overlay {
@@ -80,8 +84,22 @@
     max-width: 85%;
     margin-top: 50px;
     opacity: 0;
-    transform: translate3d(-5px, 0, 0);
-    transition: opacity 0.7s ease-out, transform 0.9s ease-out;
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  &__year-role {
+    font-family: 'MaisonNeue-Mono';
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    letter-spacing: -1px;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translate3d(0, 5px, 0);
+
+    span {
+      font-family: 'MaisonNeue-Bold';
+      letter-spacing: 0;
+    }
   }
 
   &__cta {
@@ -215,7 +233,18 @@
 @keyframes fade-in-right {
   from {
     opacity: 0;
-    transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 5px, 0);
   }
   to {
     opacity: 1;
