@@ -32,7 +32,7 @@
 }
 
 .project-tiles__tile-content {
-  color: $white;
+  color: white;
   position: absolute;
   top: 0;
   right: 0;
@@ -99,7 +99,7 @@
 }
 
 .project-tiles__cta {
-  color: $white;
+  color: white;
   font-family: 'MaisonNeue-Mono';
   font-size: 1.6rem;
   line-height: 1.6rem;
@@ -115,7 +115,7 @@
 
   a {
     text-decoration: none;
-    color: $white;
+    color: white;
   }
 }
 
@@ -147,13 +147,6 @@
   }
 }
 
-#wework.project-tiles__tile {
-  .project-tiles__tile-content,
-  .project-tiles__cta a {
-    color: $project-tiles--color;
-  }
-}
-
 #pbs.project-tiles__tile {
   .project-tiles__tile-content,
   .project-tiles__cta a {
@@ -161,10 +154,9 @@
   }
 }
 
-#behanced.project-tiles__tile {
-  .project-tiles__tile-content,
-  .project-tiles__cta a {
-    color: $project-tiles--color;
+#cnn.project-tiles__tile {
+  .project-tiles__title {
+    max-width: 60%;
   }
 }
 
@@ -188,9 +180,27 @@
   border-top-right-radius: 15px;
 }
 
+#wework.project-tiles__tile {
+  .project-tiles__tile-content,
+  .project-tiles__cta a {
+    color: $project-tiles--color;
+  }
+
+  .project-tiles__title {
+    max-width: 60%;
+  }
+}
+
+#behanced.project-tiles__tile {
+  .project-tiles__tile-content,
+  .project-tiles__cta a {
+    color: $project-tiles--color;
+  }
+}
+
 #betterment.project-tiles__tile {
   .project-tiles__title {
-    max-width: 100%;
+    max-width: 70%;
   }
 }
 

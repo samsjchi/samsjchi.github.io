@@ -122,7 +122,7 @@ export default function Footer() {
           </li>
           <li>
             <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">
-              <GitHubLogo width={40} />
+              <GitHubLogo className="github-logo" width={40} />
             </a>
           </li>
         </ul>

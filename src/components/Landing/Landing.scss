@@ -78,7 +78,7 @@
     bottom: 100%;
     height: 35px;
     background: rgba(0, 0, 0, 0.8);
-    color: $white;
+    color: white;
     font-family: 'MaisonNeue-Book';
     font-size: 1.2rem;
     line-height: 3.4rem;
@@ -253,7 +253,7 @@
       box-shadow: inset 0 -3px 0 $rethink-red;
 
       &:hover {
-        color: $white;
+        color: white;
         -webkit-box-shadow: inset 0 -40px 0 $rethink-red;
         box-shadow: inset 0 -40px 0 $rethink-red;
       }
@@ -265,7 +265,7 @@
       box-shadow: inset 0 -3px 0 $atlantic-gold;
 
       &:hover {
-        color: $white;
+        color: white;
         -webkit-box-shadow: inset 0 -40px 0 $atlantic-gold;
         box-shadow: inset 0 -40px 0 $atlantic-gold;
       }
