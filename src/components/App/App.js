@@ -12,7 +12,13 @@ import PointingUpEmoji from '../../../assets/img/pointing-up-emoji.png';
 
 const About = () => (
   <div className="temp-wrapper">
-    <h1>About</h1>
+    <h1>Under Construction 🛠️</h1>
+  </div>
+);
+
+const Photography = () => (
+  <div className="temp-wrapper">
+    <h1>Under Construction 🛠️</h1>
   </div>
 );
 
@@ -37,6 +43,7 @@ export default function App() {
         <SideNavSocial />
         <Switch>
           <Route exact path="/" component={Landing} />
+          <Route path="/photography" component={Photography} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route component={PageNotFound} />

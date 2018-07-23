@@ -19,6 +19,9 @@ export default function Nav() {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/photography">Photography</NavLink>
+          </li>
+          <li>
             <NavLink to="/about">About</NavLink>
           </li>
           <li>

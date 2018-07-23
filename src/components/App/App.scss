@@ -27,7 +27,7 @@ body {
 
 .main-content {
   color: $dark-gray;
-  background: $white;
+  background: white;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 350px;
@@ -70,10 +70,10 @@ body {
 }
 
 ::selection {
-  background: #fedb59;
+  background: #fee178;
 }
 ::-moz-selection {
-  background: #fedb59;
+  background: #fee178;
 }
 
 .temp-wrapper {
@@ -84,8 +84,9 @@ body {
   height: 90vh;
 
   h1 {
-    font-family: 'GTPressura-Light';
-    font-size: 80px;
+    font-family: 'MaisonNeue-Mono';
+    font-size: 30px;
+    letter-spacing: -2px;
     text-align: center;
   }
 }

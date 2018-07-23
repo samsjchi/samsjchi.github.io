@@ -1,0 +1,24 @@
+.contact {
+  height: 90vh;
+
+  &__body {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+
+  &__emoji {
+    font-size: 2rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+  }
+
+  &__email {
+    font-size: 2.8rem;
+    color: $dark-gray;
+    text-decoration: none;
+  }
+}
