@@ -31,12 +31,13 @@
     padding: 60px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    background: linear-gradient(135deg, #243143 0%, #030303 100%);
+    background: linear-gradient(135deg, #204a55 0%, #030303 100%);
   }
 
   &__email {
     font-family: 'MaisonNeue-Mono';
     font-size: 4rem;
+    line-height: 4.8rem;
     color: white;
     text-decoration: none;
 
