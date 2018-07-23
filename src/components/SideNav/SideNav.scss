@@ -36,8 +36,7 @@
         margin-right: 40px;
         transform: translate3d(-20px, 0, 0);
         opacity: 0;
-        will-change: transform;
-        will-change: opacity;
+        will-change: transform, opacity;
       }
     }
 

@@ -38,8 +38,7 @@
     li {
       transform: translate3d(0, -10px, 0);
       opacity: 0;
-      will-change: transform;
-      will-change: opacity;
+      will-change: transform, opacity;
 
       &:nth-of-type(1) {
         animation-delay: 0s;
