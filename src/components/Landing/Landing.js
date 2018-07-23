@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import ProjectTiles from '../ProjectTiles/ProjectTiles';
 import NycLogo from '../../../assets/img/nyc-logo.svg';
-import CloseBtn from '../../../assets/img/close-btn.svg';
 import RethinkLogo from '../../../assets/img/rethink-poseidon.svg';
 import AtlanticLogo from '../../../assets/img/atlantic-a.svg';
 import Ampersand from '../../../assets/img/ampersand.png';
@@ -12,7 +11,6 @@ class Landing extends Component {
     super(props);
 
     this.state = {
-      showVideo: false,
       showNycLogo: true,
     };
 
@@ -87,10 +85,10 @@ class Landing extends Component {
   handleScroll() {
     if (window.pageYOffset < 350) {
       if (!this.state.showNycLogo) {
-        this.setState({ showNycLogo: true });
+        this.setState(() => ({ showNycLogo: true }));
       }
     } else if (this.state.showNycLogo) {
-      this.setState({ showNycLogo: false });
+      this.setState(() => ({ showNycLogo: false }));
     }
   }
 
@@ -98,16 +96,17 @@ class Landing extends Component {
    * Show Vimeo iframe when user hovers over video icon
    */
   openVideo() {
-    this.setState(() => ({ showVideo: true }));
-    document.querySelector('.intro__rethink-video').style.display = 'flex';
+    const rethinkVideo = document.querySelector('.intro__rethink-video');
+    const vimeoIframe = document.querySelector('#vimeoIframe');
 
-    if (document.querySelector('#vimeoIframe').getAttribute('src') === 'about:blank') {
-      document
-        .querySelector('#vimeoIframe')
-        .setAttribute(
-          'src',
-          'https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0?autoplay=1',
-        );
+    document.querySelector('body').style.overflow = 'hidden';
+    rethinkVideo.classList.remove('closed');
+
+    if (vimeoIframe.getAttribute('src') === 'about:blank') {
+      vimeoIframe.setAttribute(
+        'src',
+        'https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0?autoplay=1',
+      );
     }
   }
 
@@ -115,8 +114,8 @@ class Landing extends Component {
    * Close Vimeo iframe when user clicks on close button
    */
   closeVideo() {
-    this.setState(() => ({ showVideo: false }));
-    document.querySelector('.intro__rethink-video').style.display = 'none';
+    document.querySelector('body').style.overflow = 'auto';
+    document.querySelector('.intro__rethink-video').classList.add('closed');
     document.querySelector('#vimeoIframe').setAttribute('src', 'about:blank');
   }
 
@@ -213,7 +212,7 @@ class Landing extends Component {
             <RethinkLogo className="intro__rethink-logo" height={550} />
             <AtlanticLogo className="intro__atlantic-logo" height={550} />
 
-            <div className="intro__rethink-video">
+            <div className="intro__rethink-video closed" onClick={() => this.closeVideo()}>
               <div className="intro__video-wrapper">
                 <iframe
                   id="vimeoIframe"
@@ -225,12 +224,7 @@ class Landing extends Component {
                   mozallowfullscreen="true"
                   allowFullScreen="true"
                 />
-                <CloseBtn
-                  onClick={() => this.closeVideo()}
-                  className="intro__video-close-btn"
-                  width={25}
-                  height={25}
-                />
+                <button className="intro__video-close-btn" onClick={() => this.closeVideo()} />
               </div>
             </div>
 

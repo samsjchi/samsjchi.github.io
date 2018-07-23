@@ -20,7 +20,7 @@ export default function ProjectTilesItem({ project }) {
       </div>
 
       <div
-        className="project-tiles__image"
+        className="project-tiles__image is-unselectable"
         data-bg-start={project.bgStart}
         data-bg-end={project.bgEnd}
       >

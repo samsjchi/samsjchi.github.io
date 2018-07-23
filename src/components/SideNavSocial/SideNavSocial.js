@@ -75,7 +75,7 @@ class SideNavSocial extends Component {
         onMouseOver={() => this.handleMouseOver()}
         onMouseOut={() => this.handleMouseOut()}
       >
-        <div className="side-nav-social__logo">
+        <div className="side-nav-social__logo is-unselectable">
           <Link to="/">
             <img src={Logo} alt="" />
           </Link>

@@ -34,7 +34,7 @@
     color: $dark-gray;
     text-decoration: none;
 
-    &:before {
+    &::before {
       content: '';
       position: absolute;
       width: 100%;
@@ -49,14 +49,14 @@
       transition: all 0.2s ease-in-out 0s;
     }
 
-    &:hover:before {
+    &:hover::before {
       visibility: visible;
       -webkit-transform: scaleX(1);
       transform: scaleX(1);
     }
 
     &.active {
-      &:before {
+      &::before {
         visibility: visible;
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
