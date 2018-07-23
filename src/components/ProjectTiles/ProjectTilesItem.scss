@@ -89,7 +89,7 @@
 
 .project-tiles__description {
   font-family: 'MaisonNeue-Book';
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   line-height: 2.4rem;
   max-width: 85%;
   margin-top: 50px;
@@ -158,14 +158,13 @@
   .project-tiles__title {
     max-width: 60%;
   }
+
+  .project-tiles__description {
+    max-width: 90%;
+  }
 }
 
 #boa.project-tiles__tile {
-  .project-tiles__tile-content,
-  .project-tiles__cta a {
-    color: $project-tiles--color;
-  }
-
   .project-tiles__image > .b-lazy {
     transform: scale(0.5) translate(34%, -21%);
   }

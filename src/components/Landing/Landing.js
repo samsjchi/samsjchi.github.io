@@ -169,14 +169,14 @@ class Landing extends Component {
         <div className="landing">
           <div className="intro">
             <h2 className="intro__tagline">
-              <span className="intro__name">I&apos;m Sam</span>
+              I&apos;m <span className="intro__name">Sam</span>
               <div className="intro__tooltip">
                 <span className="intro__tooltip-message">
                   Pronounced “kai,” like the Greek letter
                 </span>
                 <span className="intro__name">Chi</span>
               </div>
-              – a front end engineer based in <span className="intro__nyc">New York City</span>.
+              – a design-minded front end engineer based in New York City.
             </h2>
             <h2 className="intro__tagline">
               Currently at&nbsp;
@@ -201,10 +201,10 @@ class Landing extends Component {
                   </g>
                 </svg>
               </div>
-              , the award-winning content
+              , the award-winning content studio
             </h2>
             <h2 className="intro__tagline">
-              studio and in-house creative marketing team at{' '}
+              and in-house creative marketing team at{' '}
               <a
                 className="atlantic"
                 href="https://www.theatlantic.com/"
@@ -214,7 +214,7 @@ class Landing extends Component {
                 onMouseOut={e => this.handleLinkMouseOut(e)}
               >
                 The Atlantic
-              </a>.
+              </a>. <span className="intro__emoji">👨🏻‍💻</span>
             </h2>
 
             <NycLogo

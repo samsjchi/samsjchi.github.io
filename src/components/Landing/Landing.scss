@@ -14,7 +14,7 @@
 
 .intro {
   font-family: 'MaisonNeue-Mono';
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   line-height: 3.4rem;
   letter-spacing: -2px;
   position: relative;
@@ -108,17 +108,6 @@
     }
   }
 
-  &__nyc {
-    position: relative;
-  }
-
-  &__nyc-logo {
-    position: absolute;
-    right: -10px;
-    bottom: -25px;
-    opacity: 0.1;
-  }
-
   &__video-icon {
     display: inline-block;
     position: relative;
@@ -126,7 +115,7 @@
     left: 2px;
     width: 23px;
     height: 23px;
-    margin: 0 5px 0 10px;
+    margin: 0 2px 0 10px;
 
     svg {
       transform: translateY(0px);
@@ -201,11 +190,12 @@
     }
   }
 
-  &__ampersand {
-    width: 22px;
-    position: relative;
-    top: 1px;
-    left: 1px;
+  &__emoji {
+    font-size: 3.6rem;
+    line-height: 5rem;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 10px;
   }
 
   &__nyc-logo,
@@ -220,7 +210,7 @@
 
   &__nyc-logo {
     right: -35px;
-    opacity: 0.05;
+    bottom: 5px;
 
     @media screen and (min-width: 1441px) {
       right: calc(3% - 40px);
@@ -241,6 +231,13 @@
     @media screen and (min-width: 1441px) {
       right: 3%;
     }
+  }
+
+  &__ampersand {
+    width: 22px;
+    position: relative;
+    top: 1px;
+    left: 1px;
   }
 
   a {
