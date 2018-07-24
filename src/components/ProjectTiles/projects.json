@@ -44,19 +44,18 @@
       "imgSrc": "../../../assets/img/hpe-eighteen-zeros.jpg"
     },
     {
-      "id": "cnn",
-      "client": "CNN x The Atlantic",
-      "title": "So You Think You Know the Kennedys?",
+      "id": "volvo",
+      "client": "Volvo x The Atlantic",
+      "title": "Designing for the Future",
       "year": "2018",
       "role": "Sole Developer",
-      "techTags": "JavaScript, jQuery, HTML, CSS, in-view.js",
+      "techTags": "JavaScript, HTML, CSS, SVG, in-view.js",
       "description":
-        "An interactive family tree tells the untold story of the American royal family, in partnership with CNN to support their docuseries, American Dynasties. I implemented a photo-expanding component, modal system, and timeline animation using JavaScript, jQuery, and in-view.js",
-      "url":
-        "https://www.theatlantic.com/sponsored/cnn-2018/so-you-think-you-know-the-kennedys/1808/",
-      "bgStart": "#000",
-      "bgEnd": "#DF4C31",
-      "imgSrc": "../../../assets/img/cnn-kennedys.jpg"
+        "An interactive custom content piece exploring the future of design via Volvo's human-centric design philosophy, presented by the Volvo XC60, considered its most progressive and future-facing vehicle. I developed a content-responsive scrolling system using JavaScript ES6, CSS/SVG animations, and in-view.js",
+      "url": "https://www.theatlantic.com/sponsored/volvo-2018/designing-for-the-future/1757/",
+      "bgStart": "#FE0004",
+      "bgEnd": "#eee",
+      "imgSrc": "../../../assets/img/volvo-future.png"
     },
     {
       "id": "boa",
@@ -134,18 +133,19 @@
       "imgSrc": "../../../assets/img/behanced.png"
     },
     {
-      "id": "volvo",
-      "client": "Volvo x The Atlantic",
-      "title": "Designing for the Future",
+      "id": "cnn",
+      "client": "CNN x The Atlantic",
+      "title": "So You Think You Know the Kennedys?",
       "year": "2018",
       "role": "Sole Developer",
-      "techTags": "JavaScript, HTML, CSS, SVG, in-view.js",
+      "techTags": "JavaScript, jQuery, HTML, CSS, in-view.js",
       "description":
-        "An interactive custom content piece exploring the future of design via Volvo's human-centric design philosophy, presented by the Volvo XC60, considered its most progressive and future-facing vehicle. I developed a content-responsive scrolling system using JavaScript ES6, CSS/SVG animations, and in-view.js",
-      "url": "https://www.theatlantic.com/sponsored/volvo-2018/designing-for-the-future/1757/",
-      "bgStart": "#FE0004",
-      "bgEnd": "#eee",
-      "imgSrc": "../../../assets/img/volvo-future.png"
+        "An interactive family tree tells the untold story of the American royal family, in partnership with CNN to support their docuseries, American Dynasties. I implemented a photo-expanding component, modal system, and timeline animation using JavaScript, jQuery, and in-view.js",
+      "url":
+        "https://www.theatlantic.com/sponsored/cnn-2018/so-you-think-you-know-the-kennedys/1808/",
+      "bgStart": "#000",
+      "bgEnd": "#DF4C31",
+      "imgSrc": "../../../assets/img/cnn-kennedys.jpg"
     },
     {
       "id": "betterment",

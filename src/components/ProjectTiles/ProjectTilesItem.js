@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 export default function ProjectTilesItem({ project }) {
   return (
     <li id={project.id} className="project-tiles__tile">
+      <div className="project-tiles__content-gradient" />
+
       <div className="project-tiles__tile-content">
         <span className="project-tiles__client">{project.client}</span>
         <h2 className="project-tiles__title">

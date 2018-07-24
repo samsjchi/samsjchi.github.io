@@ -37,6 +37,27 @@
     }
   }
 
+  &__content-gradient {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 3;
+    background-size: cover;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 20%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
   &__tile-content {
     color: white;
     position: absolute;
@@ -184,11 +205,19 @@
   .project-tiles__tile-content {
     color: $project-tiles--color;
   }
+
+  .project-tiles__content-gradient {
+    background-image: none;
+  }
 }
 
 #pbs.project-tiles__tile {
   .project-tiles__tile-content {
     color: $project-tiles--color;
+  }
+
+  .project-tiles__content-gradient {
+    background-image: none;
   }
 }
 
@@ -205,6 +234,10 @@
 #boa.project-tiles__tile {
   .project-tiles__image > .b-lazy {
     transform: scale(0.5) translate(34%, -21%);
+  }
+
+  .project-tiles__content-gradient {
+    background-image: none;
   }
 }
 
@@ -225,17 +258,35 @@
   .project-tiles__title {
     max-width: 60%;
   }
+
+  .project-tiles__content-gradient {
+    background-image: none;
+  }
 }
 
 #behanced.project-tiles__tile {
   .project-tiles__tile-content {
     color: $project-tiles--color;
   }
+
+  .project-tiles__content-gradient {
+    background-image: none;
+  }
+}
+
+#volvo.project-tiles__tile {
+  .project-tiles__content-gradient {
+    background-image: none;
+  }
 }
 
 #betterment.project-tiles__tile {
   .project-tiles__title {
     max-width: 70%;
+  }
+
+  .project-tiles__content-gradient {
+    background-image: none;
   }
 }
 
@@ -244,6 +295,10 @@
 
   .project-tiles__tile-content {
     color: $project-tiles--color;
+  }
+
+  .project-tiles__content-gradient {
+    background-image: none;
   }
 }
 
