@@ -21,8 +21,15 @@
     }
 
     &:hover .project-tiles__year-role {
-      animation: fade-in-up ease 0.5s forwards;
-      animation-delay: 0.1s;
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s;
+    }
+
+    &:hover .project-tiles__tech-tag-list {
+      opacity: 0;
+      transform: translate3d(0, 5px, 0);
+      transition: opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s;
     }
 
     &:hover .project-tiles__gradient-overlay {
@@ -88,6 +95,9 @@
   }
 
   &__year-role {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
     font-family: 'MaisonNeue-Mono';
     font-size: 1.2rem;
     line-height: 2.2rem;
@@ -95,6 +105,7 @@
     margin-top: 50px;
     opacity: 0;
     transform: translate3d(0, 5px, 0);
+    transition: opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s;
 
     span {
       font-family: 'MaisonNeue-Bold';
@@ -118,6 +129,33 @@
     transform: scaleY(0) translateZ(0);
     transform-origin: 0 0;
     transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  &__tech-tag-list {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    z-index: 3;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s;
+  }
+
+  &__tech-tag {
+    display: inline-block;
+    font-family: 'MaisonNeue-Mono';
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    letter-spacing: -1px;
+    margin: 0 3px;
+    padding: 6px 8px 4px;
+    border-radius: 3px;
+    color: white;
+    background-color: black;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 
   &__image {
@@ -234,17 +272,6 @@
   from {
     opacity: 0;
     transform: translate3d(-10px, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 5px, 0);
   }
   to {
     opacity: 1;

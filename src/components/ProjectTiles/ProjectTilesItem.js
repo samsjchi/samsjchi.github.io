@@ -26,6 +26,14 @@ export default function ProjectTilesItem({ project }) {
         View Project →
       </a>
 
+      <div className="project-tiles__tech-tag-list">
+        {project.techTags.split(', ').map(techTag => (
+          <span key={techTag} className="project-tiles__tech-tag">
+            {techTag}
+          </span>
+        ))}
+      </div>
+
       <div
         className="project-tiles__image is-unselectable"
         data-bg-start={project.bgStart}
