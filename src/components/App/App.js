@@ -9,6 +9,7 @@ import Landing from '../Landing/Landing';
 import Footer from '../Footer/Footer';
 import Contact from '../Contact/Contact';
 
+import InstagramLogo from '../../../assets/img/instagram-logo.svg';
 import PointingUpEmoji from '../../../assets/img/pointing-up-emoji.png';
 
 const About = () => (
@@ -19,7 +20,13 @@ const About = () => (
 
 const Photography = () => (
   <div className="temp-wrapper">
-    <h1>Under Construction 🛠️</h1>
+    <div className="temp-wrapper--inner">
+      <h1>🛠️ Under Construction 🛠️</h1>
+      <h3>In the meantime, find me on Instagram:</h3>
+      <a href="https://www.instagram.com/samsjchi/" target="_blank" rel="noopener noreferrer">
+        <InstagramLogo className="ig-logo" width={40} />
+      </a>
+    </div>
   </div>
 );
 
