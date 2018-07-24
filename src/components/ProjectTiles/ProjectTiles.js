@@ -71,8 +71,8 @@ class ProjectTiles extends Component {
 
   render() {
     return (
-      <div className="project-tiles__container">
-        <h1 className="project-tiles__heading">Work.</h1>
+      <div className="project-tiles">
+        <h1 className="project-tiles__heading is-unselectable">Work.</h1>
 
         <div className="project-tiles__columns">
           <ul className="project-tiles__column-a project-tiles__column">

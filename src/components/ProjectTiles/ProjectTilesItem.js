@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 export default function ProjectTilesItem({ project }) {
   return (
     <li id={project.id} className="project-tiles__tile">
+      <div className="project-tiles__content-gradient" />
+
       <div className="project-tiles__tile-content">
         <span className="project-tiles__client">{project.client}</span>
         <h2 className="project-tiles__title">
@@ -12,11 +14,26 @@ export default function ProjectTilesItem({ project }) {
           </a>
         </h2>
         <p className="project-tiles__description">{project.description}</p>
+        <p className="project-tiles__year-role">
+          <span>Year:</span> {project.year} | <span>Role:</span> {project.role}
+        </p>
       </div>
-      <div className="project-tiles__cta">
-        <a href={project.url} target="_blank" rel="noopener noreferrer">
-          View Project →
-        </a>
+
+      <a
+        className="project-tiles__cta is-unselectable"
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Project →
+      </a>
+
+      <div className="project-tiles__tech-tag-list">
+        {project.techTags.split(', ').map(techTag => (
+          <span key={techTag} className="project-tiles__tech-tag">
+            {techTag}
+          </span>
+        ))}
       </div>
 
       <div

@@ -31,15 +31,14 @@
 
     &.active {
       li {
-        animation: fade-in-down 0.3s cubic-bezier(0, 0.13, 0, 1.02) 0.3s forwards;
+        animation: fade-in-down-social 0.3s cubic-bezier(0, 0.13, 0, 1.02) 0.3s forwards;
       }
     }
 
     li {
-      transform: translate3d(0, -10px, 0);
+      transform: translate3d(-20px, 0, 0);
       opacity: 0;
-      will-change: transform;
-      will-change: opacity;
+      will-change: transform, opacity;
 
       &:nth-of-type(1) {
         animation-delay: 0s;
@@ -99,9 +98,9 @@
   }
 }
 
-@keyframes fade-in-down {
+@keyframes fade-in-down-social {
   from {
-    transform: translate3d(0, -10px, 0);
+    transform: translate3d(-20px, 0, 0);
     opacity: 0;
   }
   to {

@@ -13,80 +13,80 @@
   padding: 50px 0;
   text-align: center;
   z-index: $z-footer;
-}
 
-.footer__social-buttons {
-  margin-top: 10px;
-}
+  &__social-buttons {
+    margin-top: 10px;
+  }
 
-.footer__social-buttons-list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 240px;
-  margin: 0 auto;
+  &__social-buttons-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 240px;
+    margin: 0 auto;
 
-  li a {
-    transition: color 0.15s;
+    li a {
+      transition: color 0.15s;
 
-    &:hover .ring {
-      stroke: white;
+      &:hover .ring {
+        stroke: white;
+      }
+
+      &:hover .icon {
+        fill: white;
+      }
     }
 
-    &:hover .icon {
-      fill: white;
+    li a svg {
+      display: block;
+      width: 4rem;
+      height: 4rem;
+
+      .ring {
+        stroke: #5e5e5e;
+        transition: stroke 0.125s ease-in-out;
+      }
+
+      .icon {
+        fill: #b3b3b3;
+        transition: fill 0.125s ease-in-out;
+      }
+
+      .github-icon {
+        transform: scale(0.16);
+        transform-origin: 13px 13px;
+      }
+
+      .linkedin-icon {
+        transform: scale(0.036);
+        transform-origin: 13px 13px;
+      }
     }
   }
 
-  li a svg {
-    display: block;
-    width: 4rem;
-    height: 4rem;
-
-    .ring {
-      stroke: #5e5e5e;
-      transition: stroke 0.125s ease-in-out;
-    }
-
-    .icon {
-      fill: #b3b3b3;
-      transition: fill 0.125s ease-in-out;
-    }
-
-    .github-icon {
-      transform: scale(0.16);
-      transform-origin: 13px 13px;
-    }
-
-    .linkedin-icon {
-      transform: scale(0.036);
-      transform-origin: 13px 13px;
-    }
-  }
-}
-
-.footer__web-tech {
-  margin: 50px 0;
-}
-
-.footer__web-tech-list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 550px;
-  margin: 15px auto;
-
-  li {
-    transition: transform 0.15s;
-
-    &:hover {
-      transform: scale(1.2);
-    }
+  &__web-tech {
+    margin: 50px 0;
   }
 
-  .github-logo,
-  .octocat,
-  .dots {
-    fill: $footer--color;
+  &__web-tech-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 550px;
+    margin: 15px auto;
+
+    li {
+      transition: transform 0.15s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .github-logo,
+    .octocat,
+    .dots {
+      fill: $footer--color;
+    }
   }
 }

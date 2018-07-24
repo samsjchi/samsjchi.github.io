@@ -1,56 +1,59 @@
-.project-tiles__heading {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, sans-serif;
-  font-size: 150px;
-  font-weight: bold;
-  color: black;
-  position: relative;
-  top: 30px;
-  z-index: 1;
-  opacity: 0;
-  transform: translate3d(0, -25%, 0);
-  animation: heading-slide-down cubic-bezier(0.485, 0.135, 0.15, 0.86) 1.5s forwards;
-  animation-delay: 2.5s;
+.project-tiles {
+  &__heading {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+    font-size: 150px;
+    font-weight: bold;
+    color: black;
+    position: relative;
+    top: 30px;
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(0, -25%, 0);
+    animation: heading-slide-down cubic-bezier(0.485, 0.135, 0.15, 0.86) 1.5s forwards;
+    animation-delay: 2.5s;
+  }
+
+  &__columns {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 15%;
+  }
+
+  &__column {
+    flex-direction: column;
+    flex-basis: 50%;
+    max-width: 50%;
+    perspective: 5000px;
+    -webkit-perspective: 5000px;
+  }
+
+  &__column-a {
+    transform: translate3d(0, -23%, 0);
+    animation: column-slide-down cubic-bezier(0.485, 0.135, 0.15, 0.86) 2s forwards;
+    animation-delay: 1.1s;
+  }
+
+  &__column-b-wrapper {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10%;
+    transition: transform 1.5s ease-out;
+    transform: translate3d(0, -23%, 0);
+    animation: column-slide-down cubic-bezier(0.485, 0.135, 0.15, 0.86) 2s forwards;
+    animation-delay: 1s;
+  }
+
+  &__column-b {
+    transition: transform 1.5s ease-out;
+    padding-bottom: 125px;
+  }
 }
 
-.project-tiles__columns {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 15%;
-}
-
-.project-tiles__column {
-  flex-direction: column;
-  flex-basis: 50%;
-  max-width: 50%;
-  perspective: 5000px;
-  -webkit-perspective: 5000px;
-}
-
-.project-tiles__column-a {
-  transform: translate3d(0, -23%, 0);
-  animation: column-slide-down cubic-bezier(0.485, 0.135, 0.15, 0.86) 2s forwards;
-  animation-delay: 1.1s;
-}
-
-.project-tiles__column-b-wrapper {
-  width: 100%;
-  height: auto;
-  padding-bottom: 10%;
-  transition: transform 1.5s ease-out;
-  transform: translate3d(0, -23%, 0);
-  animation: column-slide-down cubic-bezier(0.485, 0.135, 0.15, 0.86) 2s forwards;
-  animation-delay: 1s;
-}
-
-.project-tiles__column-b {
-  transition: transform 1.5s ease-out;
-  padding-bottom: 125px;
-}
-
+// Keyframe animations
 @keyframes heading-slide-down {
   from {
     opacity: 0;

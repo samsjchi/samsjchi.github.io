@@ -1,156 +1,223 @@
-.project-tiles__tile {
-  position: relative;
-  width: 100%;
-  padding-bottom: 72%;
-  overflow: hidden;
-  cursor: pointer;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+.project-tiles {
+  &__tile {
+    position: relative;
+    width: 100%;
+    padding-bottom: 72%;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
-  &:hover .project-tiles__description {
-    opacity: 1;
-    animation: fade-in-right ease 0.3s forwards;
+    &:hover .project-tiles__cta {
+      transform: scaleY(1) translateZ(0);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    &:hover .project-tiles__description {
+      animation: fade-in-right ease 0.3s forwards;
+    }
+
+    &:hover .project-tiles__year-role {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s;
+    }
+
+    &:hover .project-tiles__tech-tag-list {
+      opacity: 0;
+      transform: translate3d(0, 5px, 0);
+      transition: opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s;
+    }
+
+    &:hover .project-tiles__gradient-overlay {
+      opacity: 1;
+    }
   }
 
-  &:hover .project-tiles__gradient-overlay {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in-right {
-  from {
-    opacity: 0;
-    transform: translate3d(-5px, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.project-tiles__tile-content {
-  color: white;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 40px;
-  z-index: $z-project-tiles-content;
-  opacity: 0;
-
-  animation: fade-in 0.5s ease-in forwards;
-  animation-delay: 2s;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.project-tiles__client {
-  display: block;
-  font-family: 'MaisonNeue-Mono';
-  font-size: 1.2rem;
-  letter-spacing: -1px;
-  margin-bottom: 10px;
-}
-
-.project-tiles__title {
-  font-family: 'MaisonNeue-Demi';
-  font-size: 2.6rem;
-  line-height: 3.6rem;
-  letter-spacing: -1px;
-  max-width: 75%;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  a::after {
-    display: block;
+  &__content-gradient {
     position: absolute;
-    content: '';
+    display: block;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
-    z-index: $z-project-tiles-title;
+    left: 0;
+    margin: auto;
+    z-index: 3;
+    background-size: cover;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 20%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
-}
 
-.project-tiles__description {
-  font-family: 'MaisonNeue-Book';
-  font-size: 1.7rem;
-  line-height: 2.4rem;
-  max-width: 85%;
-  margin-top: 50px;
-  opacity: 0;
-  transform: translate3d(-5px, 0, 0);
-  transition: opacity 0.7s ease-out, transform 0.9s ease-out;
-}
-
-.project-tiles__cta {
-  color: white;
-  font-family: 'MaisonNeue-Mono';
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-  letter-spacing: -1px;
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  z-index: $z-project-tiles-cta;
-  opacity: 0;
-
-  animation: fade-in 0.5s ease-in forwards;
-  animation-delay: 2s;
-
-  a {
-    text-decoration: none;
+  &__tile-content {
     color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 40px;
+    z-index: $z-project-tiles-content;
+    opacity: 0;
+
+    animation: fade-in 0.5s ease-in forwards;
+    animation-delay: 2s;
+  }
+
+  &__client {
+    display: block;
+    font-family: 'MaisonNeue-Mono';
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-family: 'MaisonNeue-Demi';
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+    letter-spacing: -1px;
+    max-width: 75%;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: $z-project-tiles-title;
+      }
+    }
+  }
+
+  &__description {
+    font-family: 'MaisonNeue-Book';
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    max-width: 85%;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  &__year-role {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    font-family: 'MaisonNeue-Mono';
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    letter-spacing: -1px;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translate3d(0, 5px, 0);
+    transition: opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s;
+
+    span {
+      font-family: 'MaisonNeue-Bold';
+      letter-spacing: 0;
+    }
+  }
+
+  &__cta {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    font-family: 'MaisonNeue-Mono';
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    padding: 15px 20px;
+    z-index: $z-project-tiles-cta;
+    will-change: transform, opacity;
+    transform: scaleY(0) translateZ(0);
+    transform-origin: 0 0;
+    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  &__tech-tag-list {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    z-index: 3;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s;
+  }
+
+  &__tech-tag {
+    display: inline-block;
+    font-family: 'MaisonNeue-Mono';
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    letter-spacing: -1px;
+    margin: 0 3px;
+    padding: 6px 8px 4px;
+    border-radius: 3px;
+    color: white;
+    background-color: black;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: $z-project-tiles-image;
+  }
+
+  &__gradient-overlay {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $z-project-tiles-gradient;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
   }
 }
 
-.project-tiles__image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: $z-project-tiles-image;
-}
-
-.project-tiles__gradient-overlay {
-  position: absolute;
-  display: block;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: $z-project-tiles-gradient;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-// Column A
+// Column A: project-specific styles
 #netflix.project-tiles__tile {
   border-top-left-radius: 15px;
 
-  .project-tiles__tile-content,
-  .project-tiles__cta a {
+  .project-tiles__tile-content {
     color: $project-tiles--color;
+  }
+
+  .project-tiles__content-gradient {
+    background-image: none;
   }
 }
 
 #pbs.project-tiles__tile {
-  .project-tiles__tile-content,
-  .project-tiles__cta a {
+  .project-tiles__tile-content {
     color: $project-tiles--color;
+  }
+
+  .project-tiles__content-gradient {
+    background-image: none;
   }
 }
 
@@ -158,16 +225,19 @@
   .project-tiles__title {
     max-width: 60%;
   }
+
+  .project-tiles__description {
+    max-width: 90%;
+  }
 }
 
 #boa.project-tiles__tile {
-  .project-tiles__tile-content,
-  .project-tiles__cta a {
-    color: $project-tiles--color;
-  }
-
   .project-tiles__image > .b-lazy {
     transform: scale(0.5) translate(34%, -21%);
+  }
+
+  .project-tiles__content-gradient {
+    background-image: none;
   }
 }
 
@@ -175,26 +245,38 @@
   border-bottom-left-radius: 15px;
 }
 
-// Column B
+// Column B: project-specific styles
 #vmware.project-tiles__tile {
   border-top-right-radius: 15px;
 }
 
 #wework.project-tiles__tile {
-  .project-tiles__tile-content,
-  .project-tiles__cta a {
+  .project-tiles__tile-content {
     color: $project-tiles--color;
   }
 
   .project-tiles__title {
     max-width: 60%;
   }
+
+  .project-tiles__content-gradient {
+    background-image: none;
+  }
 }
 
 #behanced.project-tiles__tile {
-  .project-tiles__tile-content,
-  .project-tiles__cta a {
+  .project-tiles__tile-content {
     color: $project-tiles--color;
+  }
+
+  .project-tiles__content-gradient {
+    background-image: none;
+  }
+}
+
+#volvo.project-tiles__tile {
+  .project-tiles__content-gradient {
+    background-image: none;
   }
 }
 
@@ -202,14 +284,21 @@
   .project-tiles__title {
     max-width: 70%;
   }
+
+  .project-tiles__content-gradient {
+    background-image: none;
+  }
 }
 
 #metermate.project-tiles__tile {
   border-bottom-right-radius: 15px;
 
-  .project-tiles__tile-content,
-  .project-tiles__cta a {
+  .project-tiles__tile-content {
     color: $project-tiles--color;
+  }
+
+  .project-tiles__content-gradient {
+    background-image: none;
   }
 }
 
@@ -230,5 +319,26 @@
   &.b-loaded {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+// Keyframe animations
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translate3d(-10px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
