@@ -139,6 +139,10 @@
     margin-top: 50px;
     opacity: 0;
     transform: translate3d(-10px, 0, 0);
+
+    @include tablet--ipad-pro {
+      display: none;
+    }
   }
 
   &__year-role {
@@ -153,6 +157,16 @@
     opacity: 0;
     transform: translate3d(0, 5px, 0);
     transition: opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s;
+
+    @include tablet--ipad-pro {
+      left: 30px;
+      bottom: 30px;
+    }
+
+    @include tablet--ipad {
+      left: 25px;
+      bottom: 25px;
+    }
 
     span {
       font-family: 'MaisonNeue-Bold';
