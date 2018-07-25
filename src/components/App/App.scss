@@ -64,6 +64,10 @@ body {
     padding-bottom: 25px;
   }
 
+  @include tablet--ipad {
+    padding-bottom: 15px;
+  }
+
   @include mobile {
     right: 15px;
     bottom: -10px;
@@ -128,6 +132,9 @@ body {
 
     @include mobile {
       font-size: 1.4rem;
+      line-height: 2.4rem;
+      max-width: 65%;
+      margin: 100px auto 15px;
       letter-spacing: 0;
     }
 

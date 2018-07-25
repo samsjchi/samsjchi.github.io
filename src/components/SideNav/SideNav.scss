@@ -32,6 +32,14 @@
       top: 0;
     }
 
+    @media (max-width: 667px) {
+      top: -40px;
+    }
+
+    @media (max-width: 568px) {
+      top: -30px;
+    }
+
     &__logo {
       display: none;
     }
@@ -54,6 +62,15 @@
 
         &:last-of-type {
           margin-right: 0;
+        }
+
+        @media (max-width: 667px) {
+          margin-right: 30px;
+        }
+
+        @media (max-width: 568px) {
+          font-size: 1.4rem;
+          margin-right: 25px;
         }
       }
     }

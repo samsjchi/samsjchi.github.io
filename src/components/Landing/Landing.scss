@@ -283,7 +283,7 @@
     z-index: -1;
     transition: opacity 0.2s ease-in-out;
 
-    @include mobile {
+    @media (max-width: #{$ipad-width - 1}) {
       display: none;
     }
   }

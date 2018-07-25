@@ -9,7 +9,7 @@ import Portrait from '../../../assets/img/portrait.jpg';
 export default function Contact() {
   return (
     <div className="contact">
-      <h2 className="contact__heading">Get in touch.</h2>
+      <h2 className="contact__heading">Get in touch. ✉️</h2>
 
       <div className="contact__box">
         <div className="contact__box--left">
@@ -18,9 +18,9 @@ export default function Contact() {
           </a>
 
           <p className="contact__body">
-            Got a cool idea? Interested in working together or collaborating on a project (web
-            development, design, photography, or otherwise)? Have a question about my work?
-            Don&apos;t be shy and say hello! 🤙
+            Interested in working together or collaborating on a project (whether it's web
+            development, design, photography, or otherwise)? Got any questions, comments,
+            compliments, or feedback about my work? Don&apos;t be shy and say hello!
           </p>
 
           <div className="contact__social-buttons">
