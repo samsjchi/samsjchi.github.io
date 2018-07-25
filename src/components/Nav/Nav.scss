@@ -5,8 +5,13 @@
 
   &__logo {
     position: absolute;
-    left: calc(10% - 4px);
     top: 88px;
+    left: calc(10% - 4px);
+
+    @include tablet {
+      top: 63px;
+      left: calc(7.5% - 4px);
+    }
 
     img {
       width: 50px;
@@ -17,9 +22,15 @@
     display: flex;
     justify-content: flex-end;
     padding-top: 100px;
-    padding-left: 10%;
     padding-right: 10%;
+    padding-left: 10%;
     background: white;
+
+    @include tablet {
+      padding-top: 75px;
+      padding-right: 7.5%;
+      padding-left: 7.5%;
+    }
   }
 
   &__links ul li {

@@ -1,5 +1,11 @@
 $max-width: 1600px;
 
+// Media query breakpoints
+$mobile-width: 480px;
+$ipad-width: 768px;
+$ipad-pro-width: 1024px;
+$desktop-width: 1440px;
+
 // z-indices
 $z-content-container: 1;
 $z-intro-link: -1;

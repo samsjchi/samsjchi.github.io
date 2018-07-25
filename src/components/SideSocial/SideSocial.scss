@@ -10,11 +10,21 @@
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 
+  @include tablet {
+    width: 7.5%;
+    justify-content: center;
+  }
+
   &__logo {
     position: relative;
     top: 35px;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
+
+    @include tablet {
+      position: absolute;
+      top: 25px;
+    }
 
     img {
       width: 40px;
@@ -28,6 +38,10 @@
     height: 200px;
     position: relative;
     bottom: 50px;
+
+    @include tablet {
+      bottom: 0;
+    }
 
     &.active {
       li {

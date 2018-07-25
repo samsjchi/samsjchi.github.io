@@ -50,14 +50,19 @@ body {
     transform: translateY(-10px);
   }
 
+  @include tablet {
+    width: 7.5%;
+    padding-bottom: 25px;
+  }
+
+  @include desktop--wide {
+    right: unset;
+    left: calc(12% + 1280px);
+  }
+
   img {
     width: 30px;
     cursor: pointer;
-  }
-
-  @media screen and (min-width: 1441px) {
-    right: unset;
-    left: calc(12% + 1280px);
   }
 }
 

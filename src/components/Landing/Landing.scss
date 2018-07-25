@@ -3,6 +3,11 @@
   margin-left: auto;
   padding-right: 10%;
   padding-left: 10%;
+
+  @include tablet {
+    padding-right: 7.5%;
+    padding-left: 7.5%;
+  }
 }
 
 .landing {
@@ -19,6 +24,10 @@
   letter-spacing: -2px;
   position: relative;
   min-width: 100%;
+
+  @include tablet {
+    font-size: 2.1rem;
+  }
 
   &__tagline {
     margin-bottom: 10px;

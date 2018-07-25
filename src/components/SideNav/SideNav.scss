@@ -10,6 +10,10 @@
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 
+  @include tablet {
+    width: 7.5%;
+  }
+
   .nav {
     display: flex;
     align-items: center;
@@ -17,6 +21,10 @@
     padding-bottom: 0;
     height: 50px;
     top: 220px;
+
+    @include tablet {
+      top: 175px;
+    }
 
     &__logo {
       display: none;
