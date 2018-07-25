@@ -18,9 +18,9 @@ export default function Contact() {
           </a>
 
           <p className="contact__body">
-            Interested in working together or collaborating on a project (whether it's web
-            development, design, photography, or otherwise)? Got any questions, comments,
-            compliments, or feedback about my work? Don&apos;t be shy and say hello!
+            Interested in working together or collaborating on a project (web development, design,
+            photography, or otherwise)? Got any questions, comments, or feedback about my work? Say
+            hello!
           </p>
 
           <div className="contact__social-buttons">
