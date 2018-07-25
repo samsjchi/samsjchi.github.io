@@ -1,5 +1,11 @@
-@mixin tablet {
-  @media (min-width: #{$ipad-width}) and (max-width: #{$ipad-pro-width}) {
+@mixin tablet--ipad {
+  @media (min-width: #{$ipad-width}) and (max-width: 895px) {
+    @content;
+  }
+}
+
+@mixin tablet--ipad-pro {
+  @media (min-width: 896px) and (max-width: #{$ipad-pro-width}) {
     @content;
   }
 }

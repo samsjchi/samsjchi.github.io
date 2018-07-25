@@ -68,9 +68,12 @@
     padding: 40px;
     z-index: $z-project-tiles-content;
     opacity: 0;
-
     animation: fade-in 0.5s ease-in forwards;
     animation-delay: 2s;
+
+    @include tablet--ipad-pro {
+      padding: 30px;
+    }
   }
 
   &__client {
@@ -87,6 +90,11 @@
     line-height: 3.6rem;
     letter-spacing: -1px;
     max-width: 75%;
+
+    @include tablet--ipad-pro {
+      font-size: 2.4rem;
+      line-height: 3rem;
+    }
 
     a {
       color: inherit;
@@ -160,6 +168,11 @@
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s;
+
+    @include tablet--ipad-pro {
+      left: 30px;
+      bottom: 30px;
+    }
   }
 
   &__tech-tag {
@@ -176,6 +189,13 @@
 
     &:first-of-type {
       margin-left: 0;
+    }
+
+    @include tablet--ipad-pro {
+      font-size: 1rem;
+      line-height: 1rem;
+      margin: 0 2px;
+      padding: 6px 8px 5px;
     }
   }
 
@@ -221,13 +241,9 @@
   }
 }
 
-#cnn.project-tiles__tile {
-  .project-tiles__title {
-    max-width: 60%;
-  }
-
-  .project-tiles__description {
-    max-width: 90%;
+#volvo.project-tiles__tile {
+  .project-tiles__content-gradient {
+    background-image: none;
   }
 }
 
@@ -257,6 +273,10 @@
 
   .project-tiles__title {
     max-width: 60%;
+
+    @include tablet--ipad-pro {
+      max-width: 80%;
+    }
   }
 
   .project-tiles__content-gradient {
@@ -274,15 +294,27 @@
   }
 }
 
-#volvo.project-tiles__tile {
-  .project-tiles__content-gradient {
-    background-image: none;
+#cnn.project-tiles__tile {
+  .project-tiles__title {
+    max-width: 60%;
+
+    @include tablet--ipad-pro {
+      max-width: 70%;
+    }
+  }
+
+  .project-tiles__description {
+    max-width: 90%;
   }
 }
 
 #betterment.project-tiles__tile {
   .project-tiles__title {
     max-width: 70%;
+
+    @include tablet--ipad-pro {
+      max-width: 70%;
+    }
   }
 
   .project-tiles__content-gradient {

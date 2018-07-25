@@ -50,7 +50,7 @@ body {
     transform: translateY(-10px);
   }
 
-  @include tablet {
+  @include tablet--ipad-pro {
     width: 7.5%;
     padding-bottom: 25px;
   }

@@ -10,7 +10,7 @@
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 
-  @include tablet {
+  @include tablet--ipad-pro {
     width: 7.5%;
     justify-content: center;
   }
@@ -21,9 +21,9 @@
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
 
-    @include tablet {
+    @include tablet--ipad-pro {
       position: absolute;
-      top: 25px;
+      top: 20px;
     }
 
     img {
@@ -39,7 +39,7 @@
     position: relative;
     bottom: 50px;
 
-    @include tablet {
+    @include tablet--ipad-pro {
       bottom: 0;
     }
 
