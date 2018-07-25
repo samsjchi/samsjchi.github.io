@@ -130,5 +130,9 @@ body {
       font-size: 1.4rem;
       letter-spacing: 0;
     }
+
+    @include mobile--iphone5 {
+      line-height: 2.2rem;
+    }
   }
 }
