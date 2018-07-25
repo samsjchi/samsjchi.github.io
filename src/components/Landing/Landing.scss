@@ -91,6 +91,10 @@
 
   &__name {
     font-weight: bold;
+
+    @include mobile {
+      letter-spacing: -2.5px;
+    }
   }
 
   &__tooltip {
@@ -353,6 +357,7 @@
       @include mobile {
         -webkit-box-shadow: inset 0 -2px 0 $rethink-red;
         box-shadow: inset 0 -2px 0 $rethink-red;
+        letter-spacing: -2.5px;
       }
 
       &:hover {
@@ -370,6 +375,7 @@
       @include mobile {
         -webkit-box-shadow: inset 0 -2px 0 $atlantic-gold;
         box-shadow: inset 0 -2px 0 $atlantic-gold;
+        letter-spacing: -2.5px;
       }
 
       &:hover {
