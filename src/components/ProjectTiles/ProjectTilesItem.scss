@@ -106,8 +106,12 @@
     }
 
     @include tablet--ipad {
-      font-size: 1.8rem;
+      font-size: 2rem;
       line-height: 2.4rem;
+    }
+
+    @include mobile {
+      letter-spacing: -0.5px;
     }
 
     a {
@@ -242,6 +246,26 @@
 #netflix.project-tiles__tile {
   border-top-left-radius: 15px;
 
+  @include mobile {
+    border-top-right-radius: 15px;
+
+    .project-tiles__tech-tag:nth-of-type(4) {
+      margin-right: 100px;
+    }
+  }
+
+  @include mobile--iphone {
+    .project-tiles__tech-tag:nth-of-type(4) {
+      margin-right: 70px;
+    }
+  }
+
+  @include mobile--iphone5 {
+    .project-tiles__tech-tag:nth-of-type(4) {
+      margin-right: 50px;
+    }
+  }
+
   .project-tiles__tile-content {
     color: $project-tiles--color;
   }
@@ -252,6 +276,12 @@
 }
 
 #pbs.project-tiles__tile {
+  @include mobile--iphone {
+    .project-tiles__tech-tag:nth-of-type(4) {
+      margin-right: 10px;
+    }
+  }
+
   .project-tiles__tile-content {
     color: $project-tiles--color;
   }
@@ -279,11 +309,19 @@
 
 #stanford.project-tiles__tile {
   border-bottom-left-radius: 15px;
+
+  @include mobile {
+    border-bottom-left-radius: 0;
+  }
 }
 
 // Column B: project-specific styles
 #vmware.project-tiles__tile {
   border-top-right-radius: 15px;
+
+  @include mobile {
+    border-top-right-radius: 0;
+  }
 }
 
 #wework.project-tiles__tile {
@@ -305,6 +343,24 @@
 }
 
 #behanced.project-tiles__tile {
+  @include mobile {
+    .project-tiles__tech-tag:nth-of-type(4) {
+      margin-right: 100px;
+    }
+  }
+
+  @include mobile--iphone {
+    .project-tiles__tech-tag:nth-of-type(4) {
+      margin-right: 70px;
+    }
+  }
+
+  @include mobile--iphone5 {
+    .project-tiles__tech-tag:nth-of-type(4) {
+      margin-right: 50px;
+    }
+  }
+
   .project-tiles__tile-content {
     color: $project-tiles--color;
   }
@@ -344,6 +400,14 @@
 
 #metermate.project-tiles__tile {
   border-bottom-right-radius: 15px;
+
+  @include mobile {
+    border-bottom-left-radius: 15px;
+
+    .project-tiles__tech-tag:nth-of-type(4) {
+      margin-right: 10px;
+    }
+  }
 
   .project-tiles__tile-content {
     color: $project-tiles--color;

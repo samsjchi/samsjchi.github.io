@@ -190,7 +190,11 @@ class Landing extends Component {
               >
                 Atlantic Re:think
               </a>
-              <div className="intro__video-icon" onMouseOver={() => this.openVideo()}>
+              <div
+                className="intro__video-icon"
+                onMouseOver={() => this.openVideo()}
+                onClick={() => this.openVideo()}
+              >
                 <svg x="0px" y="0px" viewBox="0 0 27 24">
                   <g fillRule="evenodd" fill="none" strokeWidth="1" stroke="none">
                     <g fill="#2f2f2f">

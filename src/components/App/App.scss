@@ -34,6 +34,10 @@ body {
   position: relative;
   box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.25);
   z-index: $z-content-container;
+
+  @include mobile--iphone {
+    margin-bottom: 375px;
+  }
 }
 
 .back-to-top-btn {
@@ -50,14 +54,19 @@ body {
     transform: translateY(-10px);
   }
 
+  @include desktop--wide {
+    right: unset;
+    left: calc(12% + 1280px);
+  }
+
   @include tablet--ipad-pro {
     width: 7.5%;
     padding-bottom: 25px;
   }
 
-  @include desktop--wide {
-    right: unset;
-    left: calc(12% + 1280px);
+  @include mobile {
+    right: 15px;
+    bottom: -10px;
   }
 
   img {
@@ -104,6 +113,11 @@ body {
     font-family: 'MaisonNeue-Mono';
     font-size: 3rem;
     letter-spacing: -2px;
+
+    @include mobile {
+      font-size: 2rem;
+      letter-spacing: -1px;
+    }
   }
 
   h3 {
@@ -111,5 +125,10 @@ body {
     font-size: 2rem;
     letter-spacing: -1px;
     margin: 100px 0 15px;
+
+    @include mobile {
+      font-size: 1.4rem;
+      letter-spacing: 0;
+    }
   }
 }

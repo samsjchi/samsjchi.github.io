@@ -15,6 +15,10 @@
     justify-content: center;
   }
 
+  @include mobile {
+    display: none;
+  }
+
   &__logo {
     position: relative;
     top: 35px;

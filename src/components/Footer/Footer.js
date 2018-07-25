@@ -102,27 +102,27 @@ export default function Footer() {
         <ul className="footer__web-tech-list">
           <li>
             <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
-              <ReactLogo width={70} />
+              <ReactLogo className="react" width={70} />
             </a>
           </li>
           <li>
             <a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">
-              <BabelLogo width={85} />
+              <BabelLogo className="babel" width={85} />
             </a>
           </li>
           <li>
             <a href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer">
-              <WebpackLogo width={45} />
+              <WebpackLogo className="webpack" width={45} />
             </a>
           </li>
           <li>
             <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">
-              <SassLogo width={45} />
+              <SassLogo className="sass" width={45} />
             </a>
           </li>
           <li>
             <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">
-              <GitHubLogo className="github-logo" width={40} />
+              <GitHubLogo className="github" width={40} />
             </a>
           </li>
         </ul>
