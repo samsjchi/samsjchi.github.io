@@ -14,6 +14,10 @@
   text-align: center;
   z-index: $z-footer;
 
+  @include mobile--iphone {
+    height: 275px;
+  }
+
   &__social-buttons {
     margin-top: 10px;
   }
@@ -66,6 +70,14 @@
 
   &__web-tech {
     margin: 50px 0;
+
+    p {
+      @include mobile--iphone {
+        max-width: 70%;
+        margin: 0 auto;
+        line-height: 2rem;
+      }
+    }
   }
 
   &__web-tech-list {
@@ -75,6 +87,28 @@
     width: 550px;
     margin: 15px auto;
 
+    @include mobile {
+      width: 100%;
+
+      svg.react {
+        width: 60px;
+      }
+
+      svg.babel {
+        width: 75px;
+
+        @include mobile--iphone {
+          width: 60px;
+        }
+      }
+
+      svg.webpack,
+      svg.sass,
+      svg.github {
+        width: 35px;
+      }
+    }
+
     li {
       transition: transform 0.15s;
 
@@ -83,7 +117,7 @@
       }
     }
 
-    .github-logo,
+    .github,
     .octocat,
     .dots {
       fill: $footer--color;

@@ -66,7 +66,10 @@ class ProjectTiles extends Component {
     const scrollDepth = Math.round((currentScrollPosition - this.state.scrollPosition) / 12);
 
     const columnA = document.querySelector('.project-tiles__column-b');
-    columnA.style.transform = `translate3d(0px, ${scrollDepth}px, 0px)`;
+
+    if (document.documentElement.clientWidth >= 480) {
+      columnA.style.transform = `translate3d(0px, ${scrollDepth}px, 0px)`;
+    }
   }
 
   render() {

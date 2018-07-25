@@ -1,0 +1,41 @@
+@mixin mobile--iphone5 {
+  @media (max-width: #{$iphone5-width}) {
+    @content;
+  }
+}
+
+@mixin mobile--iphone {
+  @media (max-width: #{$iphone-width}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet--ipad {
+  @media (max-width: #{$ipad-width}) {
+    @content;
+  }
+}
+
+@mixin tablet--ipad-pro {
+  @media (max-width: #{$ipad-pro-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$ipad-pro-width + 1}) and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop--wide {
+  @media (min-width: #{$desktop-width + 1}) {
+    @content;
+  }
+}

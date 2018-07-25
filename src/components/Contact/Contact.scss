@@ -3,6 +3,20 @@
   margin-left: auto;
   padding: 10%;
 
+  @include tablet--ipad-pro {
+    height: 47vh;
+    padding: 7.5%;
+    padding-top: 185px;
+  }
+
+  @include tablet--ipad {
+    padding-top: 15%;
+  }
+
+  @include mobile {
+    height: auto;
+  }
+
   &__heading {
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, sans-serif;
@@ -15,6 +29,16 @@
     transform: translate3d(0, -27.5%, 0);
     animation: heading-slide-down cubic-bezier(0.485, 0.135, 0.15, 0.86) 1.5s forwards;
     animation-delay: 2s;
+
+    @include tablet--ipad {
+      font-size: 6rem;
+      line-height: 3.4rem;
+    }
+
+    @include mobile {
+      font-size: 4rem;
+      line-height: 2.4rem;
+    }
   }
 
   &__box {
@@ -22,6 +46,10 @@
     transform: translate3d(0, -27.5%, 0);
     animation: contact-slide-down cubic-bezier(0.485, 0.135, 0.15, 0.86) 1s forwards;
     animation-delay: 1s;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__box--left {
@@ -32,6 +60,22 @@
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     background: linear-gradient(135deg, #204a55 0%, #030303 100%);
+
+    @include tablet--ipad-pro {
+      padding: 50px;
+    }
+
+    @include tablet--ipad {
+      padding: 35px;
+    }
+
+    @include mobile {
+      height: 250px;
+      width: calc(100% - 50px);
+      padding: 25px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 0;
+    }
   }
 
   &__email {
@@ -43,6 +87,16 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    @include tablet--ipad {
+      font-size: 3rem;
+      line-height: 3.8rem;
+    }
+
+    @include mobile {
+      font-size: 2rem;
+      line-height: 2.6rem;
     }
   }
 
@@ -63,14 +117,58 @@
       height: 3px;
       background-color: white;
       width: 50px;
+
+      @include mobile {
+        top: -20px;
+      }
+    }
+
+    @include tablet--ipad-pro {
+      line-height: 2.8rem;
+      margin-top: 65px;
+      max-width: 95%;
+    }
+
+    @include tablet--ipad {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+    }
+
+    @include mobile {
+      margin-top: 40px;
+    }
+
+    @include mobile--iphone {
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+
+    @include mobile--iphone {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
     }
   }
 
   &__box--right {
+    @include mobile {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+
     img {
       vertical-align: middle;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
+
+      @include mobile {
+        position: relative;
+        top: -60px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
     }
   }
 
@@ -85,6 +183,18 @@
     position: absolute;
     bottom: 60px;
 
+    @include tablet--ipad-pro {
+      bottom: 50px;
+    }
+
+    @include tablet--ipad {
+      bottom: 35px;
+    }
+
+    @include mobile {
+      bottom: 25px;
+    }
+
     a {
       margin-right: 25px;
     }
@@ -95,6 +205,10 @@
 
       &:hover {
         transform: scale(1.2);
+      }
+
+      @include tablet--ipad {
+        width: 25px;
       }
     }
   }
