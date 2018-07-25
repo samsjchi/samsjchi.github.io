@@ -228,6 +228,12 @@
     cursor: pointer;
     background-color: transparent;
     transition: all 0.2s ease-in-out;
+    z-index: 999;
+
+    @include mobile {
+      top: 10px;
+      right: 10px;
+    }
 
     &:hover {
       background-color: rgba(10, 10, 10, 0.5);
