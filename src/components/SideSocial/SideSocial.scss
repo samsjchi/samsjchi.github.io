@@ -26,8 +26,16 @@
       top: 20px;
     }
 
+    @include tablet--ipad {
+      top: 10px;
+    }
+
     img {
       width: 40px;
+
+      @include tablet--ipad {
+        width: 35px;
+      }
     }
   }
 

@@ -14,6 +14,12 @@
 
     @include tablet--ipad-pro {
       font-size: 12rem;
+      top: 23px;
+    }
+
+    @include tablet--ipad {
+      font-size: 9rem;
+      top: 17px;
     }
   }
 

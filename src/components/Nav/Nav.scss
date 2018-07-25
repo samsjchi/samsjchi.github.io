@@ -13,6 +13,10 @@
       left: calc(7.5% - 4px);
     }
 
+    @include tablet--ipad {
+      top: 48px;
+    }
+
     img {
       width: 50px;
     }
@@ -30,6 +34,10 @@
       padding-top: 75px;
       padding-right: 7.5%;
       padding-left: 7.5%;
+    }
+
+    @include tablet--ipad {
+      padding-top: 60px;
     }
   }
 
