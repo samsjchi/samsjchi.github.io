@@ -9,6 +9,11 @@
     padding-top: 185px;
   }
 
+  @media (max-width: 1024px) and (orientation: landscape) {
+    height: auto;
+    padding-top: 100px;
+  }
+
   @include tablet--ipad {
     padding-top: 15%;
   }
@@ -107,6 +112,11 @@
       text-decoration: underline;
     }
 
+    @include desktop--narrow {
+      font-size: 3.4rem;
+      line-height: 4rem;
+    }
+
     @include tablet--ipad {
       font-size: 3rem;
       line-height: 3.8rem;
@@ -133,7 +143,7 @@
     font-size: 1.8rem;
     line-height: 3rem;
     margin-top: 75px;
-    max-width: 65%;
+    max-width: 70%;
 
     &::before {
       content: '';
@@ -153,6 +163,12 @@
         top: -15px;
         width: 40px;
       }
+    }
+
+    @include desktop--narrow {
+      margin-top: 50px;
+      max-width: 80%;
+      line-height: 2.6rem;
     }
 
     @include tablet--ipad-pro {
