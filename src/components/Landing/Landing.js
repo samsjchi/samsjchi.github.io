@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import ProjectTiles from '../ProjectTiles/ProjectTiles';
-import NycLogo from '../../../assets/img/nyc-logo.svg';
 import RethinkLogo from '../../../assets/img/rethink-poseidon.svg';
 import AtlanticLogo from '../../../assets/img/atlantic-a.svg';
 import Ampersand from '../../../assets/img/ampersand.png';
@@ -11,36 +10,19 @@ class Landing extends Component {
     super(props);
 
     this.state = {
-      showNycLogo: true,
       typeWriterTimeouts: [],
     };
 
-    this.handleScroll = this.handleScroll.bind(this);
     this.typeWriter = this.typeWriter.bind(this);
     this.startTextAnimation = this.startTextAnimation.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
     this.startTextAnimation(0); // Initiate typewriter animation
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
     this.state.typeWriterTimeouts.forEach(timeout => clearTimeout(timeout)); // Clear all typewriter timeouts
-  }
-
-  /**
-   * Hide NYC logo when user reaches project tiles section
-   */
-  handleScroll() {
-    if (window.pageYOffset < 350) {
-      if (!this.state.showNycLogo) {
-        this.setState(() => ({ showNycLogo: true }));
-      }
-    } else if (this.state.showNycLogo) {
-      this.setState(() => ({ showNycLogo: false }));
-    }
   }
 
   /**
@@ -75,12 +57,10 @@ class Landing extends Component {
    */
   handleLinkMouseOver(e) {
     if (e.target.className === 'rethink') {
-      document.querySelector('.intro__nyc-logo').style.opacity = '0';
       document.querySelector('.intro__rethink-logo').style.opacity = '0.05';
     }
 
     if (e.target.className === 'atlantic') {
-      document.querySelector('.intro__nyc-logo').style.opacity = '0';
       document.querySelector('.intro__atlantic-logo').style.opacity = '0.05';
     }
   }
@@ -91,12 +71,10 @@ class Landing extends Component {
   handleLinkMouseOut(e) {
     if (e.target.className === 'rethink') {
       document.querySelector('.intro__rethink-logo').style.opacity = '0';
-      document.querySelector('.intro__nyc-logo').style.opacity = '0.05';
     }
 
     if (e.target.className === 'atlantic') {
       document.querySelector('.intro__atlantic-logo').style.opacity = '0';
-      document.querySelector('.intro__nyc-logo').style.opacity = '0.05';
     }
   }
 
@@ -221,12 +199,6 @@ class Landing extends Component {
               </a>. <span className="intro__emoji">👨🏻‍💻</span>
             </h2>
 
-            <NycLogo
-              className="intro__nyc-logo"
-              height={550}
-              width={550}
-              style={{ opacity: this.state.showNycLogo ? 0.05 : 0 }}
-            />
             <RethinkLogo className="intro__rethink-logo" height={550} />
             <AtlanticLogo className="intro__atlantic-logo" height={550} />
 
