@@ -10,6 +10,10 @@
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 
+  @media (min-width: 1600px) {
+    right: 2%;
+  }
+
   @include tablet--ipad-pro {
     width: 7.5%;
     justify-content: center;

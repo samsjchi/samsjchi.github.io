@@ -51,7 +51,7 @@
       "role": "Sole Developer",
       "techTags": "JavaScript, HTML, CSS, SVG, in-view.js",
       "description":
-        "An interactive custom content piece exploring the future of design via Volvo's human-centric design philosophy, presented by the Volvo XC60, considered its most progressive and future-facing vehicle. I developed a content-responsive scrolling system using JavaScript ES6, CSS/SVG animations, and in-view.js",
+        "An interactive custom content piece exploring the future of design via Volvo's human-centric design philosophy, presented by the XC60, considered its most progressive and future-facing vehicle. I developed a content-responsive scrolling system using JavaScript ES6, CSS/SVG animations, and in-view.js",
       "url": "https://www.theatlantic.com/sponsored/volvo-2018/designing-for-the-future/1757/",
       "bgStart": "#FE0004",
       "bgEnd": "#eee",

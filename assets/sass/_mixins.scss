@@ -28,8 +28,14 @@
   }
 }
 
+@mixin desktop--narrow {
+  @media (max-width: #{$desktop-narrow-width}) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media (min-width: #{$ipad-pro-width + 1}) and (max-width: #{$desktop-width}) {
+  @media (max-width: #{$desktop-width}) {
     @content;
   }
 }

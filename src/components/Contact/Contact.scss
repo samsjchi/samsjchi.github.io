@@ -13,6 +13,10 @@
     padding-top: 15%;
   }
 
+  @media (max-width: 812px) and (orientation: landscape) {
+    height: auto;
+  }
+
   @include mobile {
     height: auto;
   }
@@ -33,6 +37,11 @@
     @include tablet--ipad {
       font-size: 5rem;
       line-height: 2.8rem;
+    }
+
+    @media (max-width: 812px) and (orientation: landscape) {
+      font-size: 6rem;
+      line-height: 3.8rem;
     }
 
     @include mobile {
@@ -74,6 +83,10 @@
       padding: 35px;
     }
 
+    @media (max-width: 568px) and (orientation: landscape) {
+      padding: 30px;
+    }
+
     @include mobile {
       height: 250px;
       width: calc(100% - 50px);
@@ -97,6 +110,15 @@
     @include tablet--ipad {
       font-size: 3rem;
       line-height: 3.8rem;
+    }
+
+    @media (max-width: 812px) and (orientation: landscape) {
+      height: 110vh;
+    }
+
+    @media (max-width: 568px) and (orientation: landscape) {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
     }
 
     @include mobile {
@@ -123,6 +145,10 @@
       background-color: white;
       width: 50px;
 
+      @media (max-width: 812px) and (orientation: landscape) {
+        top: -20px;
+      }
+
       @include mobile {
         top: -15px;
         width: 40px;
@@ -139,6 +165,18 @@
       font-size: 1.4rem;
       line-height: 2.2rem;
       max-width: 90%;
+    }
+
+    @media (max-width: 812px) and (orientation: landscape) {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      margin-top: 50px;
+      max-width: 100%;
+    }
+
+    @media (max-width: 568px) and (orientation: landscape) {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
     }
 
     @include mobile {
