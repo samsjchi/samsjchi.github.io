@@ -69,6 +69,7 @@ class ProjectTiles extends Component {
 
     if (document.documentElement.clientWidth >= 480) {
       columnA.style.transform = `translate3d(0px, ${scrollDepth}px, 0px)`;
+      columnA.style.webkitTransform = `translate3d(0px, ${scrollDepth}px, 0px)`;
     }
   }
 
