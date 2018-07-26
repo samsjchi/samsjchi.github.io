@@ -272,6 +272,7 @@
     position: absolute;
     margin-top: -5px;
     margin-left: 10px;
+    width: 50px;
 
     @include tablet--ipad {
       font-size: 3rem;
