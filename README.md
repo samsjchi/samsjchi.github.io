@@ -10,16 +10,17 @@ Built with JavaScript ES6, React, React Router, Babel, webpack, and Sass (using 
 - Dynamic color gradients on hover
 - Tags indicating which tools/technologies were used in each project
 - Responsive sidebars based on scroll position/direction
-- Simple, minimalist site logo designed in Adobe Illustrator
 - A healthy dose of subtle UI animations
+- Desktop/tablet/mobile versions 
 
 **To Do:**
 
 - Create individual project/case study pages (instead of just linking out to live link)
-- Build out Photography section
+- Separate About section?
+- Build out Photography section (IN PROGRESS)
 - Day/night color switch
-- Update video icon animation on landing page to make it more clear there is a video on hover
-- Cross-browser/cross-device/cross-platform testing
+- Smooth, native-like page transitions/animations
+- Cross-browser/cross-device/cross-platform testing (IN PROGRESS)
 - More to come...
 
 ## Local Setup
