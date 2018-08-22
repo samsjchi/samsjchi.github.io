@@ -22,7 +22,7 @@ const Photography = () => (
   <div className="temp-wrapper">
     <div className="temp-wrapper--inner">
       <h1>🛠️ Under Construction 🛠️</h1>
-      <h3>In the meantime, you can find me on Instagram:</h3>
+      <h3>In the meantime, find me on Instagram:</h3>
       <a href="https://www.instagram.com/samsjchi/" target="_blank" rel="noopener noreferrer">
         <InstagramLogo className="ig-logo" width={40} />
       </a>
