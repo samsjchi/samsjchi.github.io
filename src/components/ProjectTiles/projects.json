@@ -5,7 +5,7 @@
       "client": "Netflix x The Atlantic",
       "title": "Fauda",
       "year": "2018",
-      "role": "Sole Developer",
+      "role": "Front End Developer",
       "techTags": "React, JavaScript, HTML, Sass, SVG, Scrollama.js",
       "description":
         "A historical journey through the Israeli-Palestinian conflict, in partnership with Netflix and their Israeli political thriller TV series. In this React web application, I used JavaScript ES6, Sass, inline SVGs, and Scrollama.js to build an interactive map component and an efficient, performant scrollytelling experience.",
@@ -20,7 +20,7 @@
       "client": "PBS x The Atlantic",
       "title": "To Pledge Allegiance",
       "year": "2017",
-      "role": "Sole Developer",
+      "role": "Front End Developer",
       "techTags": "JavaScript, jQuery, HTML, Sass, Web Audio API",
       "description":
         "An immersive web experience showcasing a selection of audio stories from citizens affected by The Vietnam War, in partnership with PBS and Ken Burns' critically acclaimed documentary series. I built a custom HTML5 audio player and a countdown timer component using JavaScript ES6, jQuery, Sass, and the Web Audio API.",
@@ -34,7 +34,7 @@
       "client": "Hewlett Packard Enterprise x The Atlantic",
       "title": "Eighteen Zeros",
       "year": "2017",
-      "role": "Sole Developer",
+      "role": "Front End Developer",
       "techTags": "JavaScript, HTML, CSS, YouTube API",
       "description":
         "A sponsored microsite for HPE featuring an Atlantic Re:think-produced documentary breaking down the Exascale supercomputer and its vast implications on our lives, as well as the opportunity to solve humanity's most pressing problems in what is the modern day space race.",
@@ -48,7 +48,7 @@
       "client": "Volvo x The Atlantic",
       "title": "Designing for the Future",
       "year": "2018",
-      "role": "Sole Developer",
+      "role": "Front End Developer",
       "techTags": "JavaScript, HTML, CSS, SVG, in-view.js",
       "description":
         "An interactive custom content piece exploring the future of design via Volvo's human-centric design philosophy, presented by the XC60, considered its most progressive and future-facing vehicle. I developed a content-responsive scrolling system using JavaScript ES6, CSS/SVG animations, and in-view.js",
@@ -62,7 +62,7 @@
       "client": "Bank of America x The Atlantic",
       "title": "Beyond the Bottom Line",
       "year": "2017",
-      "role": "Sole Developer",
+      "role": "Front End Developer",
       "techTags": "JavaScript, jQuery, HTML, CSS",
       "description":
         "An interactive experience exploring how companies are strengthening their business through best practices in environmental, social, and corporate governance (ESG) policies. I built the interactive cards, animations, and a modular modal component system using JavaScript, jQuery, HTML, and CSS.",
@@ -77,7 +77,7 @@
       "client": "Stanford Children's Health x The Atlantic",
       "title": "Building with Care",
       "year": "2017",
-      "role": "Sole Developer",
+      "role": "Front End Developer",
       "techTags": "JavaScript, jQuery, HTML, CSS",
       "description":
         "A photo-driven custom content article takes you on a digital tour of the Lucile Packard Children's Hospital from the perspective of several stakeholders, including the chief medical officer, lead architect, and former patients. I built the navigation bar and photo hot spot components from scratch using JavaScript, jQuery, HTML, and CSS.",
@@ -95,7 +95,7 @@
       "client": "VMware x The Atlantic",
       "title": "The Possibility Report",
       "year": "2017-2018",
-      "role": "Sole Developer",
+      "role": "Front End Developer",
       "techTags": "JavaScript, jQuery, HTML, Sass",
       "description":
         "An expansive multimedia hub of articles, infographics, and videos exploring how new technologies will reframe our understanding of the world, in partnership with VMware. I developed a semantic, modular system of reusable components using JavaScript ES6, jQuery, HTML, and Sass (BEM architecture).",
@@ -109,7 +109,7 @@
       "client": "WeWork x The Atlantic",
       "title": "How Can Cities Succeed in the 21st Century?",
       "year": "2018",
-      "role": "Sole Developer",
+      "role": "Front End Developer",
       "techTags": "JavaScript, HTML, Sass, SVG, slick.js",
       "description":
         "A data-driven look at how WeWork is revolutionizing the future of work and impacting cultural change in the workplace and in cities. I built two interactives from scratch–a data visualization and animated infographic–using JavaScript ES6, Sass, SVG animation, and Slick.js.",
@@ -123,7 +123,7 @@
       "client": "Personal Project",
       "title": "Behanced",
       "year": "2018",
-      "role": "Sole Developer",
+      "role": "Front End Developer",
       "techTags": "React, JavaScript, HTML, Sass, axios, Behance API",
       "description":
         "A minimalist Adobe Behance clone built with React, JavaScript ES6, Sass, axios, and the Behance API. I redesigned the cards and developed a navigation bar and dropdown menu component with category filters using the axios library to programmatically fetch and render all relevant API data.",
@@ -137,7 +137,7 @@
       "client": "CNN x The Atlantic",
       "title": "So You Think You Know the Kennedys?",
       "year": "2018",
-      "role": "Sole Developer",
+      "role": "Front End Developer",
       "techTags": "JavaScript, jQuery, HTML, CSS, in-view.js",
       "description":
         "An interactive family tree tells the untold story of the American royal family, in partnership with CNN to support their docuseries, American Dynasties. I implemented a photo-expanding component, modal system, and timeline animation using JavaScript, jQuery, and in-view.js",
@@ -152,7 +152,7 @@
       "client": "Betterment x The Atlantic",
       "title": "Investing: Was It Designed to Mystify Everyday Americans?",
       "year": "2017",
-      "role": "Sole Developer",
+      "role": "Front End Developer",
       "techTags": "JavaScript, jQuery, HTML, CSS",
       "description":
         "A full-screen interactive infographic examining the history of the financial industry and how the power of fintech is making investing more accessible. I built this scrolling experience using a “page piling” transition effect using JavaScript, jQuery, and pure HTML/CSS.",
@@ -161,20 +161,6 @@
       "bgStart": "#1066a2",
       "bgEnd": "#A6FFCB",
       "imgSrc": "../../../assets/img/betterment-investing.gif"
-    },
-    {
-      "id": "metermate",
-      "client": "Team Project @ Hack Reactor",
-      "title": "MeterMate",
-      "year": "2016",
-      "role": "Team Lead, Front End Developer",
-      "techTags": "AngularJS, Node.js, Express, MySQL, Google Maps API, Heroku",
-      "description":
-        "A full stack map-based web application that helps users find available parking spots in Santa Monica, powered by AngularJS, Node.js, Express, MySQL, the Google Maps API, and the Santa Monica Parking Data API. I served as Team Lead, designed the UI wireframes, and developed the app's front end architecture.",
-      "url": "https://github.com/samsjchi/metermate",
-      "bgStart": "#e7d8bb",
-      "bgEnd": "#d2ccc1",
-      "imgSrc": "../../../assets/img/metermate.jpg"
     }
   ]
 }
