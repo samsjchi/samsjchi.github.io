@@ -212,7 +212,7 @@ class Landing extends Component {
                   frameBorder="0"
                   webkitallowfullscreen="true"
                   mozallowfullscreen="true"
-                  allowFullScreen="true"
+                  allowFullScreen
                 />
                 <button className="intro__video-close-btn" onClick={() => this.closeVideo()} />
               </div>
