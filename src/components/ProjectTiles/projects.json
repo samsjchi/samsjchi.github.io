@@ -30,20 +30,6 @@
       "imgSrc": "../../../assets/img/pbs-to-pledge-allegiance.jpg"
     },
     {
-      "id": "hpe",
-      "client": "Hewlett Packard Enterprise x The Atlantic",
-      "title": "Eighteen Zeros",
-      "year": "2017",
-      "role": "Front End Developer",
-      "techTags": "JavaScript, HTML, CSS, YouTube API",
-      "description":
-        "A sponsored microsite for HPE featuring an Atlantic Re:think-produced documentary breaking down the Exascale supercomputer and its vast implications on our lives, as well as the opportunity to solve humanity's most pressing problems in what is the modern day space race.",
-      "url": "https://www.theatlantic.com/sponsored/hpe-2017/eighteen-zeros/1545/",
-      "bgStart": "#0B0E1D",
-      "bgEnd": "#0c7d63",
-      "imgSrc": "../../../assets/img/hpe-eighteen-zeros.jpg"
-    },
-    {
       "id": "volvo",
       "client": "Volvo x The Atlantic",
       "title": "Designing for the Future",
