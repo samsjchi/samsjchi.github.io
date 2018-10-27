@@ -1,7 +1,8 @@
 .contact {
   margin-right: auto;
   margin-left: auto;
-  padding: 10%;
+  padding: 7.5% 10% 10%;
+  max-width: 1000px;
 
   @include tablet--ipad-pro {
     height: 47vh;
@@ -143,7 +144,7 @@
     font-size: 1.8rem;
     line-height: 3rem;
     margin-top: 75px;
-    max-width: 70%;
+    max-width: 80%;
 
     &::before {
       content: '';
