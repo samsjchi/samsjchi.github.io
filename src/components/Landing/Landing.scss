@@ -27,7 +27,8 @@
 }
 
 .intro {
-  font-family: $font--regular;
+  font-family: $standard-font;
+  font-weight: 400;
   font-size: 3rem;
   line-height: 3.4rem;
   position: relative;
@@ -136,15 +137,15 @@
   }
 
   &__name {
-    font-family: $font--medium;
-    font-weight: bold;
+    font-family: $standard-font;
+    font-weight: 600;
   }
 
   &__tooltip {
     position: relative;
     display: inline-block;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4) 40%, rgba(255, 255, 255, 0) 20%);
-    background-position: 0 95%;
+    background-position: 8% 100%;
     background-size: 5px 2px;
     background-repeat: repeat-x;
     margin: 0 8px;
@@ -175,7 +176,8 @@
     height: 35px;
     background: rgba(0, 0, 0, 0.8);
     color: white;
-    font-family: $font--regular;
+    font-family: $standard-font;
+    font-weight: 400;
     font-size: 1.4rem;
     line-height: 3.4rem;
     white-space: nowrap;
@@ -366,8 +368,8 @@
   }
 
   a {
-    font-family: $font--medium;
-    font-weight: bold;
+    font-family: $standard-font;
+    font-weight: 600;
     display: inline-block;
     color: $dark-gray;
     text-decoration: none;

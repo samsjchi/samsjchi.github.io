@@ -31,8 +31,8 @@
 
   &__heading {
     position: relative;
-    font-family: $font--medium;
-    font-weight: bold;
+    font-family: $standard-font;
+    font-weight: 600;
     font-size: 8rem;
     line-height: 4.2rem;
     z-index: 1;
@@ -105,7 +105,7 @@
   }
 
   &__email {
-    font-family: $font--mono;
+    font-family: $mono-font;
     font-size: 4rem;
     line-height: 4.8rem;
     color: white;
@@ -142,7 +142,8 @@
 
   &__body {
     position: relative;
-    font-family: $font--regular;
+    font-family: $standard-font;
+    font-weight: 400;
     font-size: 2.2rem;
     line-height: 3rem;
     margin-top: 65px;
