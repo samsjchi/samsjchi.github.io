@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ProjectTiles from '../ProjectTiles/ProjectTiles';
+import FacebookLogo from '../../../assets/img/facebook-logo.svg';
 import RethinkLogo from '../../../assets/img/rethink-poseidon.svg';
 import AtlanticLogo from '../../../assets/img/atlantic-a.svg';
 import Ampersand from '../../../assets/img/ampersand.png';
@@ -22,13 +23,14 @@ class Landing extends Component {
   }
 
   componentWillUnmount() {
-    this.state.typeWriterTimeouts.forEach(timeout => clearTimeout(timeout)); // Clear all typewriter timeouts
+    // Clear all typewriter timeouts
+    this.state.typeWriterTimeouts.forEach(timeout => clearTimeout(timeout));
   }
 
   /**
    * Show Vimeo iframe when user hovers over video icon
    */
-  openVideo() {
+  openVideo = () => {
     const rethinkVideo = document.querySelector('.intro__rethink-video');
     const vimeoIframe = document.querySelector('#vimeoIframe');
 
@@ -46,7 +48,7 @@ class Landing extends Component {
   /**
    * Close Vimeo iframe when user clicks on close button
    */
-  closeVideo() {
+  closeVideo = () => {
     document.querySelector('body').style.overflow = 'auto';
     document.querySelector('.intro__rethink-video').classList.add('closed');
     document.querySelector('#vimeoIframe').setAttribute('src', 'about:blank');
@@ -55,7 +57,11 @@ class Landing extends Component {
   /**
    * Show Re:think Poseidon/Atlantic "A" graphic on link mouse over
    */
-  handleLinkMouseOver(e) {
+  handleLinkMouseOver = (e) => {
+    if (e.target.className === 'facebook') {
+      document.querySelector('.intro__facebook-logo').style.opacity = '0.05';
+    }
+
     if (e.target.className === 'rethink') {
       document.querySelector('.intro__rethink-logo').style.opacity = '0.05';
     }
@@ -68,7 +74,11 @@ class Landing extends Component {
   /**
    * Hide Re:think Poseidon/Atlantic "A" graphic on link mouse out
    */
-  handleLinkMouseOut(e) {
+  handleLinkMouseOut = (e) => {
+    if (e.target.className === 'facebook') {
+      document.querySelector('.intro__facebook-logo').style.opacity = '0';
+    }
+
     if (e.target.className === 'rethink') {
       document.querySelector('.intro__rethink-logo').style.opacity = '0';
     }
@@ -114,12 +124,11 @@ class Landing extends Component {
   startTextAnimation(i) {
     const typeWriterList = [
       ' clean and intuitive user interfaces.',
-      ' modern single-page web applications.',
-      ' responsive, interactive data-driven content.',
+      ' modern single-page web applications using React & Redux.',
+      ' responsive, cross-platform interactive content.',
       ' dynamic and delightful web experiences.',
-      ' cross-browser/cross-platform compatible websites.',
       ' with the end user always in mind.',
-      ' experiment, iterate, learn, and repeat.',
+      ' then experiment, iterate, learn, and repeat.',
     ];
 
     // If at the end of typeWriterList, start over
@@ -146,82 +155,120 @@ class Landing extends Component {
       <div className="content-container">
         <div className="landing">
           <div className="intro">
-            <h2 className="intro__tagline">
-              I&apos;m <span className="intro__name">Sam</span>
-              <div className="intro__tooltip">
-                <span className="intro__tooltip-message">
-                  Pronounced “kai,” like the Greek letter
-                </span>
-                <span className="intro__name">Chi</span>
-              </div>
-              – a design-minded front end engineer based in New York City.
-            </h2>
-            <h2 className="intro__tagline">
-              Currently at&nbsp;
-              <a
-                className="rethink"
-                href="https://advertising.theatlantic.com/rethink/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseOver={e => this.handleLinkMouseOver(e)}
-                onMouseOut={e => this.handleLinkMouseOut(e)}
-              >
-                Atlantic Re:think
-              </a>
-              <div
-                className="intro__video-icon"
-                onMouseOver={() => this.openVideo()}
-                onClick={() => this.openVideo()}
-              >
-                <svg x="0px" y="0px" viewBox="0 0 27 24">
-                  <g fillRule="evenodd" fill="none" strokeWidth="1" stroke="none">
-                    <g fill="#2f2f2f">
-                      <path d="M18,15.8461538 L18,11 L0,11 L0,24 L18,24 L18,19.8461538 L27,24 L27,11 L18,15.8461538 Z" />
-                      <circle r="5.5" cy="5.5" cx="12.5" />
-                      <circle r="3.5" cy="7.5" cx="3.5" />
+            <div className="intro__section">
+              <h2 className="intro__tagline">
+                I&apos;m <span className="intro__name">Sam</span>
+                <div className="intro__tooltip">
+                  <span className="intro__tooltip-message">
+                    Pronounced “kai,” like the Greek letter
+                  </span>
+                  <span className="intro__name">Chi</span>
+                </div>
+                – a design-minded front end engineer based in New York City.
+              </h2>
+
+              <h2 className="intro__tagline">
+                Currently at&nbsp;
+                <a
+                  className="facebook"
+                  href="https://www.facebook.com/careers/life/partner-engineering-at-facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseOver={e => this.handleLinkMouseOver(e)}
+                  onMouseOut={e => this.handleLinkMouseOut(e)}
+                >
+                  Facebook
+                </a>
+                &nbsp;on the Partner Engineering team, helping companies glean
+              </h2>
+
+              <h2 className="intro__tagline">data-driven insights and discover the stories that matter on&nbsp;
+                <a
+                  className="crowdtangle"
+                  href="https://www.crowdtangle.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseOver={e => this.handleLinkMouseOver(e)}
+                  onMouseOut={e => this.handleLinkMouseOut(e)}
+                >
+                  CrowdTangle
+                </a>.
+              </h2>
+
+              <FacebookLogo className="intro__facebook-logo" height={550} />
+            </div>
+
+            <div className="intro__section">
+              <h2 className="intro__tagline">
+                Previously, I worked at&nbsp;
+                <a
+                  className="rethink"
+                  href="https://advertising.theatlantic.com/rethink/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseOver={e => this.handleLinkMouseOver(e)}
+                  onMouseOut={e => this.handleLinkMouseOut(e)}
+                >
+                  Atlantic Re:think
+                </a>
+                <div
+                  className="intro__video-icon"
+                  onMouseOver={() => this.openVideo()}
+                  onClick={() => this.openVideo()}
+                >
+                  <svg x="0px" y="0px" viewBox="0 0 27 24">
+                    <g fillRule="evenodd" fill="none" strokeWidth="1" stroke="none">
+                      <g fill="#2f2f2f">
+                        <path d="M18,15.8461538 L18,11 L0,11 L0,24 L18,24 L18,19.8461538 L27,24 L27,11 L18,15.8461538 Z" />
+                        <circle r="5.5" cy="5.5" cx="12.5" />
+                        <circle r="3.5" cy="7.5" cx="3.5" />
+                      </g>
                     </g>
-                  </g>
-                </svg>
-              </div>
-              , the award-winning content studio
-            </h2>
-            <h2 className="intro__tagline">
-              and in-house creative marketing team at{' '}
-              <a
-                className="atlantic"
-                href="https://www.theatlantic.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseOver={e => this.handleLinkMouseOver(e)}
-                onMouseOut={e => this.handleLinkMouseOut(e)}
-              >
-                The Atlantic
-              </a>. <span className="intro__emoji">👨🏻‍💻</span>
-            </h2>
+                  </svg>
+                </div>
+                , the award-winning
+              </h2>
 
-            <RethinkLogo className="intro__rethink-logo" height={550} />
-            <AtlanticLogo className="intro__atlantic-logo" height={550} />
+              <h2 className="intro__tagline">
+                content studio and in-house creative marketing team at{' '}
+                <a
+                  className="atlantic"
+                  href="https://www.theatlantic.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseOver={e => this.handleLinkMouseOver(e)}
+                  onMouseOut={e => this.handleLinkMouseOut(e)}
+                >
+                  The Atlantic
+                </a>.
+              </h2>
 
-            <div className="intro__rethink-video closed" onClick={() => this.closeVideo()}>
-              <div className="intro__video-wrapper">
-                <iframe
-                  id="vimeoIframe"
-                  src="https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0?autoplay=1"
-                  width="960"
-                  height="518"
-                  frameBorder="0"
-                  webkitallowfullscreen="true"
-                  mozallowfullscreen="true"
-                  allowFullScreen
-                />
-                <button className="intro__video-close-btn" onClick={() => this.closeVideo()} />
+              <RethinkLogo className="intro__rethink-logo" height={550} />
+              <AtlanticLogo className="intro__atlantic-logo" height={550} />
+
+              <div className="intro__rethink-video closed" onClick={() => this.closeVideo()}>
+                <div className="intro__video-wrapper">
+                  <iframe
+                    id="vimeoIframe"
+                    src="https://player.vimeo.com/video/201355728?title=0&byline=0&portrait=0?autoplay=1"
+                    width="960"
+                    height="518"
+                    frameBorder="0"
+                    webkitallowfullscreen="true"
+                    mozallowfullscreen="true"
+                    allowFullScreen
+                  />
+                  <button className="intro__video-close-btn" onClick={() => this.closeVideo()} />
+                </div>
               </div>
             </div>
 
-            <h2 className="intro__tagline">
-              I design <img className="intro__ampersand" src={Ampersand} alt="" /> build...{' '}
-              <span className="typewriter">dynamic web applications.</span>
-            </h2>
+            <div className="intro__section">
+              <h2 className="intro__tagline last">
+                I design <img className="intro__ampersand" src={Ampersand} alt="" /> build...{' '}
+                <span className="typewriter">dynamic web applications.</span>
+              </h2>
+            </div>
           </div>
         </div>
 

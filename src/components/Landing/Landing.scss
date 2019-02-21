@@ -28,9 +28,9 @@
 
 .intro {
   font-family: 'MaisonNeue-Mono';
-  font-size: 2.2rem;
-  line-height: 3.4rem;
-  letter-spacing: -2px;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  letter-spacing: -1px;
   position: relative;
   min-width: 100%;
 
@@ -56,6 +56,18 @@
     top: 40px;
   }
 
+  &__section {
+    margin-bottom: 100px;
+
+    &:nth-of-type(2) {
+      text-align: right;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &__tagline {
     margin-bottom: 10px;
     transform: translate3d(0, 20px, 0);
@@ -79,7 +91,7 @@
       animation-delay: 2s;
     }
 
-    &:nth-of-type(4) {
+    .last {
       animation-delay: 2.1s;
       margin-top: 70px;
 
@@ -285,32 +297,22 @@
     }
   }
 
+  &__facebook-logo,
   &__rethink-logo,
   &__atlantic-logo {
     position: fixed;
     bottom: 0;
+    right: 0;
     opacity: 0;
     z-index: -1;
     transition: opacity 0.2s ease-in-out;
 
+    @media screen and (min-width: 1441px) {
+      right: 2.5%;
+    }
+
     @media (max-width: #{$ipad-width - 1}) {
       display: none;
-    }
-  }
-
-  &__rethink-logo {
-    right: -5px;
-
-    @media screen and (min-width: 1441px) {
-      right: 3%;
-    }
-  }
-
-  &__atlantic-logo {
-    right: 0;
-
-    @media screen and (min-width: 1441px) {
-      right: 3%;
     }
   }
 
@@ -336,6 +338,42 @@
     text-decoration: none;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+
+    &.facebook {
+      color: $fb-blue;
+      -webkit-box-shadow: inset 0 -3px 0 $fb-blue;
+      box-shadow: inset 0 -3px 0 $fb-blue;
+
+      @include mobile {
+        -webkit-box-shadow: inset 0 -2px 0 $fb-blue;
+        box-shadow: inset 0 -2px 0 $fb-blue;
+        letter-spacing: -2.5px;
+      }
+
+      &:hover {
+        color: white;
+        -webkit-box-shadow: inset 0 -35px 0 $fb-blue;
+        box-shadow: inset 0 -35px 0 $fb-blue;
+      }
+    }
+
+    &.crowdtangle {
+      color: $ct-blue;
+      -webkit-box-shadow: inset 0 -3px 0 $ct-blue;
+      box-shadow: inset 0 -3px 0 $ct-blue;
+
+      @include mobile {
+        -webkit-box-shadow: inset 0 -2px 0 $ct-blue;
+        box-shadow: inset 0 -2px 0 $ct-blue;
+        letter-spacing: -2.5px;
+      }
+
+      &:hover {
+        color: white;
+        -webkit-box-shadow: inset 0 -35px 0 $ct-blue;
+        box-shadow: inset 0 -35px 0 $ct-blue;
+      }
+    }
 
     &.rethink {
       color: $rethink-red;
