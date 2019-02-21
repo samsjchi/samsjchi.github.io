@@ -16,7 +16,8 @@
   }
 
   @include tablet--ipad {
-    padding-top: 15%;
+    padding-top: 7.5%;
+    padding-bottom: 5%;
   }
 
   @media (max-width: 812px) and (orientation: landscape) {
@@ -25,6 +26,7 @@
 
   @include mobile {
     height: auto;
+    padding-bottom: 7.5%;
   }
 
   &__heading {
@@ -52,7 +54,7 @@
 
     @include mobile {
       font-size: 4rem;
-      line-height: 2.4rem;
+      line-height: 2rem;
     }
 
     @include mobile--iphone5 {
@@ -179,7 +181,7 @@
     }
 
     @include tablet--ipad {
-      font-size: 1.4rem;
+      font-size: 1.7rem;
       line-height: 2.2rem;
       max-width: 90%;
     }
