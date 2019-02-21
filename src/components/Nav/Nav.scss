@@ -5,7 +5,7 @@
 
   &__logo {
     position: absolute;
-    top: 88px;
+    top: 80px;
     left: calc(10% - 4px);
 
     @include tablet--ipad-pro {
@@ -49,8 +49,8 @@
     }
 
     ul li {
-      font-family: 'MaisonNeue-Book';
-      font-size: 1.6rem;
+      font-family: $font--regular;
+      font-size: 1.8rem;
       display: inline;
       margin-left: 40px;
       opacity: 0;

@@ -1,8 +1,9 @@
 .project-tiles {
   &__heading {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, sans-serif;
-    font-size: 12rem;
+    font-family: $font--medium;
     font-weight: bold;
+    font-size: 12rem;
+    line-height: 11rem;
     color: black;
     position: relative;
     top: 22px;
