@@ -13,7 +13,11 @@ export default function Footer() {
       <div className="footer__social-buttons">
         <ul className="footer__social-buttons-list">
           <li>
-            <a href="https://github.com/samsjchi" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/samsjchi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg x="0px" y="0px" viewBox="0 0 41 41">
                 <title>GitHub</title>
                 <circle
@@ -55,7 +59,11 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/samsjchi" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/samsjchi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg x="0px" y="0px" viewBox="0 0 41 41">
                 <title>Facebook</title>
                 <circle
@@ -76,7 +84,11 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/samsjchi/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/samsjchi/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg x="0px" y="0px" viewBox="0 0 41 41">
                 <title>Instagram</title>
                 <circle
@@ -101,34 +113,54 @@ export default function Footer() {
         <p>This site is powered by the following web technologies:</p>
         <ul className="footer__web-tech-list">
           <li>
-            <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://reactjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <ReactLogo className="react" width={70} />
             </a>
           </li>
           <li>
-            <a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://babeljs.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <BabelLogo className="babel" width={85} />
             </a>
           </li>
           <li>
-            <a href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://webpack.js.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <WebpackLogo className="webpack" width={45} />
             </a>
           </li>
           <li>
-            <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://sass-lang.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SassLogo className="sass" width={45} />
             </a>
           </li>
           <li>
-            <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://pages.github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <GitHubLogo className="github" width={40} />
             </a>
           </li>
         </ul>
       </div>
 
-      <p className="footer__copyright">© 2018 Sam Chi. All rights reserved.</p>
+      <p className="footer__copyright">© 2020 Sam Chi. All rights reserved.</p>
     </footer>
   );
 }
