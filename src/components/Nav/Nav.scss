@@ -6,11 +6,10 @@
   &__logo {
     position: absolute;
     top: 80px;
-    left: calc(10% - 4px);
+    left: 0;
 
     @include tablet--ipad-pro {
       top: 63px;
-      left: calc(7.5% - 4px);
     }
 
     @include tablet--ipad {
@@ -27,17 +26,21 @@
   }
 
   &__links {
+    position: relative;
     display: flex;
     justify-content: flex-end;
+    max-width: $max-width;
+    margin: 0 auto;
     padding-top: 100px;
-    padding-right: 10%;
-    padding-left: 10%;
     background: transparent;
 
+    @include desktop--narrow {
+      margin: 0 $side-bar-width--desktop;
+    }
+
     @include tablet--ipad-pro {
+      margin: 0 $side-bar-width--tablet;
       padding-top: 75px;
-      padding-right: 7.5%;
-      padding-left: 7.5%;
     }
 
     @include tablet--ipad {
@@ -45,6 +48,7 @@
     }
 
     @include mobile {
+      margin: 0 $side-bar-width--mobile;
       padding-top: 45px;
     }
 
