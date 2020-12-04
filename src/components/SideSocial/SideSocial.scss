@@ -1,8 +1,9 @@
 .side-social {
   position: fixed;
   top: 0;
+  left: 0;
   bottom: 0;
-  width: 10%;
+  width: $side-bar-width--desktop;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,7 +12,7 @@
   transition: opacity 0.2s ease-in-out;
 
   @include tablet--ipad-pro {
-    width: 7.5%;
+    width: $side-bar-width--tablet;
     justify-content: center;
   }
 
@@ -49,7 +50,7 @@
     justify-content: space-evenly;
     height: 200px;
     position: relative;
-    bottom: 50px;
+    bottom: 40px;
 
     @include tablet--ipad-pro {
       bottom: 0;
@@ -57,7 +58,8 @@
 
     &.active {
       li {
-        animation: fade-in-down-social 0.3s cubic-bezier(0, 0.13, 0, 1.02) 0.3s forwards;
+        animation: fade-in-down-social 0.3s cubic-bezier(0, 0.13, 0, 1.02) 0.3s
+          forwards;
       }
     }
 
