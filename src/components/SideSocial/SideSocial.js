@@ -27,7 +27,7 @@ class SideSocial extends Component {
     /**
      * Only show side nav when user is viewing project tiles section
      */
-    if (window.pageYOffset > 750 && window.pageYOffset < 3000) {
+    if (window.pageYOffset > 750 && window.pageYOffset < 2600) {
       if (!this.state.show) {
         this.setState(() => ({ show: true }));
       }
@@ -36,35 +36,16 @@ class SideSocial extends Component {
     }
 
     /**
-     * Show side nav on scroll up; hide on scroll down
+     * Show side nav on scroll down
      */
     const newScrollPosition = window.scrollY;
 
-    if (newScrollPosition < this.state.lastScrollPosition) {
+    if (newScrollPosition > this.state.lastScrollPosition) {
       document.querySelector('.side-social__logo').style.opacity = '1';
       document.querySelector('.side-social__buttons').classList.add('active');
-    } else {
-      document.querySelector('.side-social__logo').style.opacity = '0';
-      document.querySelector('.side-social__buttons').classList.remove('active');
     }
 
     this.setState(() => ({ lastScrollPosition: newScrollPosition }));
-  }
-
-  /**
-   * Show side nav on mouse over
-   */
-  handleMouseOver() {
-    document.querySelector('.side-social__logo').style.opacity = '1';
-    document.querySelector('.side-social__buttons').classList.add('active');
-  }
-
-  /**
-   * Hide side nav on mouse out
-   */
-  handleMouseOut() {
-    document.querySelector('.side-social__logo').style.opacity = '0';
-    document.querySelector('.side-social__buttons').classList.remove('active');
   }
 
   render() {
@@ -72,8 +53,6 @@ class SideSocial extends Component {
       <aside
         className="side-social"
         style={{ opacity: this.state.show ? 1 : 0 }}
-        onMouseOver={() => this.handleMouseOver()}
-        onMouseOut={() => this.handleMouseOut()}
       >
         <div className="side-social__logo is-unselectable">
           <Link to="/">
@@ -83,7 +62,11 @@ class SideSocial extends Component {
 
         <ul className="side-social__buttons">
           <li>
-            <a href="https://github.com/samsjchi" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/samsjchi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg x="0px" y="0px" viewBox="0 0 41 41">
                 <title>GitHub</title>
                 <circle
@@ -125,7 +108,11 @@ class SideSocial extends Component {
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/samsjchi" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/samsjchi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg x="0px" y="0px" viewBox="0 0 41 41">
                 <title>Facebook</title>
                 <circle
@@ -146,7 +133,11 @@ class SideSocial extends Component {
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/samsjchi/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/samsjchi/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg x="0px" y="0px" viewBox="0 0 41 41">
                 <title>Instagram</title>
                 <circle

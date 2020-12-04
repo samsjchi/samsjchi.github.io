@@ -23,7 +23,11 @@ const Photography = () => (
     <div className="temp-wrapper--inner">
       <h1>🛠️ Under Construction 🛠️</h1>
       <h3>In the meantime, find me on Instagram:</h3>
-      <a href="https://www.instagram.com/samsjchi/" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.instagram.com/samsjchi/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <InstagramLogo className="ig-logo" width={40} />
       </a>
     </div>
@@ -48,19 +52,21 @@ export default function App() {
       <Nav />
 
       <div className="main-content">
-        <SideSocial />
-        <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route path="/photography" component={Photography} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route component={PageNotFound} />
-        </Switch>
-        <SideNav />
+        <div className="main-content--inner">
+          <SideSocial />
+          <Switch>
+            <Route exact path="/" component={Landing} />
+            <Route path="/photography" component={Photography} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route component={PageNotFound} />
+          </Switch>
+          <SideNav />
+        </div>
       </div>
 
       <div className="back-to-top-btn is-unselectable">
-        <ScrollToTop showUnder={1000} duration={500} style={scrollToTopStyles}>
+        <ScrollToTop showUnder={1500} duration={500} style={scrollToTopStyles}>
           <img src={PointingUpEmoji} alt="Back to Top" />
         </ScrollToTop>
       </div>
