@@ -292,21 +292,11 @@
 
   @include mobile {
     border-top-right-radius: 15px;
-
-    .project-tiles__tech-tag:nth-of-type(4) {
-      margin-right: 100px;
-    }
-  }
-
-  @include mobile--iphone {
-    .project-tiles__tech-tag:nth-of-type(4) {
-      margin-right: 70px;
-    }
   }
 
   @include mobile--iphone5 {
     .project-tiles__tech-tag:nth-of-type(4) {
-      margin-right: 50px;
+      margin-right: 25px;
     }
   }
 
@@ -383,21 +373,9 @@
 }
 
 #behanced.project-tiles__tile {
-  @include mobile {
-    .project-tiles__tech-tag:nth-of-type(4) {
-      margin-right: 100px;
-    }
-  }
-
-  @include mobile--iphone {
-    .project-tiles__tech-tag:nth-of-type(4) {
-      margin-right: 70px;
-    }
-  }
-
   @include mobile--iphone5 {
     .project-tiles__tech-tag:nth-of-type(4) {
-      margin-right: 50px;
+      margin-right: 25px;
     }
   }
 
@@ -425,6 +403,12 @@
 }
 
 #betterment.project-tiles__tile {
+  border-bottom-right-radius: 15px;
+
+  @include mobile {
+    border-bottom-left-radius: 15px;
+  }
+
   .project-tiles__title {
     max-width: 70%;
 
