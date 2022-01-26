@@ -18,9 +18,9 @@ export default function Nav() {
               Work
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/photography">Photography</NavLink>
-          </li>
+          </li> */}
           {/* <li>
             <NavLink to="/about">About</NavLink>
           </li> */}

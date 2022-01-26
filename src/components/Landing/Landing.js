@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import ProjectTiles from '../ProjectTiles/ProjectTiles';
-import FacebookLogo from '../../../assets/img/facebook-logo.svg';
+import MetaLogo from '../../../assets/img/meta-logo.svg';
+import NPELogo from '../../../assets/img/npe-logo.svg';
 import RethinkLogo from '../../../assets/img/rethink-poseidon.svg';
 import AtlanticLogo from '../../../assets/img/atlantic-a.svg';
 import Ampersand from '../../../assets/img/ampersand.png';
@@ -24,7 +25,7 @@ class Landing extends Component {
 
   componentWillUnmount() {
     // Clear all typewriter timeouts
-    this.state.typeWriterTimeouts.forEach((timeout) => clearTimeout(timeout));
+    this.state.typeWriterTimeouts.forEach(timeout => clearTimeout(timeout));
   }
 
   /**
@@ -58,8 +59,12 @@ class Landing extends Component {
    * Show Re:think Poseidon/Atlantic "A" graphic on link mouse over
    */
   handleLinkMouseOver = (e) => {
-    if (e.target.className === 'facebook') {
-      document.querySelector('.intro__facebook-logo').style.opacity = '0.1';
+    if (e.target.className === 'meta') {
+      document.querySelector('.intro__meta-logo').style.opacity = '0.1';
+    }
+
+    if (e.target.className === 'npe') {
+      document.querySelector('.intro__npe-logo').style.opacity = '0.1';
     }
 
     if (e.target.className === 'rethink') {
@@ -75,8 +80,12 @@ class Landing extends Component {
    * Hide Re:think Poseidon/Atlantic "A" graphic on link mouse out
    */
   handleLinkMouseOut = (e) => {
-    if (e.target.className === 'facebook') {
-      document.querySelector('.intro__facebook-logo').style.opacity = '0';
+    if (e.target.className === 'meta') {
+      document.querySelector('.intro__meta-logo').style.opacity = '0';
+    }
+
+    if (e.target.className === 'npe') {
+      document.querySelector('.intro__npe-logo').style.opacity = '0';
     }
 
     if (e.target.className === 'rethink') {
@@ -105,14 +114,14 @@ class Landing extends Component {
         this.typeWriter(text, i + 1, callbackFn);
       }, 50);
 
-      this.setState((prevState) => ({
+      this.setState(prevState => ({
         typeWriterTimeouts: [...prevState.typeWriterTimeouts, timeout1],
       }));
     } else if (typeof callbackFn === 'function') {
       // If text has finished, invoke callback function
       // Invoke callback after 2500ms
       const timeout2 = setTimeout(callbackFn, 2500);
-      this.setState((prevState) => ({
+      this.setState(prevState => ({
         typeWriterTimeouts: [...prevState.typeWriterTimeouts, timeout2],
       }));
     }
@@ -124,7 +133,7 @@ class Landing extends Component {
   startTextAnimation(i) {
     const typeWriterList = [
       ' clean and intuitive user interfaces.',
-      ' modern single-page web applications using React & Redux.',
+      ' modern single-page web applications using TypeScript, React, and GraphQL.',
       ' responsive, cross-platform interactive content.',
       ' dynamic and delightful web experiences.',
       ' with the end user always in mind.',
@@ -137,7 +146,7 @@ class Landing extends Component {
         this.startTextAnimation(0);
       }, 7000);
 
-      this.setState((prevState) => ({
+      this.setState(prevState => ({
         typeWriterTimeouts: [...prevState.typeWriterTimeouts, timeout3],
       }));
     }
@@ -157,48 +166,38 @@ class Landing extends Component {
           <div className="intro">
             <div className="intro__section">
               <h2 className="intro__tagline">
-                I&apos;m <span className="intro__name">Sam</span>
-                <div className="intro__tooltip">
-                  <span className="intro__tooltip-message">
-                    Pronounced “kai,” like the Greek letter
-                  </span>
-                  <span className="intro__name">Chi</span>
-                </div>
-                – a design-minded front end engineer based in New York City.
+                Hi, I&apos;m <span className="intro__name">Sam</span> – a design-minded software engineer based in New York City.
               </h2>
 
               <h2 className="intro__tagline">
                 Currently, I work at&nbsp;
                 <a
-                  className="facebook"
-                  href="https://www.facebook.com/careers/life/partner-engineering-at-facebook"
+                  className="meta"
+                  href="https://about.facebook.com/meta"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onMouseOver={(e) => this.handleLinkMouseOver(e)}
-                  onMouseOut={(e) => this.handleLinkMouseOut(e)}
+                  onMouseOver={e => this.handleLinkMouseOver(e)}
+                  onMouseOut={e => this.handleLinkMouseOut(e)}
                 >
-                  Facebook
+                  Meta
                 </a>
-                &nbsp;on the Partner Engineering team, helping companies
+                &nbsp;on the&nbsp;
+                <a
+                  className="npe"
+                  href="https://techcrunch.com/2021/12/02/metas-npe-team-takes-a-global-focus-with-seed-stage-investments-offices-in-emerging-markets/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseOver={e => this.handleLinkMouseOver(e)}
+                  onMouseOut={e => this.handleLinkMouseOut(e)}
+                >New Product Experimentation</a> team, a zero-to-one product
               </h2>
 
               <h2 className="intro__tagline">
-                glean data-driven insights and discover stories that matter
-                on&nbsp;
-                <a
-                  className="crowdtangle"
-                  href="https://www.crowdtangle.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onMouseOver={(e) => this.handleLinkMouseOver(e)}
-                  onMouseOut={(e) => this.handleLinkMouseOut(e)}
-                >
-                  CrowdTangle
-                </a>
-                .
+                development team building and testing new social experiences adjacent to Meta&apos;s family of apps.
               </h2>
 
-              <FacebookLogo className="intro__facebook-logo" height={550} />
+              <MetaLogo className="intro__meta-logo" height={550} />
+              <NPELogo className="intro__npe-logo" height={550} />
             </div>
 
             <div className="intro__section">
@@ -206,13 +205,13 @@ class Landing extends Component {
                 Previously, I worked at&nbsp;
                 <a
                   className="rethink"
-                  href="https://advertising.theatlantic.com/rethink/"
+                  href="https://www.theatlantic.com/rethink/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onMouseOver={(e) => this.handleLinkMouseOver(e)}
-                  onMouseOut={(e) => this.handleLinkMouseOut(e)}
+                  onMouseOver={e => this.handleLinkMouseOver(e)}
+                  onMouseOut={e => this.handleLinkMouseOut(e)}
                 >
-                  Atlantic Re:think
+                  Re:think Studio
                 </a>
                 <div
                   className="intro__video-icon"
@@ -244,8 +243,8 @@ class Landing extends Component {
                   href="https://www.theatlantic.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onMouseOver={(e) => this.handleLinkMouseOver(e)}
-                  onMouseOut={(e) => this.handleLinkMouseOut(e)}
+                  onMouseOver={e => this.handleLinkMouseOver(e)}
+                  onMouseOut={e => this.handleLinkMouseOut(e)}
                 >
                   The Atlantic
                 </a>
@@ -259,8 +258,8 @@ class Landing extends Component {
                   href="https://advertising.theatlantic.com/rethink/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onMouseOver={(e) => this.handleLinkMouseOver(e)}
-                  onMouseOut={(e) => this.handleLinkMouseOut(e)}
+                  onMouseOver={e => this.handleLinkMouseOver(e)}
+                  onMouseOut={e => this.handleLinkMouseOut(e)}
                 >
                   Atlantic Re:think
                 </a>
@@ -291,8 +290,8 @@ class Landing extends Component {
                   href="https://www.theatlantic.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onMouseOver={(e) => this.handleLinkMouseOver(e)}
-                  onMouseOut={(e) => this.handleLinkMouseOut(e)}
+                  onMouseOver={e => this.handleLinkMouseOver(e)}
+                  onMouseOut={e => this.handleLinkMouseOut(e)}
                 >
                   The Atlantic
                 </a>
