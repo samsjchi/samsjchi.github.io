@@ -1,4 +1,4 @@
-# Portfolio Website: https://samchi.co/
+# Portfolio Website: https://samchi.dev/
 
 Built with JavaScript ES6, React, React Router, Babel, webpack, and Sass (using BEM architecture). Deployed using [this solution](https://github.com/rafrex/spa-github-pages) to host single page apps with GitHub Pages.
 
